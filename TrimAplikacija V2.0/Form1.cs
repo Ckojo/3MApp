@@ -598,5 +598,10 @@ namespace TrimAplikacija_V2._0
                 }
             }
         }
+
+        private void btnConvert_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

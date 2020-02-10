@@ -31,6 +31,26 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.firmeDataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeesDataGridView3 = new System.Windows.Forms.DataGridView();
+            this.id_zaposlen2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
@@ -117,6 +137,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblEmployeeInfo = new System.Windows.Forms.Label();
+            this.lblInformations = new System.Windows.Forms.Label();
             this.btnAddAnnuityDate = new System.Windows.Forms.Button();
             this.dtpRata20 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata19 = new System.Windows.Forms.DateTimePicker();
@@ -191,30 +213,16 @@
             this.preostali_dug_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.employeesDataGridView3 = new System.Windows.Forms.DataGridView();
-            this.firmeDataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_zaposlen2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblInformations = new System.Windows.Forms.Label();
-            this.lblEmployeeInfo = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnConvert = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -225,8 +233,11 @@
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -257,6 +268,176 @@
             this.tabPage4.Size = new System.Drawing.Size(1310, 701);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Zaposleni - Unos";
+            // 
+            // firmeDataGridView2
+            // 
+            this.firmeDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.firmeDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21});
+            this.firmeDataGridView2.Location = new System.Drawing.Point(954, 99);
+            this.firmeDataGridView2.Name = "firmeDataGridView2";
+            this.firmeDataGridView2.Size = new System.Drawing.Size(350, 386);
+            this.firmeDataGridView2.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "id_firme";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Firma ID";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "naziv";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Naziv";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "mesto";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Mesto";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "pib";
+            this.dataGridViewTextBoxColumn20.HeaderText = "PIB";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "ukupni_dug";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Ukupni dug";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Visible = false;
+            // 
+            // employeesDataGridView3
+            // 
+            this.employeesDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_zaposlen2,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
+            this.employeesDataGridView3.Location = new System.Drawing.Point(209, 514);
+            this.employeesDataGridView3.Name = "employeesDataGridView3";
+            this.employeesDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.employeesDataGridView3.Size = new System.Drawing.Size(1095, 183);
+            this.employeesDataGridView3.TabIndex = 13;
+            this.employeesDataGridView3.Visible = false;
+            // 
+            // id_zaposlen2
+            // 
+            this.id_zaposlen2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_zaposlen2.DataPropertyName = "id_zaposlen";
+            this.id_zaposlen2.HeaderText = "ID";
+            this.id_zaposlen2.Name = "id_zaposlen2";
+            this.id_zaposlen2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ime";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "prezime";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Prezime";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "licna_karta";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Lična karta";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "poziv_na_broj";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Poziv na broj";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "datum_kupovine";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Datum kupovine";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "broj_rata";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Broj rata";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "iznos_kupovine";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Iznos kupovine";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "iznos_rate";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Iznos rate";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "ukupno_duga";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Ukupno duga";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "uplaceno";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Uplaceno";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "preostali_dug";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Preostali dug";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "firma";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Firma";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // panel4
             // 
@@ -291,7 +472,7 @@
             this.btnAddEmp.BackColor = System.Drawing.Color.White;
             this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddEmp.Font = new System.Drawing.Font("Segoe UI Light", 15.25F);
-            this.btnAddEmp.Location = new System.Drawing.Point(209, 446);
+            this.btnAddEmp.Location = new System.Drawing.Point(209, 462);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(720, 39);
             this.btnAddEmp.TabIndex = 12;
@@ -322,48 +503,26 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtCompany);
-            this.panel1.Controls.Add(this.txtLeftDebt);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.lblPaid);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dtpPurchaseDate);
-            this.panel1.Controls.Add(this.txtLastName);
-            this.panel1.Controls.Add(this.txtIdentityCard);
-            this.panel1.Controls.Add(this.txtReferenceNumber);
-            this.panel1.Controls.Add(this.txtAnnuityNumber);
-            this.panel1.Controls.Add(this.txtPurchaseAmount);
-            this.panel1.Controls.Add(this.txtAnnuityAmount);
-            this.panel1.Controls.Add(this.txtTotalDebtt);
-            this.panel1.Controls.Add(this.txtPaid);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.lblCompany);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.lblLastName);
-            this.panel1.Controls.Add(this.lblLeftDebt);
-            this.panel1.Controls.Add(this.lblIdentityCard);
-            this.panel1.Controls.Add(this.lblTotalDebtt);
-            this.panel1.Controls.Add(this.lblReferenceNumber);
-            this.panel1.Controls.Add(this.lblAnnuityAmount);
-            this.panel1.Controls.Add(this.lblPurchaseDate);
-            this.panel1.Controls.Add(this.lblPurchaseAmount);
-            this.panel1.Controls.Add(this.lblAnnuityNumber);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Location = new System.Drawing.Point(209, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 418);
+            this.panel1.Size = new System.Drawing.Size(720, 434);
             this.panel1.TabIndex = 10;
             // 
             // txtCompany
             // 
-            this.txtCompany.Location = new System.Drawing.Point(366, 365);
+            this.txtCompany.Location = new System.Drawing.Point(405, 28);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(51, 22);
             this.txtCompany.TabIndex = 12;
             // 
             // txtLeftDebt
             // 
-            this.txtLeftDebt.Location = new System.Drawing.Point(154, 365);
+            this.txtLeftDebt.Location = new System.Drawing.Point(123, 29);
             this.txtLeftDebt.Name = "txtLeftDebt";
             this.txtLeftDebt.Size = new System.Drawing.Size(116, 22);
             this.txtLeftDebt.TabIndex = 11;
@@ -372,7 +531,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(562, 282);
+            this.label9.Location = new System.Drawing.Point(548, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 21);
             this.label9.TabIndex = 37;
@@ -382,7 +541,7 @@
             // 
             this.lblPaid.AutoSize = true;
             this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaid.Location = new System.Drawing.Point(360, 278);
+            this.lblPaid.Location = new System.Drawing.Point(346, 16);
             this.lblPaid.Name = "lblPaid";
             this.lblPaid.Size = new System.Drawing.Size(78, 21);
             this.lblPaid.TabIndex = 36;
@@ -392,7 +551,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(279, 279);
+            this.label7.Location = new System.Drawing.Point(265, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 21);
             this.label7.TabIndex = 35;
@@ -402,7 +561,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(665, 205);
+            this.label1.Location = new System.Drawing.Point(614, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 21);
             this.label1.TabIndex = 34;
@@ -412,70 +571,70 @@
             // 
             this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
             this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(557, 119);
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(497, 18);
             this.dtpPurchaseDate.Name = "dtpPurchaseDate";
             this.dtpPurchaseDate.Size = new System.Drawing.Size(151, 22);
             this.dtpPurchaseDate.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(294, 42);
+            this.txtLastName.Location = new System.Drawing.Point(279, 21);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 22);
             this.txtLastName.TabIndex = 2;
             // 
             // txtIdentityCard
             // 
-            this.txtIdentityCard.Location = new System.Drawing.Point(517, 43);
+            this.txtIdentityCard.Location = new System.Drawing.Point(502, 22);
             this.txtIdentityCard.Name = "txtIdentityCard";
             this.txtIdentityCard.Size = new System.Drawing.Size(100, 22);
             this.txtIdentityCard.TabIndex = 3;
             // 
             // txtReferenceNumber
             // 
-            this.txtReferenceNumber.Location = new System.Drawing.Point(152, 118);
+            this.txtReferenceNumber.Location = new System.Drawing.Point(127, 17);
             this.txtReferenceNumber.Name = "txtReferenceNumber";
-            this.txtReferenceNumber.Size = new System.Drawing.Size(242, 22);
+            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
             this.txtReferenceNumber.TabIndex = 4;
             // 
             // txtAnnuityNumber
             // 
-            this.txtAnnuityNumber.Location = new System.Drawing.Point(122, 201);
+            this.txtAnnuityNumber.Location = new System.Drawing.Point(98, 16);
             this.txtAnnuityNumber.Name = "txtAnnuityNumber";
             this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
             this.txtAnnuityNumber.TabIndex = 6;
             // 
             // txtPurchaseAmount
             // 
-            this.txtPurchaseAmount.Location = new System.Drawing.Point(311, 200);
+            this.txtPurchaseAmount.Location = new System.Drawing.Point(270, 15);
             this.txtPurchaseAmount.Name = "txtPurchaseAmount";
             this.txtPurchaseAmount.Size = new System.Drawing.Size(106, 22);
             this.txtPurchaseAmount.TabIndex = 7;
             // 
             // txtAnnuityAmount
             // 
-            this.txtAnnuityAmount.Location = new System.Drawing.Point(531, 204);
+            this.txtAnnuityAmount.Location = new System.Drawing.Point(479, 19);
             this.txtAnnuityAmount.Name = "txtAnnuityAmount";
             this.txtAnnuityAmount.Size = new System.Drawing.Size(134, 22);
             this.txtAnnuityAmount.TabIndex = 8;
             // 
             // txtTotalDebtt
             // 
-            this.txtTotalDebtt.Location = new System.Drawing.Point(157, 278);
+            this.txtTotalDebtt.Location = new System.Drawing.Point(143, 16);
             this.txtTotalDebtt.Name = "txtTotalDebtt";
             this.txtTotalDebtt.Size = new System.Drawing.Size(116, 22);
             this.txtTotalDebtt.TabIndex = 9;
             // 
             // txtPaid
             // 
-            this.txtPaid.Location = new System.Drawing.Point(444, 282);
+            this.txtPaid.Location = new System.Drawing.Point(430, 20);
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(112, 22);
             this.txtPaid.TabIndex = 10;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(104, 39);
+            this.txtName.Location = new System.Drawing.Point(89, 18);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 1;
@@ -484,7 +643,7 @@
             // 
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(307, 366);
+            this.lblCompany.Location = new System.Drawing.Point(346, 29);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(53, 21);
             this.lblCompany.TabIndex = 10;
@@ -494,7 +653,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(44, 39);
+            this.lblName.Location = new System.Drawing.Point(29, 18);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(39, 21);
             this.lblName.TabIndex = 0;
@@ -504,7 +663,7 @@
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(219, 40);
+            this.lblLastName.Location = new System.Drawing.Point(204, 19);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(69, 21);
             this.lblLastName.TabIndex = 9;
@@ -514,7 +673,7 @@
             // 
             this.lblLeftDebt.AutoSize = true;
             this.lblLeftDebt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeftDebt.Location = new System.Drawing.Point(44, 362);
+            this.lblLeftDebt.Location = new System.Drawing.Point(13, 26);
             this.lblLeftDebt.Name = "lblLeftDebt";
             this.lblLeftDebt.Size = new System.Drawing.Size(104, 21);
             this.lblLeftDebt.TabIndex = 1;
@@ -524,7 +683,7 @@
             // 
             this.lblIdentityCard.AutoSize = true;
             this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentityCard.Location = new System.Drawing.Point(423, 42);
+            this.lblIdentityCard.Location = new System.Drawing.Point(408, 21);
             this.lblIdentityCard.Name = "lblIdentityCard";
             this.lblIdentityCard.Size = new System.Drawing.Size(88, 21);
             this.lblIdentityCard.TabIndex = 8;
@@ -534,7 +693,7 @@
             // 
             this.lblTotalDebtt.AutoSize = true;
             this.lblTotalDebtt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDebtt.Location = new System.Drawing.Point(44, 275);
+            this.lblTotalDebtt.Location = new System.Drawing.Point(30, 13);
             this.lblTotalDebtt.Name = "lblTotalDebtt";
             this.lblTotalDebtt.Size = new System.Drawing.Size(107, 21);
             this.lblTotalDebtt.TabIndex = 2;
@@ -544,7 +703,7 @@
             // 
             this.lblReferenceNumber.AutoSize = true;
             this.lblReferenceNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenceNumber.Location = new System.Drawing.Point(44, 118);
+            this.lblReferenceNumber.Location = new System.Drawing.Point(19, 17);
             this.lblReferenceNumber.Name = "lblReferenceNumber";
             this.lblReferenceNumber.Size = new System.Drawing.Size(102, 21);
             this.lblReferenceNumber.TabIndex = 7;
@@ -554,7 +713,7 @@
             // 
             this.lblAnnuityAmount.AutoSize = true;
             this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityAmount.Location = new System.Drawing.Point(444, 202);
+            this.lblAnnuityAmount.Location = new System.Drawing.Point(397, 17);
             this.lblAnnuityAmount.Name = "lblAnnuityAmount";
             this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
             this.lblAnnuityAmount.TabIndex = 3;
@@ -564,7 +723,7 @@
             // 
             this.lblPurchaseDate.AutoSize = true;
             this.lblPurchaseDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseDate.Location = new System.Drawing.Point(423, 119);
+            this.lblPurchaseDate.Location = new System.Drawing.Point(363, 18);
             this.lblPurchaseDate.Name = "lblPurchaseDate";
             this.lblPurchaseDate.Size = new System.Drawing.Size(128, 21);
             this.lblPurchaseDate.TabIndex = 6;
@@ -574,7 +733,7 @@
             // 
             this.lblPurchaseAmount.AutoSize = true;
             this.lblPurchaseAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseAmount.Location = new System.Drawing.Point(188, 202);
+            this.lblPurchaseAmount.Location = new System.Drawing.Point(147, 17);
             this.lblPurchaseAmount.Name = "lblPurchaseAmount";
             this.lblPurchaseAmount.Size = new System.Drawing.Size(117, 21);
             this.lblPurchaseAmount.TabIndex = 4;
@@ -584,7 +743,7 @@
             // 
             this.lblAnnuityNumber.AutoSize = true;
             this.lblAnnuityNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityNumber.Location = new System.Drawing.Point(44, 201);
+            this.lblAnnuityNumber.Location = new System.Drawing.Point(20, 16);
             this.lblAnnuityNumber.Name = "lblAnnuityNumber";
             this.lblAnnuityNumber.Size = new System.Drawing.Size(72, 21);
             this.lblAnnuityNumber.TabIndex = 5;
@@ -594,6 +753,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage1.Controls.Add(this.btnConvert);
             this.tabPage1.Controls.Add(this.btnSearchAll);
             this.tabPage1.Controls.Add(this.dtpDateTwo);
             this.tabPage1.Controls.Add(this.dtpDateOne);
@@ -614,7 +774,7 @@
             this.btnSearchAll.BackColor = System.Drawing.Color.White;
             this.btnSearchAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchAll.Location = new System.Drawing.Point(446, 403);
+            this.btnSearchAll.Location = new System.Drawing.Point(1092, 111);
             this.btnSearchAll.Name = "btnSearchAll";
             this.btnSearchAll.Size = new System.Drawing.Size(123, 35);
             this.btnSearchAll.TabIndex = 35;
@@ -626,7 +786,7 @@
             // 
             this.dtpDateTwo.CustomFormat = "dd -MMMM- yyyy";
             this.dtpDateTwo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateTwo.Location = new System.Drawing.Point(446, 375);
+            this.dtpDateTwo.Location = new System.Drawing.Point(1092, 83);
             this.dtpDateTwo.Name = "dtpDateTwo";
             this.dtpDateTwo.Size = new System.Drawing.Size(200, 22);
             this.dtpDateTwo.TabIndex = 34;
@@ -635,7 +795,7 @@
             // 
             this.dtpDateOne.CustomFormat = "dd -MMMM- yyyy";
             this.dtpDateOne.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateOne.Location = new System.Drawing.Point(240, 375);
+            this.dtpDateOne.Location = new System.Drawing.Point(886, 83);
             this.dtpDateOne.Name = "dtpDateOne";
             this.dtpDateOne.Size = new System.Drawing.Size(200, 22);
             this.dtpDateOne.TabIndex = 33;
@@ -645,7 +805,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(317, 403);
+            this.btnSearch.Location = new System.Drawing.Point(963, 111);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(123, 35);
             this.btnSearch.TabIndex = 4;
@@ -657,7 +817,7 @@
             // 
             this.lblAccountingPeriod.AutoSize = true;
             this.lblAccountingPeriod.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountingPeriod.Location = new System.Drawing.Point(292, 314);
+            this.lblAccountingPeriod.Location = new System.Drawing.Point(938, 22);
             this.lblAccountingPeriod.Name = "lblAccountingPeriod";
             this.lblAccountingPeriod.Size = new System.Drawing.Size(281, 45);
             this.lblAccountingPeriod.TabIndex = 3;
@@ -1153,6 +1313,25 @@
             this.tabPage3.Size = new System.Drawing.Size(1310, 701);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Datumi uplate";
+            // 
+            // lblEmployeeInfo
+            // 
+            this.lblEmployeeInfo.AutoSize = true;
+            this.lblEmployeeInfo.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeInfo.Location = new System.Drawing.Point(722, 12);
+            this.lblEmployeeInfo.Name = "lblEmployeeInfo";
+            this.lblEmployeeInfo.Size = new System.Drawing.Size(0, 47);
+            this.lblEmployeeInfo.TabIndex = 74;
+            // 
+            // lblInformations
+            // 
+            this.lblInformations.AutoSize = true;
+            this.lblInformations.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformations.Location = new System.Drawing.Point(237, 12);
+            this.lblInformations.Name = "lblInformations";
+            this.lblInformations.Size = new System.Drawing.Size(479, 47);
+            this.lblInformations.TabIndex = 73;
+            this.lblInformations.Text = "Detalji o uplatama za radnika:";
             // 
             // btnAddAnnuityDate
             // 
@@ -1817,194 +1996,85 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // employeesDataGridView3
+            // panel5
             // 
-            this.employeesDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_zaposlen2,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
-            this.employeesDataGridView3.Location = new System.Drawing.Point(209, 491);
-            this.employeesDataGridView3.Name = "employeesDataGridView3";
-            this.employeesDataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeesDataGridView3.Size = new System.Drawing.Size(1095, 206);
-            this.employeesDataGridView3.TabIndex = 13;
-            this.employeesDataGridView3.Visible = false;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lblName);
+            this.panel5.Controls.Add(this.lblIdentityCard);
+            this.panel5.Controls.Add(this.lblLastName);
+            this.panel5.Controls.Add(this.txtName);
+            this.panel5.Controls.Add(this.txtIdentityCard);
+            this.panel5.Controls.Add(this.txtLastName);
+            this.panel5.Location = new System.Drawing.Point(33, 30);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(657, 65);
+            this.panel5.TabIndex = 15;
             // 
-            // firmeDataGridView2
+            // panel6
             // 
-            this.firmeDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.firmeDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21});
-            this.firmeDataGridView2.Location = new System.Drawing.Point(954, 99);
-            this.firmeDataGridView2.Name = "firmeDataGridView2";
-            this.firmeDataGridView2.Size = new System.Drawing.Size(350, 386);
-            this.firmeDataGridView2.TabIndex = 14;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.lblReferenceNumber);
+            this.panel6.Controls.Add(this.lblPurchaseDate);
+            this.panel6.Controls.Add(this.txtReferenceNumber);
+            this.panel6.Controls.Add(this.dtpPurchaseDate);
+            this.panel6.Location = new System.Drawing.Point(33, 111);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(657, 65);
+            this.panel6.TabIndex = 15;
             // 
-            // dataGridViewTextBoxColumn17
+            // panel7
             // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "id_firme";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Firma ID";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblAnnuityNumber);
+            this.panel7.Controls.Add(this.lblPurchaseAmount);
+            this.panel7.Controls.Add(this.lblAnnuityAmount);
+            this.panel7.Controls.Add(this.txtAnnuityAmount);
+            this.panel7.Controls.Add(this.txtPurchaseAmount);
+            this.panel7.Controls.Add(this.txtAnnuityNumber);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Location = new System.Drawing.Point(33, 195);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(657, 65);
+            this.panel7.TabIndex = 38;
             // 
-            // dataGridViewTextBoxColumn18
+            // panel8
             // 
-            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "naziv";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Naziv";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.lblTotalDebtt);
+            this.panel8.Controls.Add(this.txtPaid);
+            this.panel8.Controls.Add(this.txtTotalDebtt);
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.lblPaid);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Location = new System.Drawing.Point(35, 273);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(655, 65);
+            this.panel8.TabIndex = 39;
             // 
-            // dataGridViewTextBoxColumn19
+            // panel9
             // 
-            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "mesto";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Mesto";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.lblLeftDebt);
+            this.panel9.Controls.Add(this.lblCompany);
+            this.panel9.Controls.Add(this.txtLeftDebt);
+            this.panel9.Controls.Add(this.txtCompany);
+            this.panel9.Location = new System.Drawing.Point(35, 353);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(655, 65);
+            this.panel9.TabIndex = 40;
             // 
-            // dataGridViewTextBoxColumn20
+            // btnConvert
             // 
-            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "pib";
-            this.dataGridViewTextBoxColumn20.HeaderText = "PIB";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "ukupni_dug";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Ukupni dug";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Visible = false;
-            // 
-            // id_zaposlen2
-            // 
-            this.id_zaposlen2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_zaposlen2.DataPropertyName = "id_zaposlen";
-            this.id_zaposlen2.HeaderText = "ID";
-            this.id_zaposlen2.Name = "id_zaposlen2";
-            this.id_zaposlen2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ime";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ime";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "prezime";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Prezime";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "licna_karta";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Lična karta";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "poziv_na_broj";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Poziv na broj";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "datum_kupovine";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Datum kupovine";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "broj_rata";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Broj rata";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "iznos_kupovine";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Iznos kupovine";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "iznos_rate";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Iznos rate";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "ukupno_duga";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Ukupno duga";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "uplaceno";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Uplaceno";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "preostali_dug";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Preostali dug";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "firma";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Firma";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // lblInformations
-            // 
-            this.lblInformations.AutoSize = true;
-            this.lblInformations.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformations.Location = new System.Drawing.Point(237, 12);
-            this.lblInformations.Name = "lblInformations";
-            this.lblInformations.Size = new System.Drawing.Size(479, 47);
-            this.lblInformations.TabIndex = 73;
-            this.lblInformations.Text = "Detalji o uplatama za radnika:";
-            // 
-            // lblEmployeeInfo
-            // 
-            this.lblEmployeeInfo.AutoSize = true;
-            this.lblEmployeeInfo.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeInfo.Location = new System.Drawing.Point(722, 12);
-            this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(0, 47);
-            this.lblEmployeeInfo.TabIndex = 74;
+            this.btnConvert.BackColor = System.Drawing.Color.White;
+            this.btnConvert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConvert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvert.Location = new System.Drawing.Point(209, 398);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(238, 40);
+            this.btnConvert.TabIndex = 36;
+            this.btnConvert.Text = "Štampaj";
+            this.btnConvert.UseVisualStyleBackColor = false;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // Form1
             // 
@@ -2021,10 +2091,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
@@ -2037,8 +2108,16 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2259,6 +2338,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.Label lblEmployeeInfo;
         private System.Windows.Forms.Label lblInformations;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnConvert;
     }
 }
 
