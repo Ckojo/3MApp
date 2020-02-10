@@ -1,0 +1,80 @@
+﻿if (employeesDataGridView.CurrentRow.Cells["txt_firma"].Value.ToString() != string.Empty)
+                {
+                    using (sqlConnection = new SqlConnection(GetConnectionString()))
+                    {
+                        sqlConnection.Open();
+                        sqlCommand = new SqlCommand("EmployeeAddOrEdit", sqlConnection);
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        DataGridViewRow gridViewRow = employeesDataGridView.CurrentRow;
+
+                        double annuity = double.Parse(gridViewRow.Cells["txt_iznos_kupovine"].Value.ToString()) / double.Parse(gridViewRow.Cells["txt_broj_rata"].Value.ToString());
+                        double leftDebt = double.Parse(gridViewRow.Cells["txt_iznos_kupovine"].Value.ToString()) - double.Parse(gridViewRow.Cells["txt_uplaceno"].Value.ToString());
+                        if (gridViewRow.Cells["id_zaposlen"].Value == DBNull.Value) //insert
+                            sqlCommand.Parameters.AddWithValue("@id_zaposlen", 0);
+                        else //update
+                            sqlCommand.Parameters.AddWithValue("@id_zaposlen", Convert.ToInt32(gridViewRow.Cells["id_zaposlen"].Value));
+                        sqlCommand.Parameters.AddWithValue("@ime", gridViewRow.Cells["txt_ime"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_ime"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@prezime", gridViewRow.Cells["txt_prezime"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_prezime"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@licna_karta", gridViewRow.Cells["txt_licna_karta"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_licna_karta"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@poziv_na_broj", gridViewRow.Cells["txt_poziv_na_broj"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_poziv_na_broj"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@datum_kupovine", gridViewRow.Cells["txt_datum_kupovine"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_datum_kupovine"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@broj_rata", gridViewRow.Cells["txt_broj_rata"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_broj_rata"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@iznos_kupovine", gridViewRow.Cells["txt_iznos_kupovine"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_iznos_kupovine"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@iznos_rate", gridViewRow.Cells["txt_iznos_rate"].Value == DBNull.Value ? "" : annuity.ToString());
+                        sqlCommand.Parameters.AddWithValue("@ukupno_duga", gridViewRow.Cells["txt_ukupno_duga"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_iznos_kupovine"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@uplaceno", gridViewRow.Cells["txt_uplaceno"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_uplaceno"].Value.ToString());
+                        sqlCommand.Parameters.AddWithValue("@preostali_dug", gridViewRow.Cells["txt_preostali_dug"].Value == DBNull.Value ? "" : leftDebt.ToString());
+                        sqlCommand.Parameters.AddWithValue("@firma", gridViewRow.Cells["txt_firma"].Value == DBNull.Value ? "" : gridViewRow.Cells["txt_firma"].Value.ToString());
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                }
+
+
+DEFAULT VALUES NEEDED
+this.BeginInvoke(new MethodInvoker(() =>
+            {
+                e.Row.Cells["txt_iznos_rate"].Value = 0;
+                e.Row.Cells["txt_ukupno_duga"].Value = 0;
+                e.Row.Cells["txt_preostali_dug"].Value = 0;
+            }));
+
+
+USER DELETING ROOW
+if (firmeDataGridView.CurrentRow.Cells["id_firme"].Value != DBNull.Value)
+            {
+                if (MessageBox.Show("Da li ste sigurni da želite da obrišete firmu?", "Company delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using (sqlConnection = new SqlConnection(GetConnectionString()))
+                    {
+                        sqlConnection.Open();
+                        sqlCommand = new SqlCommand("CompanyDeleteByID", sqlConnection);
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.AddWithValue("@id_firme", Convert.ToInt32(firmeDataGridView.CurrentRow.Cells["id_firme"].Value));
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
+                    foreach (Control c in flowLayoutPanel1.Controls)
+                    {
+                        if (c.GetType() == typeof(Button))
+                        {
+                            if(((Button)c).Text == firmeDataGridView.CurrentRow.Cells["txtNaziv"].Value.ToString())
+                            {
+                                flowLayoutPanel1.Controls.Remove(c);
+                            }
+                        }
+                    }
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+                e.Cancel = true;
+
+CELL END EDIT
+this.BeginInvoke(new MethodInvoker(() =>
+            {
+                if (employeesDataGridView.CurrentCell == employeesDataGridView.CurrentRow.Cells["txtUplaceno"])
+                {
+                    txtTotalDebt.Text = Convert.ToString(CompanyDebt());
+                }
+            }));
