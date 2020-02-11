@@ -670,7 +670,7 @@ namespace TrimAplikacija_V2._0
                                 stream.Close();
                             }
 
-                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                            MessageBox.Show("Podaci uspešno konvertovani.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
