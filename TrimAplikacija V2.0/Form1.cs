@@ -25,70 +25,20 @@ namespace TrimAplikacija_V2._0
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            PopulateCompanyDataDG2();
+            var ui = new UI();
+            ui.LoadButtons(flowLayoutPanel1, flowLayoutPanel2, Company_Click);
+            //LoadButtons();
+            PopulateEmployees3();
+            //LoadLabelsTab3();
+        }
+
         string GetConnectionString()
         {
             string sqlConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrimDb;Integrated Security=True";
             return sqlConnectionString;
-        }
-
-        void CreateButton(string companyName, FlowLayoutPanel layoutPanel)
-        {
-            string noSpaceName = companyName.Replace(" ", string.Empty);
-            Button button = new Button();
-            button.Location = new Point(22, 250);
-            button.Name = $"btn{noSpaceName}";
-            
-            if(layoutPanel.Name == "flowLayoutPanel1")
-                button.Name = $"btn{noSpaceName}";
-            else if(layoutPanel.Name == "flowLayoutPanel2")
-                button.Name = $"btn{noSpaceName}2";
-
-            button.Text = $"{companyName}";
-            button.Size = new Size(layoutPanel.ClientSize.Width - 5, 23);
-            button.Font = new System.Drawing.Font("Segoe UI", 8);
-            button.Padding = new Padding(0);
-            button.BackColor = Color.White;
-            button.FlatStyle = FlatStyle.Popup;
-            button.Click += new EventHandler(Company_Click);
-            button.Anchor = AnchorStyles.None;
-            button.BringToFront();
-
-            layoutPanel.Controls.Add(button);
-        }
-
-        void LoadButtons()
-        {
-            using (sqlConnection = new SqlConnection(GetConnectionString()))
-            {
-                sqlConnection.Open();
-                string querry = "SELECT dbo.firme.id_firme, dbo.firme.naziv FROM dbo.firme;";
-                sqlCommand = new SqlCommand(querry, sqlConnection);
-                sqlDataReader = sqlCommand.ExecuteReader();
-                while (sqlDataReader.Read())
-                {
-                    string[] companies = new[] { sqlDataReader["naziv"].ToString() };
-
-                    // Populates button in first flow layout panel ( In tab 'Zaposleni - Detalji')
-                    foreach (var company in companies)
-                    {
-                        CreateButton(companyName: company, layoutPanel: flowLayoutPanel1);
-                    }
-
-                    // Populates button in second flow layout panel ( In tab 'Datumi uplate')
-                    foreach (var company in companies)
-                    {
-                        CreateButton(companyName: company, layoutPanel: flowLayoutPanel2);
-                    }
-                }
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            PopulateCompanyDataDG2();
-            LoadButtons();
-            PopulateEmployees3();
-            //LoadLabelsTab3();
         }
 
         /// <summary>
@@ -349,8 +299,8 @@ namespace TrimAplikacija_V2._0
                 MessageBox.Show("Greška pri unosu podataka. Pokušajte ponovo!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             PopulateCompanyDataDG2();
-            CreateButton(txtCompanyName2.Text, flowLayoutPanel1);
-            CreateButton(txtCompanyName2.Text, flowLayoutPanel2);
+            //CreateButton(txtCompanyName2.Text, flowLayoutPanel1);
+            //CreateButton(txtCompanyName2.Text, flowLayoutPanel2);
 
             foreach (Control c in panel3.Controls)
             {
@@ -610,7 +560,7 @@ namespace TrimAplikacija_V2._0
                 SaveFileDialog sfd = new SaveFileDialog();
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.EMBEDDED);
                 iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.NORMAL);
-                
+
 
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
                 sfd.FileName = "Output.pdf";
