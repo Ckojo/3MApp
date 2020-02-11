@@ -462,46 +462,6 @@ namespace TrimAplikacija_V2._0
                                 dateTimePickers[i].Value = sqlDataReader.GetDateTime(k);
                             }
                         }
-                        /*txtRata1.Text = sqlDataReader.GetSqlDouble(1).ToString();
-                        dtpRata1.Value = sqlDataReader.GetDateTime(2);
-                        txtRata2.Text = sqlDataReader.GetSqlDouble(3).ToString();
-                        dtpRata2.Value = sqlDataReader.GetDateTime(4);
-                        txtRata3.Text = sqlDataReader.GetSqlDouble(5).ToString();
-                        dtpRata3.Value = sqlDataReader.GetDateTime(6);
-                        txtRata4.Text = sqlDataReader.GetSqlDouble(7).ToString();
-                        dtpRata4.Value = sqlDataReader.GetDateTime(8);
-                        txtRata5.Text = sqlDataReader.GetSqlDouble(9).ToString();
-                        dtpRata5.Value = sqlDataReader.GetDateTime(10);
-                        txtRata6.Text = sqlDataReader.GetSqlDouble(11).ToString();
-                        dtpRata6.Value = sqlDataReader.GetDateTime(12);
-                        txtRata7.Text = sqlDataReader.GetSqlDouble(13).ToString();
-                        dtpRata7.Value = sqlDataReader.GetDateTime(14);
-                        txtRata8.Text = sqlDataReader.GetSqlDouble(15).ToString();
-                        dtpRata8.Value = sqlDataReader.GetDateTime(16);
-                        txtRata9.Text = sqlDataReader.GetSqlDouble(17).ToString();
-                        dtpRata9.Value = sqlDataReader.GetDateTime(18);
-                        txtRata10.Text = sqlDataReader.GetSqlDouble(19).ToString();
-                        dtpRata10.Value = sqlDataReader.GetDateTime(20);
-                        txtRata11.Text = sqlDataReader.GetSqlDouble(21).ToString();
-                        dtpRata11.Value = sqlDataReader.GetDateTime(22);
-                        txtRata12.Text = sqlDataReader.GetSqlDouble(23).ToString();
-                        dtpRata12.Value = sqlDataReader.GetDateTime(24);
-                        txtRata13.Text = sqlDataReader.GetSqlDouble(25).ToString();
-                        dtpRata13.Value = sqlDataReader.GetDateTime(26);
-                        txtRata14.Text = sqlDataReader.GetSqlDouble(27).ToString();
-                        dtpRata14.Value = sqlDataReader.GetDateTime(28);
-                        txtRata15.Text = sqlDataReader.GetSqlDouble(29).ToString();
-                        dtpRata15.Value = sqlDataReader.GetDateTime(30);
-                        txtRata16.Text = sqlDataReader.GetSqlDouble(31).ToString();
-                        dtpRata16.Value = sqlDataReader.GetDateTime(32);
-                        txtRata17.Text = sqlDataReader.GetSqlDouble(33).ToString();
-                        dtpRata17.Value = sqlDataReader.GetDateTime(34);
-                        txtRata18.Text = sqlDataReader.GetSqlDouble(35).ToString();
-                        dtpRata18.Value = sqlDataReader.GetDateTime(36);
-                        txtRata19.Text = sqlDataReader.GetSqlDouble(37).ToString();
-                        dtpRata19.Value = sqlDataReader.GetDateTime(38);
-                        txtRata20.Text = sqlDataReader.GetSqlDouble(39).ToString();
-                        dtpRata20.Value = sqlDataReader.GetDateTime(40);*/
                     }
                 }
 
