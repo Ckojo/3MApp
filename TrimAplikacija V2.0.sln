@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimAplikacija V2.0", "TrimAplikacija V2.0\TrimAplikacija V2.0.csproj", "{34C1AA4E-6E4F-4B8C-9EFB-8CBF5DA365DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{8212F431-FBDA-4C6D-BB2F-821E703AFCB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary1\ClassLibrary.csproj", "{8212F431-FBDA-4C6D-BB2F-821E703AFCB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
