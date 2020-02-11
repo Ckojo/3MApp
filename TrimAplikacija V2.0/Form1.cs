@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace TrimAplikacija_V2._0
 {
@@ -42,7 +45,7 @@ namespace TrimAplikacija_V2._0
 
             button.Text = $"{companyName}";
             button.Size = new Size(layoutPanel.ClientSize.Width - 5, 23);
-            button.Font = new Font("Segoe UI", 8);
+            button.Font = new System.Drawing.Font("Segoe UI", 8);
             button.Padding = new Padding(0);
             button.BackColor = Color.White;
             button.FlatStyle = FlatStyle.Popup;
@@ -201,7 +204,7 @@ namespace TrimAplikacija_V2._0
         private double CompanyDebt()
         {
             double sum = 0;
-            for (int i = 0; i < employeesDataGridView.Rows.Count - 1; i++)
+            for (int i = 0; i < employeesDataGridView.Rows.Count; i++)
             {
                 if (employeesDataGridView.Rows[i].Cells[11].Value == null)
                 {
@@ -410,7 +413,7 @@ namespace TrimAplikacija_V2._0
             label.Text = $"Rata {i}";
             label.Name = $"lblRata{i}";
             label.Location = new Point(x, y);
-            label.Font = new Font("Segoe UI", 12);
+            label.Font = new System.Drawing.Font("Segoe UI", 12);
 
             tabPage3.Controls.Add(label);
         }
@@ -420,6 +423,8 @@ namespace TrimAplikacija_V2._0
             if(e.RowIndex >= 0)
             {
                 DataGridViewRow row = employeesDataGridView2.Rows[e.RowIndex];
+                List<TextBox> textBoxes = new List<TextBox>();
+                List<DateTimePicker> dateTimePickers = new List<DateTimePicker>();
                 int currentIdIndex = int.Parse(row.Cells["id_zaposlen_2"].Value.ToString());
                 string querry = $"SELECT * FROM dbo.datum_uplate WHERE id_z = {currentIdIndex}";
                 using(sqlConnection = new SqlConnection(GetConnectionString()))
@@ -430,7 +435,34 @@ namespace TrimAplikacija_V2._0
 
                     while (sqlDataReader.Read())
                     {
-                        txtRata1.Text = sqlDataReader.GetSqlDouble(1).ToString();
+                        foreach (Control c in tabPage3.Controls)
+                        {
+                            if (c.GetType() == typeof(TextBox) && c.Name.Contains("txtRata"))
+                                textBoxes.Add((TextBox)c);
+                        }
+
+                        foreach (Control c in tabPage3.Controls)
+                        {
+                            if (c.GetType() == typeof(DateTimePicker) && c.Name.Contains("dtpRata"))
+                            {
+                                dateTimePickers.Add((DateTimePicker)c);
+                            }
+                        }
+
+                        textBoxes.Reverse();
+                        dateTimePickers.Reverse();
+
+                        if (textBoxes.Count == dateTimePickers.Count)
+                        {
+                            int j = 1;
+                            int k = 2;
+                            for (int i = 0; i < textBoxes.Count; i++, j+= 2, k+= 2)
+                            {
+                                textBoxes[i].Text = sqlDataReader.GetSqlDouble(j).ToString();
+                                dateTimePickers[i].Value = sqlDataReader.GetDateTime(k);
+                            }
+                        }
+                        /*txtRata1.Text = sqlDataReader.GetSqlDouble(1).ToString();
                         dtpRata1.Value = sqlDataReader.GetDateTime(2);
                         txtRata2.Text = sqlDataReader.GetSqlDouble(3).ToString();
                         dtpRata2.Value = sqlDataReader.GetDateTime(4);
@@ -469,7 +501,7 @@ namespace TrimAplikacija_V2._0
                         txtRata19.Text = sqlDataReader.GetSqlDouble(37).ToString();
                         dtpRata19.Value = sqlDataReader.GetDateTime(38);
                         txtRata20.Text = sqlDataReader.GetSqlDouble(39).ToString();
-                        dtpRata20.Value = sqlDataReader.GetDateTime(40);
+                        dtpRata20.Value = sqlDataReader.GetDateTime(40);*/
                     }
                 }
 
@@ -562,17 +594,29 @@ namespace TrimAplikacija_V2._0
                 else
                     MessageBox.Show("Firma nije izabrana! \nIzaberite firmu pre provere obračunskog perioda!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            string totalDebt = CompanyDebt().ToString();
+            txtTotalDebt.Text = totalDebt;
+            UpdateTotalDebt(totalDebt);
         }
 
         private void btnSearchAll_Click(object sender, EventArgs e)
         {
             PopulateEmployeeData(Convert.ToInt32(txtCompanyID.Text), employeesDataGridView);
+
+            string totalDebt = CompanyDebt().ToString();
+            txtTotalDebt.Text = totalDebt;
+            UpdateTotalDebt(totalDebt);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDateTime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
             lblTime.Text = DateTime.Now.ToString("T");
+
+            lblDate2.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            lblTime2.Text = DateTime.Now.ToString("T");
         }
 
 
@@ -599,9 +643,91 @@ namespace TrimAplikacija_V2._0
             }
         }
 
+        void ExportToPDF(DataGridView dataGridView, string fileName)
+        {
+            if (dataGridView.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.EMBEDDED);
+                iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.NORMAL);
+                
+
+                sfd.Filter = "PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Output.pdf";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("It wasn't possible to write the data to the disk." + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            PdfPTable pdfTable = new PdfPTable(dataGridView.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                            float[] widths = new float[] { 0f, 60f, 60f, 60f, 60f, 80f, 50f, 50f, 50f, 50f, 50f, 50f, 0f };
+                            pdfTable.SetWidths(widths);
+
+                            foreach (DataGridViewColumn column in dataGridView.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, font));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            foreach (DataGridViewRow row in dataGridView.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(new Phrase(cell.Value.ToString(), font));
+                                }
+                            }
+
+                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                            {
+                                Document pdfDoc = new Document(PageSize.A3, 10f, 20f, 20f, 10f);
+                                PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, stream);
+                                pdfDoc.Open();
+                                Paragraph pLeft = new Paragraph($"Firma: {txtCompanyName.Text}\nMesto: {txtHeadQuarter.Text}\n" +
+                                    $"PIB: {txtPIB.Text}\nPreostali dug: {txtTotalDebt.Text}\n\n", font);
+                                Paragraph pRight = new Paragraph($"Obračunski period:\n{dtpDateOne.Value.ToString("dd. MM. yyyy.")} - {dtpDateTwo.Value.ToString("dd. MM. yyyy.")}\n\n", font);
+                                pRight.Alignment = Element.ALIGN_TOP;
+                                pdfDoc.Add(pLeft);
+                                pdfDoc.Add(pRight);
+                                pdfDoc.Add(pdfTable);
+                                pdfDoc.Close();
+                                stream.Close();
+                            }
+
+                            MessageBox.Show("Data Exported Successfully !!!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Record To Export !!!", "Info");
+            }
+        }
+
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            
+            ExportToPDF(employeesDataGridView, "test");
         }
     }
 }

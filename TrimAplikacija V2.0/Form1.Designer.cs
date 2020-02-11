@@ -58,34 +58,40 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCompany = new System.Windows.Forms.TextBox();
-            this.txtLeftDebt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblPaid = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtIdentityCard = new System.Windows.Forms.TextBox();
-            this.txtReferenceNumber = new System.Windows.Forms.TextBox();
-            this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
-            this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
-            this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
-            this.txtTotalDebtt = new System.Windows.Forms.TextBox();
-            this.txtPaid = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblCompany = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.lblLeftDebt = new System.Windows.Forms.Label();
-            this.lblIdentityCard = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
+            this.txtLeftDebt = new System.Windows.Forms.TextBox();
+            this.txtCompany = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.lblTotalDebtt = new System.Windows.Forms.Label();
-            this.lblReferenceNumber = new System.Windows.Forms.Label();
-            this.lblAnnuityAmount = new System.Windows.Forms.Label();
-            this.lblPurchaseDate = new System.Windows.Forms.Label();
-            this.lblPurchaseAmount = new System.Windows.Forms.Label();
+            this.txtPaid = new System.Windows.Forms.TextBox();
+            this.txtTotalDebtt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblPaid = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.lblAnnuityNumber = new System.Windows.Forms.Label();
+            this.lblPurchaseAmount = new System.Windows.Forms.Label();
+            this.lblAnnuityAmount = new System.Windows.Forms.Label();
+            this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
+            this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
+            this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblReferenceNumber = new System.Windows.Forms.Label();
+            this.lblPurchaseDate = new System.Windows.Forms.Label();
+            this.txtReferenceNumber = new System.Windows.Forms.TextBox();
+            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblIdentityCard = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtIdentityCard = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnConvert = new System.Windows.Forms.Button();
             this.btnSearchAll = new System.Windows.Forms.Button();
             this.dtpDateTwo = new System.Windows.Forms.DateTimePicker();
             this.dtpDateOne = new System.Windows.Forms.DateTimePicker();
@@ -213,18 +219,20 @@
             this.preostali_dug_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnConvert = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lblTime2 = new System.Windows.Forms.Label();
+            this.lblDate2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
             this.panel2.SuspendLayout();
@@ -233,11 +241,7 @@
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -513,161 +517,17 @@
             this.panel1.Size = new System.Drawing.Size(720, 434);
             this.panel1.TabIndex = 10;
             // 
-            // txtCompany
+            // panel9
             // 
-            this.txtCompany.Location = new System.Drawing.Point(405, 28);
-            this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(51, 22);
-            this.txtCompany.TabIndex = 12;
-            // 
-            // txtLeftDebt
-            // 
-            this.txtLeftDebt.Location = new System.Drawing.Point(123, 29);
-            this.txtLeftDebt.Name = "txtLeftDebt";
-            this.txtLeftDebt.Size = new System.Drawing.Size(116, 22);
-            this.txtLeftDebt.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(548, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 21);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "RSD";
-            // 
-            // lblPaid
-            // 
-            this.lblPaid.AutoSize = true;
-            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaid.Location = new System.Drawing.Point(346, 16);
-            this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(78, 21);
-            this.lblPaid.TabIndex = 36;
-            this.lblPaid.Text = "Uplaćeno:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(265, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 21);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "RSD";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 21);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "RSD";
-            // 
-            // dtpPurchaseDate
-            // 
-            this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
-            this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(497, 18);
-            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
-            this.dtpPurchaseDate.Size = new System.Drawing.Size(151, 22);
-            this.dtpPurchaseDate.TabIndex = 5;
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.Location = new System.Drawing.Point(279, 21);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 22);
-            this.txtLastName.TabIndex = 2;
-            // 
-            // txtIdentityCard
-            // 
-            this.txtIdentityCard.Location = new System.Drawing.Point(502, 22);
-            this.txtIdentityCard.Name = "txtIdentityCard";
-            this.txtIdentityCard.Size = new System.Drawing.Size(100, 22);
-            this.txtIdentityCard.TabIndex = 3;
-            // 
-            // txtReferenceNumber
-            // 
-            this.txtReferenceNumber.Location = new System.Drawing.Point(127, 17);
-            this.txtReferenceNumber.Name = "txtReferenceNumber";
-            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
-            this.txtReferenceNumber.TabIndex = 4;
-            // 
-            // txtAnnuityNumber
-            // 
-            this.txtAnnuityNumber.Location = new System.Drawing.Point(98, 16);
-            this.txtAnnuityNumber.Name = "txtAnnuityNumber";
-            this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
-            this.txtAnnuityNumber.TabIndex = 6;
-            // 
-            // txtPurchaseAmount
-            // 
-            this.txtPurchaseAmount.Location = new System.Drawing.Point(270, 15);
-            this.txtPurchaseAmount.Name = "txtPurchaseAmount";
-            this.txtPurchaseAmount.Size = new System.Drawing.Size(106, 22);
-            this.txtPurchaseAmount.TabIndex = 7;
-            // 
-            // txtAnnuityAmount
-            // 
-            this.txtAnnuityAmount.Location = new System.Drawing.Point(479, 19);
-            this.txtAnnuityAmount.Name = "txtAnnuityAmount";
-            this.txtAnnuityAmount.Size = new System.Drawing.Size(134, 22);
-            this.txtAnnuityAmount.TabIndex = 8;
-            // 
-            // txtTotalDebtt
-            // 
-            this.txtTotalDebtt.Location = new System.Drawing.Point(143, 16);
-            this.txtTotalDebtt.Name = "txtTotalDebtt";
-            this.txtTotalDebtt.Size = new System.Drawing.Size(116, 22);
-            this.txtTotalDebtt.TabIndex = 9;
-            // 
-            // txtPaid
-            // 
-            this.txtPaid.Location = new System.Drawing.Point(430, 20);
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Size = new System.Drawing.Size(112, 22);
-            this.txtPaid.TabIndex = 10;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(89, 18);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 22);
-            this.txtName.TabIndex = 1;
-            // 
-            // lblCompany
-            // 
-            this.lblCompany.AutoSize = true;
-            this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(346, 29);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(53, 21);
-            this.lblCompany.TabIndex = 10;
-            this.lblCompany.Text = "Firma:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(29, 18);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 21);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Ime:";
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(204, 19);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(69, 21);
-            this.lblLastName.TabIndex = 9;
-            this.lblLastName.Text = "Prezime:";
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.lblLeftDebt);
+            this.panel9.Controls.Add(this.lblCompany);
+            this.panel9.Controls.Add(this.txtLeftDebt);
+            this.panel9.Controls.Add(this.txtCompany);
+            this.panel9.Location = new System.Drawing.Point(35, 353);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(655, 65);
+            this.panel9.TabIndex = 40;
             // 
             // lblLeftDebt
             // 
@@ -679,15 +539,43 @@
             this.lblLeftDebt.TabIndex = 1;
             this.lblLeftDebt.Text = "Preostali dug:";
             // 
-            // lblIdentityCard
+            // lblCompany
             // 
-            this.lblIdentityCard.AutoSize = true;
-            this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentityCard.Location = new System.Drawing.Point(408, 21);
-            this.lblIdentityCard.Name = "lblIdentityCard";
-            this.lblIdentityCard.Size = new System.Drawing.Size(88, 21);
-            this.lblIdentityCard.TabIndex = 8;
-            this.lblIdentityCard.Text = "Lična karta:";
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.Location = new System.Drawing.Point(346, 29);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(53, 21);
+            this.lblCompany.TabIndex = 10;
+            this.lblCompany.Text = "Firma:";
+            // 
+            // txtLeftDebt
+            // 
+            this.txtLeftDebt.Location = new System.Drawing.Point(123, 29);
+            this.txtLeftDebt.Name = "txtLeftDebt";
+            this.txtLeftDebt.Size = new System.Drawing.Size(116, 22);
+            this.txtLeftDebt.TabIndex = 11;
+            // 
+            // txtCompany
+            // 
+            this.txtCompany.Location = new System.Drawing.Point(405, 28);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(51, 22);
+            this.txtCompany.TabIndex = 12;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.lblTotalDebtt);
+            this.panel8.Controls.Add(this.txtPaid);
+            this.panel8.Controls.Add(this.txtTotalDebtt);
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Controls.Add(this.lblPaid);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Location = new System.Drawing.Point(35, 273);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(655, 65);
+            this.panel8.TabIndex = 39;
             // 
             // lblTotalDebtt
             // 
@@ -699,45 +587,64 @@
             this.lblTotalDebtt.TabIndex = 2;
             this.lblTotalDebtt.Text = "Ukupno duga:";
             // 
-            // lblReferenceNumber
+            // txtPaid
             // 
-            this.lblReferenceNumber.AutoSize = true;
-            this.lblReferenceNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenceNumber.Location = new System.Drawing.Point(19, 17);
-            this.lblReferenceNumber.Name = "lblReferenceNumber";
-            this.lblReferenceNumber.Size = new System.Drawing.Size(102, 21);
-            this.lblReferenceNumber.TabIndex = 7;
-            this.lblReferenceNumber.Text = "Poziv na broj:";
+            this.txtPaid.Location = new System.Drawing.Point(430, 20);
+            this.txtPaid.Name = "txtPaid";
+            this.txtPaid.Size = new System.Drawing.Size(112, 22);
+            this.txtPaid.TabIndex = 10;
             // 
-            // lblAnnuityAmount
+            // txtTotalDebtt
             // 
-            this.lblAnnuityAmount.AutoSize = true;
-            this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityAmount.Location = new System.Drawing.Point(397, 17);
-            this.lblAnnuityAmount.Name = "lblAnnuityAmount";
-            this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
-            this.lblAnnuityAmount.TabIndex = 3;
-            this.lblAnnuityAmount.Text = "Iznos rate:";
+            this.txtTotalDebtt.Location = new System.Drawing.Point(143, 16);
+            this.txtTotalDebtt.Name = "txtTotalDebtt";
+            this.txtTotalDebtt.Size = new System.Drawing.Size(116, 22);
+            this.txtTotalDebtt.TabIndex = 9;
             // 
-            // lblPurchaseDate
+            // label7
             // 
-            this.lblPurchaseDate.AutoSize = true;
-            this.lblPurchaseDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseDate.Location = new System.Drawing.Point(363, 18);
-            this.lblPurchaseDate.Name = "lblPurchaseDate";
-            this.lblPurchaseDate.Size = new System.Drawing.Size(128, 21);
-            this.lblPurchaseDate.TabIndex = 6;
-            this.lblPurchaseDate.Text = "Datum kupovine:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(265, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 21);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "RSD";
             // 
-            // lblPurchaseAmount
+            // lblPaid
             // 
-            this.lblPurchaseAmount.AutoSize = true;
-            this.lblPurchaseAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseAmount.Location = new System.Drawing.Point(147, 17);
-            this.lblPurchaseAmount.Name = "lblPurchaseAmount";
-            this.lblPurchaseAmount.Size = new System.Drawing.Size(117, 21);
-            this.lblPurchaseAmount.TabIndex = 4;
-            this.lblPurchaseAmount.Text = "Iznos kupovine:";
+            this.lblPaid.AutoSize = true;
+            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaid.Location = new System.Drawing.Point(346, 16);
+            this.lblPaid.Name = "lblPaid";
+            this.lblPaid.Size = new System.Drawing.Size(78, 21);
+            this.lblPaid.TabIndex = 36;
+            this.lblPaid.Text = "Uplaćeno:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(548, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 21);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "RSD";
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblAnnuityNumber);
+            this.panel7.Controls.Add(this.lblPurchaseAmount);
+            this.panel7.Controls.Add(this.lblAnnuityAmount);
+            this.panel7.Controls.Add(this.txtAnnuityAmount);
+            this.panel7.Controls.Add(this.txtPurchaseAmount);
+            this.panel7.Controls.Add(this.txtAnnuityNumber);
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Location = new System.Drawing.Point(33, 195);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(657, 65);
+            this.panel7.TabIndex = 38;
             // 
             // lblAnnuityNumber
             // 
@@ -749,10 +656,175 @@
             this.lblAnnuityNumber.TabIndex = 5;
             this.lblAnnuityNumber.Text = "Broj rata:";
             // 
+            // lblPurchaseAmount
+            // 
+            this.lblPurchaseAmount.AutoSize = true;
+            this.lblPurchaseAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurchaseAmount.Location = new System.Drawing.Point(147, 17);
+            this.lblPurchaseAmount.Name = "lblPurchaseAmount";
+            this.lblPurchaseAmount.Size = new System.Drawing.Size(117, 21);
+            this.lblPurchaseAmount.TabIndex = 4;
+            this.lblPurchaseAmount.Text = "Iznos kupovine:";
+            // 
+            // lblAnnuityAmount
+            // 
+            this.lblAnnuityAmount.AutoSize = true;
+            this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnuityAmount.Location = new System.Drawing.Point(397, 17);
+            this.lblAnnuityAmount.Name = "lblAnnuityAmount";
+            this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
+            this.lblAnnuityAmount.TabIndex = 3;
+            this.lblAnnuityAmount.Text = "Iznos rate:";
+            // 
+            // txtAnnuityAmount
+            // 
+            this.txtAnnuityAmount.Location = new System.Drawing.Point(479, 19);
+            this.txtAnnuityAmount.Name = "txtAnnuityAmount";
+            this.txtAnnuityAmount.Size = new System.Drawing.Size(134, 22);
+            this.txtAnnuityAmount.TabIndex = 8;
+            // 
+            // txtPurchaseAmount
+            // 
+            this.txtPurchaseAmount.Location = new System.Drawing.Point(270, 15);
+            this.txtPurchaseAmount.Name = "txtPurchaseAmount";
+            this.txtPurchaseAmount.Size = new System.Drawing.Size(106, 22);
+            this.txtPurchaseAmount.TabIndex = 7;
+            // 
+            // txtAnnuityNumber
+            // 
+            this.txtAnnuityNumber.Location = new System.Drawing.Point(98, 16);
+            this.txtAnnuityNumber.Name = "txtAnnuityNumber";
+            this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
+            this.txtAnnuityNumber.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(614, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 21);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "RSD";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.lblReferenceNumber);
+            this.panel6.Controls.Add(this.lblPurchaseDate);
+            this.panel6.Controls.Add(this.txtReferenceNumber);
+            this.panel6.Controls.Add(this.dtpPurchaseDate);
+            this.panel6.Location = new System.Drawing.Point(33, 111);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(657, 65);
+            this.panel6.TabIndex = 15;
+            // 
+            // lblReferenceNumber
+            // 
+            this.lblReferenceNumber.AutoSize = true;
+            this.lblReferenceNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReferenceNumber.Location = new System.Drawing.Point(19, 17);
+            this.lblReferenceNumber.Name = "lblReferenceNumber";
+            this.lblReferenceNumber.Size = new System.Drawing.Size(102, 21);
+            this.lblReferenceNumber.TabIndex = 7;
+            this.lblReferenceNumber.Text = "Poziv na broj:";
+            // 
+            // lblPurchaseDate
+            // 
+            this.lblPurchaseDate.AutoSize = true;
+            this.lblPurchaseDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurchaseDate.Location = new System.Drawing.Point(363, 18);
+            this.lblPurchaseDate.Name = "lblPurchaseDate";
+            this.lblPurchaseDate.Size = new System.Drawing.Size(128, 21);
+            this.lblPurchaseDate.TabIndex = 6;
+            this.lblPurchaseDate.Text = "Datum kupovine:";
+            // 
+            // txtReferenceNumber
+            // 
+            this.txtReferenceNumber.Location = new System.Drawing.Point(127, 17);
+            this.txtReferenceNumber.Name = "txtReferenceNumber";
+            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
+            this.txtReferenceNumber.TabIndex = 4;
+            // 
+            // dtpPurchaseDate
+            // 
+            this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
+            this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(497, 18);
+            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
+            this.dtpPurchaseDate.Size = new System.Drawing.Size(151, 22);
+            this.dtpPurchaseDate.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lblName);
+            this.panel5.Controls.Add(this.lblIdentityCard);
+            this.panel5.Controls.Add(this.lblLastName);
+            this.panel5.Controls.Add(this.txtName);
+            this.panel5.Controls.Add(this.txtIdentityCard);
+            this.panel5.Controls.Add(this.txtLastName);
+            this.panel5.Location = new System.Drawing.Point(33, 30);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(657, 65);
+            this.panel5.TabIndex = 15;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(29, 18);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(39, 21);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Ime:";
+            // 
+            // lblIdentityCard
+            // 
+            this.lblIdentityCard.AutoSize = true;
+            this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentityCard.Location = new System.Drawing.Point(408, 21);
+            this.lblIdentityCard.Name = "lblIdentityCard";
+            this.lblIdentityCard.Size = new System.Drawing.Size(88, 21);
+            this.lblIdentityCard.TabIndex = 8;
+            this.lblIdentityCard.Text = "Lična karta:";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(204, 19);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(69, 21);
+            this.lblLastName.TabIndex = 9;
+            this.lblLastName.Text = "Prezime:";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(89, 18);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 22);
+            this.txtName.TabIndex = 1;
+            // 
+            // txtIdentityCard
+            // 
+            this.txtIdentityCard.Location = new System.Drawing.Point(502, 22);
+            this.txtIdentityCard.Name = "txtIdentityCard";
+            this.txtIdentityCard.Size = new System.Drawing.Size(100, 22);
+            this.txtIdentityCard.TabIndex = 3;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(279, 21);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(100, 22);
+            this.txtLastName.TabIndex = 2;
+            // 
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage1.Controls.Add(this.panel10);
             this.tabPage1.Controls.Add(this.btnConvert);
             this.tabPage1.Controls.Add(this.btnSearchAll);
             this.tabPage1.Controls.Add(this.dtpDateTwo);
@@ -768,6 +840,19 @@
             this.tabPage1.Size = new System.Drawing.Size(1310, 701);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Zaposleni - Detalji";
+            // 
+            // btnConvert
+            // 
+            this.btnConvert.BackColor = System.Drawing.Color.White;
+            this.btnConvert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConvert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvert.Location = new System.Drawing.Point(209, 398);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(238, 40);
+            this.btnConvert.TabIndex = 36;
+            this.btnConvert.Text = "Štampaj";
+            this.btnConvert.UseVisualStyleBackColor = false;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // btnSearchAll
             // 
@@ -825,6 +910,7 @@
             // 
             // employeesDataGridView
             // 
+            this.employeesDataGridView.AllowUserToAddRows = false;
             this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_zaposlen,
@@ -1996,85 +2082,33 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel5
+            // panel10
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.lblName);
-            this.panel5.Controls.Add(this.lblIdentityCard);
-            this.panel5.Controls.Add(this.lblLastName);
-            this.panel5.Controls.Add(this.txtName);
-            this.panel5.Controls.Add(this.txtIdentityCard);
-            this.panel5.Controls.Add(this.txtLastName);
-            this.panel5.Location = new System.Drawing.Point(33, 30);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(657, 65);
-            this.panel5.TabIndex = 15;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.lblTime2);
+            this.panel10.Controls.Add(this.lblDate2);
+            this.panel10.Location = new System.Drawing.Point(553, 6);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(333, 61);
+            this.panel10.TabIndex = 37;
             // 
-            // panel6
+            // lblTime2
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.lblReferenceNumber);
-            this.panel6.Controls.Add(this.lblPurchaseDate);
-            this.panel6.Controls.Add(this.txtReferenceNumber);
-            this.panel6.Controls.Add(this.dtpPurchaseDate);
-            this.panel6.Location = new System.Drawing.Point(33, 111);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(657, 65);
-            this.panel6.TabIndex = 15;
+            this.lblTime2.AutoSize = true;
+            this.lblTime2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime2.Location = new System.Drawing.Point(225, 21);
+            this.lblTime2.Name = "lblTime2";
+            this.lblTime2.Size = new System.Drawing.Size(0, 21);
+            this.lblTime2.TabIndex = 1;
             // 
-            // panel7
+            // lblDate2
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.lblAnnuityNumber);
-            this.panel7.Controls.Add(this.lblPurchaseAmount);
-            this.panel7.Controls.Add(this.lblAnnuityAmount);
-            this.panel7.Controls.Add(this.txtAnnuityAmount);
-            this.panel7.Controls.Add(this.txtPurchaseAmount);
-            this.panel7.Controls.Add(this.txtAnnuityNumber);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Location = new System.Drawing.Point(33, 195);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(657, 65);
-            this.panel7.TabIndex = 38;
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.lblTotalDebtt);
-            this.panel8.Controls.Add(this.txtPaid);
-            this.panel8.Controls.Add(this.txtTotalDebtt);
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.lblPaid);
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Location = new System.Drawing.Point(35, 273);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(655, 65);
-            this.panel8.TabIndex = 39;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lblLeftDebt);
-            this.panel9.Controls.Add(this.lblCompany);
-            this.panel9.Controls.Add(this.txtLeftDebt);
-            this.panel9.Controls.Add(this.txtCompany);
-            this.panel9.Location = new System.Drawing.Point(35, 353);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(655, 65);
-            this.panel9.TabIndex = 40;
-            // 
-            // btnConvert
-            // 
-            this.btnConvert.BackColor = System.Drawing.Color.White;
-            this.btnConvert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConvert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConvert.Location = new System.Drawing.Point(209, 398);
-            this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(238, 40);
-            this.btnConvert.TabIndex = 36;
-            this.btnConvert.Text = "Štampaj";
-            this.btnConvert.UseVisualStyleBackColor = false;
-            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            this.lblDate2.AutoSize = true;
+            this.lblDate2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate2.Location = new System.Drawing.Point(21, 21);
+            this.lblDate2.Name = "lblDate2";
+            this.lblDate2.Size = new System.Drawing.Size(0, 21);
+            this.lblDate2.TabIndex = 0;
             // 
             // Form1
             // 
@@ -2096,6 +2130,16 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
@@ -2108,16 +2152,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2344,6 +2380,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnConvert;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label lblTime2;
+        private System.Windows.Forms.Label lblDate2;
     }
 }
 
