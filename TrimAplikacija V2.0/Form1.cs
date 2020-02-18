@@ -51,7 +51,7 @@ namespace TrimAplikacija_V2._0
             using(sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapte(querry, sqlConnection);
+                sqlDataAdapter = new SqlDataAdapter(querry, sqlConnection);
                 dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
 
