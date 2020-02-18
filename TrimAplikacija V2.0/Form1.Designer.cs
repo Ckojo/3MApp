@@ -222,6 +222,10 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblTime2 = new System.Windows.Forms.Label();
             this.lblDate2 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
@@ -242,6 +246,10 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -527,7 +535,7 @@
             this.panel9.Location = new System.Drawing.Point(35, 353);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(655, 65);
-            this.panel9.TabIndex = 40;
+            this.panel9.TabIndex = 5;
             // 
             // lblLeftDebt
             // 
@@ -575,7 +583,7 @@
             this.panel8.Location = new System.Drawing.Point(35, 273);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(655, 65);
-            this.panel8.TabIndex = 39;
+            this.panel8.TabIndex = 4;
             // 
             // lblTotalDebtt
             // 
@@ -644,7 +652,7 @@
             this.panel7.Location = new System.Drawing.Point(33, 195);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(657, 65);
-            this.panel7.TabIndex = 38;
+            this.panel7.TabIndex = 3;
             // 
             // lblAnnuityNumber
             // 
@@ -717,7 +725,7 @@
             this.panel6.Location = new System.Drawing.Point(33, 111);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(657, 65);
-            this.panel6.TabIndex = 15;
+            this.panel6.TabIndex = 2;
             // 
             // lblReferenceNumber
             // 
@@ -767,7 +775,7 @@
             this.panel5.Location = new System.Drawing.Point(33, 30);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(657, 65);
-            this.panel5.TabIndex = 15;
+            this.panel5.TabIndex = 1;
             // 
             // lblName
             // 
@@ -1328,69 +1336,13 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage3.Controls.Add(this.panel14);
+            this.tabPage3.Controls.Add(this.panel13);
+            this.tabPage3.Controls.Add(this.panel12);
+            this.tabPage3.Controls.Add(this.panel11);
             this.tabPage3.Controls.Add(this.lblEmployeeInfo);
             this.tabPage3.Controls.Add(this.lblInformations);
             this.tabPage3.Controls.Add(this.btnAddAnnuityDate);
-            this.tabPage3.Controls.Add(this.dtpRata20);
-            this.tabPage3.Controls.Add(this.dtpRata19);
-            this.tabPage3.Controls.Add(this.dtpRata18);
-            this.tabPage3.Controls.Add(this.dtpRata17);
-            this.tabPage3.Controls.Add(this.dtpRata16);
-            this.tabPage3.Controls.Add(this.dtpRata15);
-            this.tabPage3.Controls.Add(this.dtpRata14);
-            this.tabPage3.Controls.Add(this.dtpRata13);
-            this.tabPage3.Controls.Add(this.dtpRata12);
-            this.tabPage3.Controls.Add(this.dtpRata11);
-            this.tabPage3.Controls.Add(this.txtRata20);
-            this.tabPage3.Controls.Add(this.lblRata20);
-            this.tabPage3.Controls.Add(this.txtRata19);
-            this.tabPage3.Controls.Add(this.lblRata19);
-            this.tabPage3.Controls.Add(this.txtRata18);
-            this.tabPage3.Controls.Add(this.lblRata18);
-            this.tabPage3.Controls.Add(this.txtRata17);
-            this.tabPage3.Controls.Add(this.lblRata17);
-            this.tabPage3.Controls.Add(this.txtRata16);
-            this.tabPage3.Controls.Add(this.lblRata16);
-            this.tabPage3.Controls.Add(this.txtRata15);
-            this.tabPage3.Controls.Add(this.lblRata15);
-            this.tabPage3.Controls.Add(this.txtRata14);
-            this.tabPage3.Controls.Add(this.lblRata14);
-            this.tabPage3.Controls.Add(this.txtRata13);
-            this.tabPage3.Controls.Add(this.lblRata13);
-            this.tabPage3.Controls.Add(this.txtRata12);
-            this.tabPage3.Controls.Add(this.lblRata12);
-            this.tabPage3.Controls.Add(this.txtRata11);
-            this.tabPage3.Controls.Add(this.lblRata11);
-            this.tabPage3.Controls.Add(this.dtpRata10);
-            this.tabPage3.Controls.Add(this.dtpRata9);
-            this.tabPage3.Controls.Add(this.dtpRata8);
-            this.tabPage3.Controls.Add(this.dtpRata7);
-            this.tabPage3.Controls.Add(this.dtpRata6);
-            this.tabPage3.Controls.Add(this.dtpRata5);
-            this.tabPage3.Controls.Add(this.dtpRata4);
-            this.tabPage3.Controls.Add(this.dtpRata3);
-            this.tabPage3.Controls.Add(this.dtpRata2);
-            this.tabPage3.Controls.Add(this.dtpRata1);
-            this.tabPage3.Controls.Add(this.txtRata10);
-            this.tabPage3.Controls.Add(this.lblRata10);
-            this.tabPage3.Controls.Add(this.txtRata9);
-            this.tabPage3.Controls.Add(this.lblRata9);
-            this.tabPage3.Controls.Add(this.txtRata8);
-            this.tabPage3.Controls.Add(this.lblRata8);
-            this.tabPage3.Controls.Add(this.txtRata7);
-            this.tabPage3.Controls.Add(this.lblRata7);
-            this.tabPage3.Controls.Add(this.txtRata6);
-            this.tabPage3.Controls.Add(this.lblRata6);
-            this.tabPage3.Controls.Add(this.txtRata5);
-            this.tabPage3.Controls.Add(this.lblRata5);
-            this.tabPage3.Controls.Add(this.txtRata4);
-            this.tabPage3.Controls.Add(this.lblRata4);
-            this.tabPage3.Controls.Add(this.txtRata3);
-            this.tabPage3.Controls.Add(this.lblRata3);
-            this.tabPage3.Controls.Add(this.txtRata2);
-            this.tabPage3.Controls.Add(this.lblRata2);
-            this.tabPage3.Controls.Add(this.txtRata1);
-            this.tabPage3.Controls.Add(this.lblRata1);
             this.tabPage3.Controls.Add(this.employeesDataGridView2);
             this.tabPage3.Controls.Add(this.flowLayoutPanel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -1436,7 +1388,7 @@
             // 
             this.dtpRata20.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata20.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata20.Location = new System.Drawing.Point(1050, 434);
+            this.dtpRata20.Location = new System.Drawing.Point(257, 151);
             this.dtpRata20.Name = "dtpRata20";
             this.dtpRata20.Size = new System.Drawing.Size(200, 22);
             this.dtpRata20.TabIndex = 40;
@@ -1445,7 +1397,7 @@
             // 
             this.dtpRata19.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata19.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata19.Location = new System.Drawing.Point(1050, 400);
+            this.dtpRata19.Location = new System.Drawing.Point(257, 117);
             this.dtpRata19.Name = "dtpRata19";
             this.dtpRata19.Size = new System.Drawing.Size(200, 22);
             this.dtpRata19.TabIndex = 38;
@@ -1454,7 +1406,7 @@
             // 
             this.dtpRata18.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata18.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata18.Location = new System.Drawing.Point(1050, 369);
+            this.dtpRata18.Location = new System.Drawing.Point(257, 86);
             this.dtpRata18.Name = "dtpRata18";
             this.dtpRata18.Size = new System.Drawing.Size(200, 22);
             this.dtpRata18.TabIndex = 36;
@@ -1463,7 +1415,7 @@
             // 
             this.dtpRata17.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata17.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata17.Location = new System.Drawing.Point(1050, 336);
+            this.dtpRata17.Location = new System.Drawing.Point(257, 53);
             this.dtpRata17.Name = "dtpRata17";
             this.dtpRata17.Size = new System.Drawing.Size(200, 22);
             this.dtpRata17.TabIndex = 34;
@@ -1472,7 +1424,7 @@
             // 
             this.dtpRata16.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata16.Location = new System.Drawing.Point(1050, 302);
+            this.dtpRata16.Location = new System.Drawing.Point(257, 19);
             this.dtpRata16.Name = "dtpRata16";
             this.dtpRata16.Size = new System.Drawing.Size(200, 22);
             this.dtpRata16.TabIndex = 32;
@@ -1481,7 +1433,7 @@
             // 
             this.dtpRata15.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata15.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata15.Location = new System.Drawing.Point(1050, 212);
+            this.dtpRata15.Location = new System.Drawing.Point(252, 152);
             this.dtpRata15.Name = "dtpRata15";
             this.dtpRata15.Size = new System.Drawing.Size(200, 22);
             this.dtpRata15.TabIndex = 30;
@@ -1490,7 +1442,7 @@
             // 
             this.dtpRata14.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata14.Location = new System.Drawing.Point(1050, 178);
+            this.dtpRata14.Location = new System.Drawing.Point(252, 118);
             this.dtpRata14.Name = "dtpRata14";
             this.dtpRata14.Size = new System.Drawing.Size(200, 22);
             this.dtpRata14.TabIndex = 28;
@@ -1499,7 +1451,7 @@
             // 
             this.dtpRata13.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata13.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata13.Location = new System.Drawing.Point(1050, 147);
+            this.dtpRata13.Location = new System.Drawing.Point(252, 87);
             this.dtpRata13.Name = "dtpRata13";
             this.dtpRata13.Size = new System.Drawing.Size(200, 22);
             this.dtpRata13.TabIndex = 26;
@@ -1508,7 +1460,7 @@
             // 
             this.dtpRata12.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata12.Location = new System.Drawing.Point(1050, 114);
+            this.dtpRata12.Location = new System.Drawing.Point(252, 54);
             this.dtpRata12.Name = "dtpRata12";
             this.dtpRata12.Size = new System.Drawing.Size(200, 22);
             this.dtpRata12.TabIndex = 24;
@@ -1517,7 +1469,7 @@
             // 
             this.dtpRata11.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata11.Location = new System.Drawing.Point(1050, 80);
+            this.dtpRata11.Location = new System.Drawing.Point(252, 20);
             this.dtpRata11.Name = "dtpRata11";
             this.dtpRata11.Size = new System.Drawing.Size(200, 22);
             this.dtpRata11.TabIndex = 22;
@@ -1525,7 +1477,7 @@
             // txtRata20
             // 
             this.txtRata20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata20.Location = new System.Drawing.Point(889, 435);
+            this.txtRata20.Location = new System.Drawing.Point(96, 152);
             this.txtRata20.Name = "txtRata20";
             this.txtRata20.Size = new System.Drawing.Size(133, 25);
             this.txtRata20.TabIndex = 39;
@@ -1534,7 +1486,7 @@
             // 
             this.lblRata20.AutoSize = true;
             this.lblRata20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata20.Location = new System.Drawing.Point(813, 439);
+            this.lblRata20.Location = new System.Drawing.Point(20, 156);
             this.lblRata20.Name = "lblRata20";
             this.lblRata20.Size = new System.Drawing.Size(70, 21);
             this.lblRata20.TabIndex = 61;
@@ -1543,7 +1495,7 @@
             // txtRata19
             // 
             this.txtRata19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata19.Location = new System.Drawing.Point(889, 401);
+            this.txtRata19.Location = new System.Drawing.Point(96, 118);
             this.txtRata19.Name = "txtRata19";
             this.txtRata19.Size = new System.Drawing.Size(133, 25);
             this.txtRata19.TabIndex = 37;
@@ -1552,7 +1504,7 @@
             // 
             this.lblRata19.AutoSize = true;
             this.lblRata19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata19.Location = new System.Drawing.Point(809, 403);
+            this.lblRata19.Location = new System.Drawing.Point(16, 120);
             this.lblRata19.Name = "lblRata19";
             this.lblRata19.Size = new System.Drawing.Size(74, 21);
             this.lblRata19.TabIndex = 60;
@@ -1561,7 +1513,7 @@
             // txtRata18
             // 
             this.txtRata18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata18.Location = new System.Drawing.Point(889, 370);
+            this.txtRata18.Location = new System.Drawing.Point(96, 87);
             this.txtRata18.Name = "txtRata18";
             this.txtRata18.Size = new System.Drawing.Size(133, 25);
             this.txtRata18.TabIndex = 35;
@@ -1570,7 +1522,7 @@
             // 
             this.lblRata18.AutoSize = true;
             this.lblRata18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata18.Location = new System.Drawing.Point(800, 370);
+            this.lblRata18.Location = new System.Drawing.Point(7, 87);
             this.lblRata18.Name = "lblRata18";
             this.lblRata18.Size = new System.Drawing.Size(83, 21);
             this.lblRata18.TabIndex = 59;
@@ -1579,7 +1531,7 @@
             // txtRata17
             // 
             this.txtRata17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata17.Location = new System.Drawing.Point(889, 337);
+            this.txtRata17.Location = new System.Drawing.Point(96, 54);
             this.txtRata17.Name = "txtRata17";
             this.txtRata17.Size = new System.Drawing.Size(133, 25);
             this.txtRata17.TabIndex = 33;
@@ -1588,7 +1540,7 @@
             // 
             this.lblRata17.AutoSize = true;
             this.lblRata17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata17.Location = new System.Drawing.Point(804, 341);
+            this.lblRata17.Location = new System.Drawing.Point(11, 58);
             this.lblRata17.Name = "lblRata17";
             this.lblRata17.Size = new System.Drawing.Size(79, 21);
             this.lblRata17.TabIndex = 58;
@@ -1597,7 +1549,7 @@
             // txtRata16
             // 
             this.txtRata16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata16.Location = new System.Drawing.Point(889, 303);
+            this.txtRata16.Location = new System.Drawing.Point(96, 20);
             this.txtRata16.Name = "txtRata16";
             this.txtRata16.Size = new System.Drawing.Size(133, 25);
             this.txtRata16.TabIndex = 31;
@@ -1606,7 +1558,7 @@
             // 
             this.lblRata16.AutoSize = true;
             this.lblRata16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata16.Location = new System.Drawing.Point(808, 307);
+            this.lblRata16.Location = new System.Drawing.Point(15, 24);
             this.lblRata16.Name = "lblRata16";
             this.lblRata16.Size = new System.Drawing.Size(75, 21);
             this.lblRata16.TabIndex = 57;
@@ -1615,7 +1567,7 @@
             // txtRata15
             // 
             this.txtRata15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata15.Location = new System.Drawing.Point(889, 212);
+            this.txtRata15.Location = new System.Drawing.Point(91, 152);
             this.txtRata15.Name = "txtRata15";
             this.txtRata15.Size = new System.Drawing.Size(133, 25);
             this.txtRata15.TabIndex = 29;
@@ -1624,7 +1576,7 @@
             // 
             this.lblRata15.AutoSize = true;
             this.lblRata15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata15.Location = new System.Drawing.Point(812, 212);
+            this.lblRata15.Location = new System.Drawing.Point(14, 152);
             this.lblRata15.Name = "lblRata15";
             this.lblRata15.Size = new System.Drawing.Size(71, 21);
             this.lblRata15.TabIndex = 54;
@@ -1633,7 +1585,7 @@
             // txtRata14
             // 
             this.txtRata14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata14.Location = new System.Drawing.Point(889, 178);
+            this.txtRata14.Location = new System.Drawing.Point(91, 118);
             this.txtRata14.Name = "txtRata14";
             this.txtRata14.Size = new System.Drawing.Size(133, 25);
             this.txtRata14.TabIndex = 27;
@@ -1642,7 +1594,7 @@
             // 
             this.lblRata14.AutoSize = true;
             this.lblRata14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata14.Location = new System.Drawing.Point(808, 179);
+            this.lblRata14.Location = new System.Drawing.Point(10, 119);
             this.lblRata14.Name = "lblRata14";
             this.lblRata14.Size = new System.Drawing.Size(75, 21);
             this.lblRata14.TabIndex = 51;
@@ -1651,7 +1603,7 @@
             // txtRata13
             // 
             this.txtRata13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata13.Location = new System.Drawing.Point(889, 147);
+            this.txtRata13.Location = new System.Drawing.Point(91, 87);
             this.txtRata13.Name = "txtRata13";
             this.txtRata13.Size = new System.Drawing.Size(133, 25);
             this.txtRata13.TabIndex = 25;
@@ -1660,7 +1612,7 @@
             // 
             this.lblRata13.AutoSize = true;
             this.lblRata13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata13.Location = new System.Drawing.Point(810, 147);
+            this.lblRata13.Location = new System.Drawing.Point(12, 87);
             this.lblRata13.Name = "lblRata13";
             this.lblRata13.Size = new System.Drawing.Size(73, 21);
             this.lblRata13.TabIndex = 49;
@@ -1669,7 +1621,7 @@
             // txtRata12
             // 
             this.txtRata12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata12.Location = new System.Drawing.Point(889, 114);
+            this.txtRata12.Location = new System.Drawing.Point(91, 54);
             this.txtRata12.Name = "txtRata12";
             this.txtRata12.Size = new System.Drawing.Size(133, 25);
             this.txtRata12.TabIndex = 23;
@@ -1678,7 +1630,7 @@
             // 
             this.lblRata12.AutoSize = true;
             this.lblRata12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata12.Location = new System.Drawing.Point(814, 114);
+            this.lblRata12.Location = new System.Drawing.Point(16, 54);
             this.lblRata12.Name = "lblRata12";
             this.lblRata12.Size = new System.Drawing.Size(69, 21);
             this.lblRata12.TabIndex = 46;
@@ -1687,7 +1639,7 @@
             // txtRata11
             // 
             this.txtRata11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata11.Location = new System.Drawing.Point(889, 80);
+            this.txtRata11.Location = new System.Drawing.Point(91, 20);
             this.txtRata11.Name = "txtRata11";
             this.txtRata11.Size = new System.Drawing.Size(133, 25);
             this.txtRata11.TabIndex = 21;
@@ -1696,7 +1648,7 @@
             // 
             this.lblRata11.AutoSize = true;
             this.lblRata11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata11.Location = new System.Drawing.Point(818, 84);
+            this.lblRata11.Location = new System.Drawing.Point(20, 24);
             this.lblRata11.Name = "lblRata11";
             this.lblRata11.Size = new System.Drawing.Size(65, 21);
             this.lblRata11.TabIndex = 44;
@@ -1706,7 +1658,7 @@
             // 
             this.dtpRata10.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata10.Location = new System.Drawing.Point(459, 434);
+            this.dtpRata10.Location = new System.Drawing.Point(242, 158);
             this.dtpRata10.Name = "dtpRata10";
             this.dtpRata10.Size = new System.Drawing.Size(200, 22);
             this.dtpRata10.TabIndex = 20;
@@ -1715,7 +1667,7 @@
             // 
             this.dtpRata9.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata9.Location = new System.Drawing.Point(459, 400);
+            this.dtpRata9.Location = new System.Drawing.Point(242, 124);
             this.dtpRata9.Name = "dtpRata9";
             this.dtpRata9.Size = new System.Drawing.Size(200, 22);
             this.dtpRata9.TabIndex = 18;
@@ -1724,7 +1676,7 @@
             // 
             this.dtpRata8.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata8.Location = new System.Drawing.Point(459, 369);
+            this.dtpRata8.Location = new System.Drawing.Point(242, 93);
             this.dtpRata8.Name = "dtpRata8";
             this.dtpRata8.Size = new System.Drawing.Size(200, 22);
             this.dtpRata8.TabIndex = 16;
@@ -1733,7 +1685,7 @@
             // 
             this.dtpRata7.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata7.Location = new System.Drawing.Point(459, 336);
+            this.dtpRata7.Location = new System.Drawing.Point(242, 60);
             this.dtpRata7.Name = "dtpRata7";
             this.dtpRata7.Size = new System.Drawing.Size(200, 22);
             this.dtpRata7.TabIndex = 14;
@@ -1742,7 +1694,7 @@
             // 
             this.dtpRata6.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata6.Location = new System.Drawing.Point(459, 302);
+            this.dtpRata6.Location = new System.Drawing.Point(242, 26);
             this.dtpRata6.Name = "dtpRata6";
             this.dtpRata6.Size = new System.Drawing.Size(200, 22);
             this.dtpRata6.TabIndex = 12;
@@ -1751,7 +1703,7 @@
             // 
             this.dtpRata5.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata5.Location = new System.Drawing.Point(459, 212);
+            this.dtpRata5.Location = new System.Drawing.Point(242, 154);
             this.dtpRata5.Name = "dtpRata5";
             this.dtpRata5.Size = new System.Drawing.Size(200, 22);
             this.dtpRata5.TabIndex = 10;
@@ -1760,7 +1712,7 @@
             // 
             this.dtpRata4.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata4.Location = new System.Drawing.Point(459, 178);
+            this.dtpRata4.Location = new System.Drawing.Point(242, 120);
             this.dtpRata4.Name = "dtpRata4";
             this.dtpRata4.Size = new System.Drawing.Size(200, 22);
             this.dtpRata4.TabIndex = 8;
@@ -1769,7 +1721,7 @@
             // 
             this.dtpRata3.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata3.Location = new System.Drawing.Point(459, 147);
+            this.dtpRata3.Location = new System.Drawing.Point(242, 89);
             this.dtpRata3.Name = "dtpRata3";
             this.dtpRata3.Size = new System.Drawing.Size(200, 22);
             this.dtpRata3.TabIndex = 6;
@@ -1778,7 +1730,7 @@
             // 
             this.dtpRata2.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata2.Location = new System.Drawing.Point(459, 114);
+            this.dtpRata2.Location = new System.Drawing.Point(242, 56);
             this.dtpRata2.Name = "dtpRata2";
             this.dtpRata2.Size = new System.Drawing.Size(200, 22);
             this.dtpRata2.TabIndex = 4;
@@ -1787,7 +1739,7 @@
             // 
             this.dtpRata1.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata1.Location = new System.Drawing.Point(459, 80);
+            this.dtpRata1.Location = new System.Drawing.Point(242, 22);
             this.dtpRata1.Name = "dtpRata1";
             this.dtpRata1.Size = new System.Drawing.Size(200, 22);
             this.dtpRata1.TabIndex = 2;
@@ -1795,7 +1747,7 @@
             // txtRata10
             // 
             this.txtRata10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata10.Location = new System.Drawing.Point(298, 435);
+            this.txtRata10.Location = new System.Drawing.Point(81, 159);
             this.txtRata10.Name = "txtRata10";
             this.txtRata10.Size = new System.Drawing.Size(133, 25);
             this.txtRata10.TabIndex = 19;
@@ -1804,7 +1756,7 @@
             // 
             this.lblRata10.AutoSize = true;
             this.lblRata10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata10.Location = new System.Drawing.Point(231, 435);
+            this.lblRata10.Location = new System.Drawing.Point(14, 159);
             this.lblRata10.Name = "lblRata10";
             this.lblRata10.Size = new System.Drawing.Size(61, 21);
             this.lblRata10.TabIndex = 31;
@@ -1813,7 +1765,7 @@
             // txtRata9
             // 
             this.txtRata9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata9.Location = new System.Drawing.Point(298, 401);
+            this.txtRata9.Location = new System.Drawing.Point(81, 125);
             this.txtRata9.Name = "txtRata9";
             this.txtRata9.Size = new System.Drawing.Size(133, 25);
             this.txtRata9.TabIndex = 17;
@@ -1822,7 +1774,7 @@
             // 
             this.lblRata9.AutoSize = true;
             this.lblRata9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata9.Location = new System.Drawing.Point(227, 403);
+            this.lblRata9.Location = new System.Drawing.Point(10, 127);
             this.lblRata9.Name = "lblRata9";
             this.lblRata9.Size = new System.Drawing.Size(65, 21);
             this.lblRata9.TabIndex = 28;
@@ -1831,7 +1783,7 @@
             // txtRata8
             // 
             this.txtRata8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata8.Location = new System.Drawing.Point(298, 370);
+            this.txtRata8.Location = new System.Drawing.Point(81, 94);
             this.txtRata8.Name = "txtRata8";
             this.txtRata8.Size = new System.Drawing.Size(133, 25);
             this.txtRata8.TabIndex = 15;
@@ -1840,7 +1792,7 @@
             // 
             this.lblRata8.AutoSize = true;
             this.lblRata8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata8.Location = new System.Drawing.Point(218, 370);
+            this.lblRata8.Location = new System.Drawing.Point(1, 94);
             this.lblRata8.Name = "lblRata8";
             this.lblRata8.Size = new System.Drawing.Size(74, 21);
             this.lblRata8.TabIndex = 25;
@@ -1849,7 +1801,7 @@
             // txtRata7
             // 
             this.txtRata7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata7.Location = new System.Drawing.Point(298, 337);
+            this.txtRata7.Location = new System.Drawing.Point(81, 61);
             this.txtRata7.Name = "txtRata7";
             this.txtRata7.Size = new System.Drawing.Size(133, 25);
             this.txtRata7.TabIndex = 13;
@@ -1858,7 +1810,7 @@
             // 
             this.lblRata7.AutoSize = true;
             this.lblRata7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata7.Location = new System.Drawing.Point(222, 337);
+            this.lblRata7.Location = new System.Drawing.Point(5, 61);
             this.lblRata7.Name = "lblRata7";
             this.lblRata7.Size = new System.Drawing.Size(70, 21);
             this.lblRata7.TabIndex = 22;
@@ -1867,7 +1819,7 @@
             // txtRata6
             // 
             this.txtRata6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata6.Location = new System.Drawing.Point(298, 303);
+            this.txtRata6.Location = new System.Drawing.Point(81, 27);
             this.txtRata6.Name = "txtRata6";
             this.txtRata6.Size = new System.Drawing.Size(133, 25);
             this.txtRata6.TabIndex = 11;
@@ -1876,7 +1828,7 @@
             // 
             this.lblRata6.AutoSize = true;
             this.lblRata6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata6.Location = new System.Drawing.Point(226, 303);
+            this.lblRata6.Location = new System.Drawing.Point(9, 27);
             this.lblRata6.Name = "lblRata6";
             this.lblRata6.Size = new System.Drawing.Size(66, 21);
             this.lblRata6.TabIndex = 19;
@@ -1885,7 +1837,7 @@
             // txtRata5
             // 
             this.txtRata5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata5.Location = new System.Drawing.Point(298, 212);
+            this.txtRata5.Location = new System.Drawing.Point(81, 154);
             this.txtRata5.Name = "txtRata5";
             this.txtRata5.Size = new System.Drawing.Size(133, 25);
             this.txtRata5.TabIndex = 9;
@@ -1894,7 +1846,7 @@
             // 
             this.lblRata5.AutoSize = true;
             this.lblRata5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata5.Location = new System.Drawing.Point(236, 212);
+            this.lblRata5.Location = new System.Drawing.Point(19, 154);
             this.lblRata5.Name = "lblRata5";
             this.lblRata5.Size = new System.Drawing.Size(62, 21);
             this.lblRata5.TabIndex = 16;
@@ -1903,7 +1855,7 @@
             // txtRata4
             // 
             this.txtRata4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata4.Location = new System.Drawing.Point(298, 178);
+            this.txtRata4.Location = new System.Drawing.Point(81, 120);
             this.txtRata4.Name = "txtRata4";
             this.txtRata4.Size = new System.Drawing.Size(133, 25);
             this.txtRata4.TabIndex = 7;
@@ -1912,7 +1864,7 @@
             // 
             this.lblRata4.AutoSize = true;
             this.lblRata4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata4.Location = new System.Drawing.Point(236, 178);
+            this.lblRata4.Location = new System.Drawing.Point(12, 120);
             this.lblRata4.Name = "lblRata4";
             this.lblRata4.Size = new System.Drawing.Size(66, 21);
             this.lblRata4.TabIndex = 13;
@@ -1921,7 +1873,7 @@
             // txtRata3
             // 
             this.txtRata3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata3.Location = new System.Drawing.Point(298, 147);
+            this.txtRata3.Location = new System.Drawing.Point(81, 89);
             this.txtRata3.Name = "txtRata3";
             this.txtRata3.Size = new System.Drawing.Size(133, 25);
             this.txtRata3.TabIndex = 5;
@@ -1930,7 +1882,7 @@
             // 
             this.lblRata3.AutoSize = true;
             this.lblRata3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata3.Location = new System.Drawing.Point(236, 147);
+            this.lblRata3.Location = new System.Drawing.Point(15, 89);
             this.lblRata3.Name = "lblRata3";
             this.lblRata3.Size = new System.Drawing.Size(64, 21);
             this.lblRata3.TabIndex = 10;
@@ -1939,7 +1891,7 @@
             // txtRata2
             // 
             this.txtRata2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata2.Location = new System.Drawing.Point(298, 114);
+            this.txtRata2.Location = new System.Drawing.Point(81, 56);
             this.txtRata2.Name = "txtRata2";
             this.txtRata2.Size = new System.Drawing.Size(133, 25);
             this.txtRata2.TabIndex = 3;
@@ -1948,7 +1900,7 @@
             // 
             this.lblRata2.AutoSize = true;
             this.lblRata2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata2.Location = new System.Drawing.Point(236, 114);
+            this.lblRata2.Location = new System.Drawing.Point(19, 56);
             this.lblRata2.Name = "lblRata2";
             this.lblRata2.Size = new System.Drawing.Size(60, 21);
             this.lblRata2.TabIndex = 7;
@@ -1957,7 +1909,7 @@
             // txtRata1
             // 
             this.txtRata1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata1.Location = new System.Drawing.Point(298, 80);
+            this.txtRata1.Location = new System.Drawing.Point(81, 22);
             this.txtRata1.Name = "txtRata1";
             this.txtRata1.Size = new System.Drawing.Size(133, 25);
             this.txtRata1.TabIndex = 1;
@@ -1966,7 +1918,7 @@
             // 
             this.lblRata1.AutoSize = true;
             this.lblRata1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata1.Location = new System.Drawing.Point(236, 80);
+            this.lblRata1.Location = new System.Drawing.Point(19, 22);
             this.lblRata1.Name = "lblRata1";
             this.lblRata1.Size = new System.Drawing.Size(56, 21);
             this.lblRata1.TabIndex = 4;
@@ -2110,6 +2062,94 @@
             this.lblDate2.Size = new System.Drawing.Size(0, 21);
             this.lblDate2.TabIndex = 0;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.lblRata1);
+            this.panel11.Controls.Add(this.txtRata1);
+            this.panel11.Controls.Add(this.lblRata2);
+            this.panel11.Controls.Add(this.txtRata2);
+            this.panel11.Controls.Add(this.lblRata3);
+            this.panel11.Controls.Add(this.txtRata3);
+            this.panel11.Controls.Add(this.lblRata4);
+            this.panel11.Controls.Add(this.txtRata4);
+            this.panel11.Controls.Add(this.lblRata5);
+            this.panel11.Controls.Add(this.txtRata5);
+            this.panel11.Controls.Add(this.dtpRata1);
+            this.panel11.Controls.Add(this.dtpRata2);
+            this.panel11.Controls.Add(this.dtpRata3);
+            this.panel11.Controls.Add(this.dtpRata4);
+            this.panel11.Controls.Add(this.dtpRata5);
+            this.panel11.Location = new System.Drawing.Point(235, 62);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(466, 199);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.lblRata6);
+            this.panel12.Controls.Add(this.txtRata6);
+            this.panel12.Controls.Add(this.lblRata7);
+            this.panel12.Controls.Add(this.txtRata7);
+            this.panel12.Controls.Add(this.lblRata8);
+            this.panel12.Controls.Add(this.txtRata8);
+            this.panel12.Controls.Add(this.lblRata9);
+            this.panel12.Controls.Add(this.txtRata9);
+            this.panel12.Controls.Add(this.lblRata10);
+            this.panel12.Controls.Add(this.txtRata10);
+            this.panel12.Controls.Add(this.dtpRata6);
+            this.panel12.Controls.Add(this.dtpRata7);
+            this.panel12.Controls.Add(this.dtpRata8);
+            this.panel12.Controls.Add(this.dtpRata9);
+            this.panel12.Controls.Add(this.dtpRata10);
+            this.panel12.Location = new System.Drawing.Point(235, 275);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(466, 199);
+            this.panel12.TabIndex = 2;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.lblRata11);
+            this.panel13.Controls.Add(this.txtRata11);
+            this.panel13.Controls.Add(this.lblRata12);
+            this.panel13.Controls.Add(this.txtRata12);
+            this.panel13.Controls.Add(this.lblRata13);
+            this.panel13.Controls.Add(this.txtRata13);
+            this.panel13.Controls.Add(this.lblRata14);
+            this.panel13.Controls.Add(this.txtRata14);
+            this.panel13.Controls.Add(this.lblRata15);
+            this.panel13.Controls.Add(this.txtRata15);
+            this.panel13.Controls.Add(this.dtpRata11);
+            this.panel13.Controls.Add(this.dtpRata15);
+            this.panel13.Controls.Add(this.dtpRata12);
+            this.panel13.Controls.Add(this.dtpRata14);
+            this.panel13.Controls.Add(this.dtpRata13);
+            this.panel13.Location = new System.Drawing.Point(784, 62);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(466, 199);
+            this.panel13.TabIndex = 3;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.lblRata16);
+            this.panel14.Controls.Add(this.txtRata16);
+            this.panel14.Controls.Add(this.lblRata17);
+            this.panel14.Controls.Add(this.txtRata17);
+            this.panel14.Controls.Add(this.lblRata18);
+            this.panel14.Controls.Add(this.txtRata18);
+            this.panel14.Controls.Add(this.lblRata19);
+            this.panel14.Controls.Add(this.dtpRata20);
+            this.panel14.Controls.Add(this.txtRata19);
+            this.panel14.Controls.Add(this.dtpRata19);
+            this.panel14.Controls.Add(this.lblRata20);
+            this.panel14.Controls.Add(this.dtpRata18);
+            this.panel14.Controls.Add(this.txtRata20);
+            this.panel14.Controls.Add(this.dtpRata17);
+            this.panel14.Controls.Add(this.dtpRata16);
+            this.panel14.Location = new System.Drawing.Point(784, 275);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(466, 199);
+            this.panel14.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2154,6 +2194,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2383,6 +2431,10 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblTime2;
         private System.Windows.Forms.Label lblDate2;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
     }
 }
 

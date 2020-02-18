@@ -51,7 +51,7 @@ namespace TrimAplikacija_V2._0
             using(sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter(querry, sqlConnection);
+                sqlDataAdapter = new SqlDataAdapte(querry, sqlConnection);
                 dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
 
@@ -285,6 +285,7 @@ namespace TrimAplikacija_V2._0
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            var ui = new UI();
             Company firma = new Company($"{txtCompanyName2.Text}", $"{txtHeadQuarter2.Text}", $"{txtPIB2.Text}");
             if(txtCompanyName2.Text == string.Empty || txtHeadQuarter2.Text == string.Empty || txtPIB2.Text == string.Empty)
             {
@@ -299,8 +300,8 @@ namespace TrimAplikacija_V2._0
                 MessageBox.Show("Greška pri unosu podataka. Pokušajte ponovo!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             PopulateCompanyDataDG2();
-            //CreateButton(txtCompanyName2.Text, flowLayoutPanel1);
-            //CreateButton(txtCompanyName2.Text, flowLayoutPanel2);
+            ui.CreateButton(txtCompanyName2.Text, flowLayoutPanel1, Company_Click);
+            ui.CreateButton(txtCompanyName2.Text, flowLayoutPanel2, Company_Click);
 
             foreach (Control c in panel3.Controls)
             {
@@ -313,6 +314,7 @@ namespace TrimAplikacija_V2._0
 
         private void firmeDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
+            var ui = new UI();
             if (firmeDataGridView.CurrentRow.Cells["id_firme"].Value != DBNull.Value)
             {
                 if (MessageBox.Show("Da li ste sigurni da želite da obrišete firmu?", "Company delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -333,39 +335,14 @@ namespace TrimAplikacija_V2._0
                         sqlCommand.ExecuteNonQuery();
                     }
 
-                    UIRemoveButtons(flowLayoutPanel1);
-                    UIRemoveButtons(flowLayoutPanel2);
+                    ui.UIRemoveButtons(flowLayoutPanel1, firmeDataGridView);
+                    ui.UIRemoveButtons(flowLayoutPanel2, firmeDataGridView);
                 }
                 else
                     e.Cancel = true;
             }
             else
                 e.Cancel = true;
-        }
-
-        void UIRemoveButtons(FlowLayoutPanel layoutPanel)
-        {
-            foreach (Control c in layoutPanel.Controls)
-            {
-                if (c.GetType() == typeof(Button))
-                {
-                    if (((Button)c).Text == firmeDataGridView.CurrentRow.Cells["naziv"].Value.ToString())
-                    {
-                        layoutPanel.Controls.Remove(c);
-                    }
-                }
-            }
-        }
-
-        void CreateLabel(int i, int x, int y)
-        {
-            Label label = new Label();
-            label.Text = $"Rata {i}";
-            label.Name = $"lblRata{i}";
-            label.Location = new Point(x, y);
-            label.Font = new System.Drawing.Font("Segoe UI", 12);
-
-            tabPage3.Controls.Add(label);
         }
 
         private void employeesDataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -609,10 +586,19 @@ namespace TrimAplikacija_V2._0
                                 Document pdfDoc = new Document(PageSize.A3, 10f, 20f, 20f, 10f);
                                 PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
-                                Paragraph pLeft = new Paragraph($"Firma: {txtCompanyName.Text}\nMesto: {txtHeadQuarter.Text}\n" +
+
+                                iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance("logo.png");
+                                image.ScalePercent(10);
+                                pdfDoc.Add(image);
+
+                                Paragraph pLeft = new Paragraph($"\n__________\nFirma: {txtCompanyName.Text}\nMesto: {txtHeadQuarter.Text}\n" +
                                     $"PIB: {txtPIB.Text}\nPreostali dug: {txtTotalDebt.Text}\n\n", font);
                                 Paragraph pRight = new Paragraph($"Obračunski period:\n{dtpDateOne.Value.ToString("dd. MM. yyyy.")} - {dtpDateTwo.Value.ToString("dd. MM. yyyy.")}\n\n", font);
-                                pRight.Alignment = Element.ALIGN_TOP;
+
+                                string sellerInformations = $"\n__________\nTRIM DOO\nMaršala Tita 56, 21460, Vrbas\n(021)/794-355\nPIB: 100639492\nŽiro račun: 275-0000220029609-95\ntrimsports@yahoo.com";
+                                var sellerDocument = new Paragraph(sellerInformations, font);
+                                
+                                pdfDoc.Add(sellerDocument);
                                 pdfDoc.Add(pLeft);
                                 pdfDoc.Add(pRight);
                                 pdfDoc.Add(pdfTable);

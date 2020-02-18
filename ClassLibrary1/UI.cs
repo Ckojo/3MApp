@@ -62,5 +62,19 @@ namespace TrimAplikacija_V2._0
                 }
             }
         }
+
+        public void UIRemoveButtons(FlowLayoutPanel layoutPanel, DataGridView dataGrid)
+        {
+            foreach (Control c in layoutPanel.Controls)
+            {
+                if (c.GetType() == typeof(Button))
+                {
+                    if (((Button)c).Text == dataGrid.CurrentRow.Cells["naziv"].Value.ToString())
+                    {
+                        layoutPanel.Controls.Remove(c);
+                    }
+                }
+            }
+        }
     }
 }
