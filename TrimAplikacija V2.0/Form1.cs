@@ -612,7 +612,7 @@ namespace TrimAplikacija_V2._0
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error:" + ex.Message);
+                            MessageBox.Show("Error :" + ex.Message);
                         }
                     }
                 }
