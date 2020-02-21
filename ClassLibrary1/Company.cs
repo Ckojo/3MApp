@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace TrimAplikacija_V2._0
 {
@@ -36,5 +37,25 @@ namespace TrimAplikacija_V2._0
                     return false;
             }
         }
+
+        // Zakomentarisana dok se ne pronadje resenje
+        /*public static void PopulateCompanyData(string companyName, string companyID, string name, string headQuarter, string pib, string totalDebt)
+        {
+            // ----- Populating data about a company -----  //
+            SqlConnection connection = Connection.AddConnection();
+            using (connection)
+            {
+                SqlCommand sqlCommand = new SqlCommand($"SELECT * FROM dbo.firme WHERE naziv = '{companyName}'", connection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    companyID = sqlDataReader.GetValue(0).ToString();
+                    name = sqlDataReader.GetValue(1).ToString();
+                    headQuarter = sqlDataReader.GetValue(2).ToString();
+                    pib = sqlDataReader.GetValue(3).ToString();
+                    totalDebt = sqlDataReader.GetValue(4).ToString();
+                }
+            }
+        }*/
     }
 }

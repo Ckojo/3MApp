@@ -37,7 +37,7 @@ namespace TrimAplikacija_V2._0
 
         string GetConnectionString()
         {
-            string sqlConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=TrimDb;Integrated Security=True";
+            string sqlConnectionString = @"Data Source =.\SQLEXPRESS; Initial Catalog = TrimDb; Integrated Security = True";
             return sqlConnectionString;
         }
 
@@ -182,7 +182,8 @@ namespace TrimAplikacija_V2._0
         {
             Button clickedButton = sender as Button;
             PopulateCompanyData(clickedButton.Text);
-
+            //Company.PopulateCompanyData(clickedButton.Text, txtCompanyID.Text, txtCompanyName.Text, txtHeadQuarter.Text, txtPIB.Text, txtTotalDebt.Text);
+            
             if(txtCompanyID.Text != string.Empty)
             {
                 if(clickedButton.Name.Contains("2"))
@@ -438,13 +439,14 @@ namespace TrimAplikacija_V2._0
                     }
                 }
 
+
                 sqlConnection.Open();
                 sqlCommand = new SqlCommand(querry, sqlConnection);
-                if(sqlCommand.ExecuteNonQuery() == 1)
+                if (sqlCommand.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Podaci uspešno uneseni", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
+
             }
         }
 
@@ -564,7 +566,7 @@ namespace TrimAplikacija_V2._0
                             pdfTable.DefaultCell.Padding = 3;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-                            float[] widths = new float[] { 0f, 60f, 60f, 60f, 60f, 80f, 50f, 50f, 50f, 50f, 50f, 50f, 0f };
+                            float[] widths = new float[] { 0f, 60f, 60f, 60f, 60f, 80f, 50f, 50f, 50f, 50f, 55f, 50f, 0f };
                             pdfTable.SetWidths(widths);
 
                             foreach (DataGridViewColumn column in dataGridView.Columns)
@@ -583,7 +585,7 @@ namespace TrimAplikacija_V2._0
 
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
-                                Document pdfDoc = new Document(PageSize.A3, 10f, 20f, 20f, 10f);
+                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
 

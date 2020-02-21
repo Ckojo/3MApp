@@ -73,5 +73,49 @@ namespace TrimAplikacija_V2._0
                 }
             }
         }
+
+        public static void PopulateEmployeeData(int i, DataGridView dgvName, DataGridView gridView1, DataGridView gridView2)
+        {
+            string query =
+                $"SELECT " +
+                $"id_zaposlen, " +
+                $"ime, " +
+                $"prezime, " +
+                $"licna_karta, " +
+                $"poziv_na_broj, " +
+                $"convert(varchar, datum_kupovine, 106) AS datum_kupovine, " +
+                $"broj_rata," +
+                $"iznos_kupovine," +
+                $"ROUND(iznos_rate, 2) AS iznos_rate," +
+                $"ukupno_duga," +
+                $"uplaceno," +
+                $"preostali_dug, " +
+                $"firma " +
+                $"FROM " +
+                $"dbo.zaposleni " +
+                $"WHERE firma = {i}";
+
+            //string query = $"SELECT * FROM dbo.zaposleni WHERE firma = {i};";
+
+            // -----  Populates data about employee in a table -----  //
+            SqlConnection sqlConnection = Connection.AddConnection();
+            using (sqlConnection)
+            {
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dgvName.Name == "employeesDataGridView")
+                {
+                    gridView1.AutoGenerateColumns = false;
+                    gridView1.DataSource = dataTable;
+                }
+                else if (dgvName.Name == "employeesDataGridView2")
+                {
+                    gridView2.AutoGenerateColumns = false;
+                    gridView2.DataSource = dataTable;
+                }
+            }
+        }
     }
 }
