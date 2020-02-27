@@ -70,7 +70,6 @@
             this.txtTotalDebtt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPaid = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblAnnuityNumber = new System.Windows.Forms.Label();
             this.lblPurchaseAmount = new System.Windows.Forms.Label();
@@ -78,7 +77,6 @@
             this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
             this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
             this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblReferenceNumber = new System.Windows.Forms.Label();
             this.lblPurchaseDate = new System.Windows.Forms.Label();
@@ -102,20 +100,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblAccountingPeriod = new System.Windows.Forms.Label();
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.id_zaposlen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_licna_karta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_poziv_na_broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_datum_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_broj_rata = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_iznos_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_iznos_rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_ukupno_duga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_uplaceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_preostali_dug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTotalDebt = new System.Windows.Forms.TextBox();
             this.txtPIB = new System.Windows.Forms.TextBox();
@@ -216,6 +202,7 @@
             this.preostali_dug_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRata5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtRata5 = new System.Windows.Forms.TextBox();
             this.dtpRata5 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata1 = new System.Windows.Forms.DateTimePicker();
@@ -223,8 +210,19 @@
             this.dtpRata2 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata3 = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.id_zaposlen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_licna_karta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_poziv_na_broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_datum_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_broj_rata = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_iznos_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_iznos_rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_ukupno_duga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_uplaceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_preostali_dug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
@@ -240,6 +238,7 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView)).BeginInit();
@@ -247,7 +246,6 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -560,6 +558,7 @@
             // 
             this.txtLeftDebt.Location = new System.Drawing.Point(123, 29);
             this.txtLeftDebt.Name = "txtLeftDebt";
+            this.txtLeftDebt.ReadOnly = true;
             this.txtLeftDebt.Size = new System.Drawing.Size(116, 22);
             this.txtLeftDebt.TabIndex = 11;
             // 
@@ -578,7 +577,6 @@
             this.panel8.Controls.Add(this.txtTotalDebtt);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.lblPaid);
-            this.panel8.Controls.Add(this.label9);
             this.panel8.Location = new System.Drawing.Point(35, 273);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(655, 65);
@@ -600,11 +598,13 @@
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(112, 22);
             this.txtPaid.TabIndex = 10;
+            this.txtPaid.TextChanged += new System.EventHandler(this.txtPaid_TextChanged);
             // 
             // txtTotalDebtt
             // 
             this.txtTotalDebtt.Location = new System.Drawing.Point(143, 16);
             this.txtTotalDebtt.Name = "txtTotalDebtt";
+            this.txtTotalDebtt.ReadOnly = true;
             this.txtTotalDebtt.Size = new System.Drawing.Size(116, 22);
             this.txtTotalDebtt.TabIndex = 9;
             // 
@@ -628,16 +628,6 @@
             this.lblPaid.TabIndex = 36;
             this.lblPaid.Text = "Uplaćeno:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(548, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 21);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "RSD";
-            // 
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -647,7 +637,6 @@
             this.panel7.Controls.Add(this.txtAnnuityAmount);
             this.panel7.Controls.Add(this.txtPurchaseAmount);
             this.panel7.Controls.Add(this.txtAnnuityNumber);
-            this.panel7.Controls.Add(this.label1);
             this.panel7.Location = new System.Drawing.Point(33, 195);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(657, 65);
@@ -677,7 +666,7 @@
             // 
             this.lblAnnuityAmount.AutoSize = true;
             this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityAmount.Location = new System.Drawing.Point(397, 17);
+            this.lblAnnuityAmount.Location = new System.Drawing.Point(424, 17);
             this.lblAnnuityAmount.Name = "lblAnnuityAmount";
             this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
             this.lblAnnuityAmount.TabIndex = 3;
@@ -685,8 +674,9 @@
             // 
             // txtAnnuityAmount
             // 
-            this.txtAnnuityAmount.Location = new System.Drawing.Point(479, 19);
+            this.txtAnnuityAmount.Location = new System.Drawing.Point(506, 19);
             this.txtAnnuityAmount.Name = "txtAnnuityAmount";
+            this.txtAnnuityAmount.ReadOnly = true;
             this.txtAnnuityAmount.Size = new System.Drawing.Size(134, 22);
             this.txtAnnuityAmount.TabIndex = 8;
             // 
@@ -694,8 +684,9 @@
             // 
             this.txtPurchaseAmount.Location = new System.Drawing.Point(270, 15);
             this.txtPurchaseAmount.Name = "txtPurchaseAmount";
-            this.txtPurchaseAmount.Size = new System.Drawing.Size(106, 22);
+            this.txtPurchaseAmount.Size = new System.Drawing.Size(148, 22);
             this.txtPurchaseAmount.TabIndex = 7;
+            this.txtPurchaseAmount.TextChanged += new System.EventHandler(this.txtPurchaseAmount_TextChanged);
             // 
             // txtAnnuityNumber
             // 
@@ -703,16 +694,7 @@
             this.txtAnnuityNumber.Name = "txtAnnuityNumber";
             this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
             this.txtAnnuityNumber.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 21);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "RSD";
+            this.txtAnnuityNumber.TextChanged += new System.EventHandler(this.txtAnnuityNumber_TextChanged);
             // 
             // panel6
             // 
@@ -968,101 +950,6 @@
             this.employeesDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellValueChanged);
             this.employeesDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.employeesDataGridView_UserDeletingRow);
             // 
-            // id_zaposlen
-            // 
-            this.id_zaposlen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_zaposlen.DataPropertyName = "id_zaposlen";
-            this.id_zaposlen.HeaderText = "ID";
-            this.id_zaposlen.Name = "id_zaposlen";
-            this.id_zaposlen.Visible = false;
-            // 
-            // txt_ime
-            // 
-            this.txt_ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_ime.DataPropertyName = "ime";
-            this.txt_ime.HeaderText = "Ime";
-            this.txt_ime.Name = "txt_ime";
-            // 
-            // txt_prezime
-            // 
-            this.txt_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_prezime.DataPropertyName = "prezime";
-            this.txt_prezime.HeaderText = "Prezime";
-            this.txt_prezime.Name = "txt_prezime";
-            // 
-            // txt_licna_karta
-            // 
-            this.txt_licna_karta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_licna_karta.DataPropertyName = "licna_karta";
-            this.txt_licna_karta.HeaderText = "Lična karta";
-            this.txt_licna_karta.Name = "txt_licna_karta";
-            // 
-            // txt_poziv_na_broj
-            // 
-            this.txt_poziv_na_broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_poziv_na_broj.DataPropertyName = "poziv_na_broj";
-            this.txt_poziv_na_broj.HeaderText = "Poziv na broj";
-            this.txt_poziv_na_broj.Name = "txt_poziv_na_broj";
-            // 
-            // txt_datum_kupovine
-            // 
-            this.txt_datum_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_datum_kupovine.DataPropertyName = "datum_kupovine";
-            this.txt_datum_kupovine.HeaderText = "Datum kupovine";
-            this.txt_datum_kupovine.Name = "txt_datum_kupovine";
-            // 
-            // txt_broj_rata
-            // 
-            this.txt_broj_rata.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_broj_rata.DataPropertyName = "broj_rata";
-            this.txt_broj_rata.HeaderText = "Broj rata";
-            this.txt_broj_rata.Name = "txt_broj_rata";
-            // 
-            // txt_iznos_kupovine
-            // 
-            this.txt_iznos_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_iznos_kupovine.DataPropertyName = "iznos_kupovine";
-            this.txt_iznos_kupovine.HeaderText = "Iznos kupovine";
-            this.txt_iznos_kupovine.Name = "txt_iznos_kupovine";
-            // 
-            // txt_iznos_rate
-            // 
-            this.txt_iznos_rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_iznos_rate.DataPropertyName = "iznos_rate";
-            this.txt_iznos_rate.HeaderText = "Iznos rate";
-            this.txt_iznos_rate.Name = "txt_iznos_rate";
-            this.txt_iznos_rate.ReadOnly = true;
-            // 
-            // txt_ukupno_duga
-            // 
-            this.txt_ukupno_duga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_ukupno_duga.DataPropertyName = "ukupno_duga";
-            this.txt_ukupno_duga.HeaderText = "Ukupno duga";
-            this.txt_ukupno_duga.Name = "txt_ukupno_duga";
-            this.txt_ukupno_duga.ReadOnly = true;
-            // 
-            // txt_uplaceno
-            // 
-            this.txt_uplaceno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_uplaceno.DataPropertyName = "uplaceno";
-            this.txt_uplaceno.HeaderText = "Uplaceno";
-            this.txt_uplaceno.Name = "txt_uplaceno";
-            // 
-            // txt_preostali_dug
-            // 
-            this.txt_preostali_dug.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_preostali_dug.DataPropertyName = "preostali_dug";
-            this.txt_preostali_dug.HeaderText = "Preostali dug";
-            this.txt_preostali_dug.Name = "txt_preostali_dug";
-            this.txt_preostali_dug.ReadOnly = true;
-            // 
-            // txt_firma
-            // 
-            this.txt_firma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_firma.DataPropertyName = "firma";
-            this.txt_firma.HeaderText = "Firma";
-            this.txt_firma.Name = "txt_firma";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
@@ -1073,6 +960,16 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 695);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -1214,6 +1111,7 @@
             this.firmeDataGridView.Name = "firmeDataGridView";
             this.firmeDataGridView.Size = new System.Drawing.Size(655, 288);
             this.firmeDataGridView.TabIndex = 2;
+            this.firmeDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.firmeDataGridView_CellValueChanged);
             this.firmeDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.firmeDataGridView_UserDeletingRow);
             // 
             // id_firme
@@ -2068,6 +1966,16 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 695);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(197, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // txtRata5
             // 
             this.txtRata5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2127,25 +2035,100 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
+            // id_zaposlen
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.id_zaposlen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_zaposlen.DataPropertyName = "id_zaposlen";
+            this.id_zaposlen.HeaderText = "ID";
+            this.id_zaposlen.Name = "id_zaposlen";
+            this.id_zaposlen.Visible = false;
             // 
-            // pictureBox2
+            // txt_ime
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(197, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.txt_ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_ime.DataPropertyName = "ime";
+            this.txt_ime.HeaderText = "Ime";
+            this.txt_ime.Name = "txt_ime";
+            // 
+            // txt_prezime
+            // 
+            this.txt_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_prezime.DataPropertyName = "prezime";
+            this.txt_prezime.HeaderText = "Prezime";
+            this.txt_prezime.Name = "txt_prezime";
+            // 
+            // txt_licna_karta
+            // 
+            this.txt_licna_karta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_licna_karta.DataPropertyName = "licna_karta";
+            this.txt_licna_karta.HeaderText = "Licna karta";
+            this.txt_licna_karta.Name = "txt_licna_karta";
+            // 
+            // txt_poziv_na_broj
+            // 
+            this.txt_poziv_na_broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_poziv_na_broj.DataPropertyName = "poziv_na_broj";
+            this.txt_poziv_na_broj.HeaderText = "Poziv na broj";
+            this.txt_poziv_na_broj.Name = "txt_poziv_na_broj";
+            // 
+            // txt_datum_kupovine
+            // 
+            this.txt_datum_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_datum_kupovine.DataPropertyName = "datum_kupovine";
+            this.txt_datum_kupovine.HeaderText = "Datum kupovine";
+            this.txt_datum_kupovine.Name = "txt_datum_kupovine";
+            // 
+            // txt_broj_rata
+            // 
+            this.txt_broj_rata.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_broj_rata.DataPropertyName = "broj_rata";
+            this.txt_broj_rata.HeaderText = "Broj rata";
+            this.txt_broj_rata.Name = "txt_broj_rata";
+            // 
+            // txt_iznos_kupovine
+            // 
+            this.txt_iznos_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_iznos_kupovine.DataPropertyName = "iznos_kupovine";
+            this.txt_iznos_kupovine.HeaderText = "Iznos kupovine";
+            this.txt_iznos_kupovine.Name = "txt_iznos_kupovine";
+            // 
+            // txt_iznos_rate
+            // 
+            this.txt_iznos_rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_iznos_rate.DataPropertyName = "iznos_rate";
+            this.txt_iznos_rate.HeaderText = "Iznos rate";
+            this.txt_iznos_rate.Name = "txt_iznos_rate";
+            this.txt_iznos_rate.ReadOnly = true;
+            // 
+            // txt_ukupno_duga
+            // 
+            this.txt_ukupno_duga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_ukupno_duga.DataPropertyName = "ukupno_duga";
+            this.txt_ukupno_duga.HeaderText = "Ukupno duga";
+            this.txt_ukupno_duga.Name = "txt_ukupno_duga";
+            this.txt_ukupno_duga.ReadOnly = true;
+            // 
+            // txt_uplaceno
+            // 
+            this.txt_uplaceno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_uplaceno.DataPropertyName = "uplaceno";
+            this.txt_uplaceno.HeaderText = "Uplaceno";
+            this.txt_uplaceno.Name = "txt_uplaceno";
+            // 
+            // txt_preostali_dug
+            // 
+            this.txt_preostali_dug.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_preostali_dug.DataPropertyName = "preostali_dug";
+            this.txt_preostali_dug.HeaderText = "Preostali dug";
+            this.txt_preostali_dug.Name = "txt_preostali_dug";
+            this.txt_preostali_dug.ReadOnly = true;
+            // 
+            // txt_firma
+            // 
+            this.txt_firma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_firma.DataPropertyName = "firma";
+            this.txt_firma.HeaderText = "Firma";
+            this.txt_firma.Name = "txt_firma";
             // 
             // Form1
             // 
@@ -2184,6 +2167,7 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -2194,7 +2178,6 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -2269,19 +2252,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.DataGridView employeesDataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_zaposlen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_ime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_prezime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_licna_karta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_poziv_na_broj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_datum_kupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_broj_rata;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_iznos_kupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_iznos_rate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_ukupno_duga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_uplaceno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_preostali_dug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txt_firma;
         private System.Windows.Forms.Button btnAddAnnuityDate;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblAccountingPeriod;
@@ -2291,10 +2261,8 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblPaid;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtIdentityCard;
@@ -2427,6 +2395,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preostali_dug_2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_zaposlen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_ime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_prezime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_licna_karta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_poziv_na_broj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_datum_kupovine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_broj_rata;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_iznos_kupovine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_iznos_rate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_ukupno_duga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_uplaceno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_preostali_dug;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txt_firma;
     }
 }
 

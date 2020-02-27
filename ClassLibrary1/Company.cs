@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace TrimAplikacija_V2._0
 {
@@ -38,24 +39,30 @@ namespace TrimAplikacija_V2._0
             }
         }
 
-        // Zakomentarisana dok se ne pronadje resenje
-        /*public static void PopulateCompanyData(string companyName, string companyID, string name, string headQuarter, string pib, string totalDebt)
+        public void EditCompany(DataGridView gridView)
         {
-            // ----- Populating data about a company -----  //
-            SqlConnection connection = Connection.AddConnection();
-            using (connection)
+            SqlConnection sqlConnection = Connection.AddConnection();
+            if(gridView.CurrentRow != null)
             {
-                SqlCommand sqlCommand = new SqlCommand($"SELECT * FROM dbo.firme WHERE naziv = '{companyName}'", connection);
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-                while (sqlDataReader.Read())
+                DataGridViewRow viewRow = gridView.CurrentRow;
+                if(viewRow.Cells["id_firme"].Value != DBNull.Value)
                 {
-                    companyID = sqlDataReader.GetValue(0).ToString();
-                    name = sqlDataReader.GetValue(1).ToString();
-                    headQuarter = sqlDataReader.GetValue(2).ToString();
-                    pib = sqlDataReader.GetValue(3).ToString();
-                    totalDebt = sqlDataReader.GetValue(4).ToString();
+                    using(sqlConnection)
+                    {
+                        SqlCommand sqlCommand = new SqlCommand("CompanyEdit", sqlConnection);
+                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                        if (viewRow.Cells["id_firme"].Value != DBNull.Value)
+                        {
+                            sqlCommand.Parameters.AddWithValue("@id_firme", Convert.ToString(viewRow.Cells["id_firme"].Value));
+                            sqlCommand.Parameters.AddWithValue("@naziv", viewRow.Cells["naziv"].Value == DBNull.Value ? "" : viewRow.Cells["naziv"].Value);
+                            sqlCommand.Parameters.AddWithValue("@mesto", viewRow.Cells["mesto"].Value == DBNull.Value ? "" : viewRow.Cells["mesto"].Value);
+                            sqlCommand.Parameters.AddWithValue("@pib", viewRow.Cells["pib"].Value == DBNull.Value ? "" : viewRow.Cells["pib"].Value);
+                            sqlCommand.Parameters.AddWithValue("@ukupni_dug", viewRow.Cells["ukupni_dug"].Value == DBNull.Value ? "" : viewRow.Cells["ukupni_dug"].Value);
+                            sqlCommand.ExecuteNonQuery();
+                        }
+                    }
                 }
             }
-        }*/
+        }
     }
 }

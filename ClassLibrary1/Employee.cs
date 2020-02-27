@@ -11,6 +11,8 @@ namespace TrimAplikacija_V2._0
     {
         SqlConnection sqlConnection;
         SqlCommand sqlCommand;
+        SqlDataAdapter sqlDataAdapter;
+        DataTable dataTable;
 
         public string Name { get; set; }
         public string LastName { get; set; }
@@ -74,48 +76,26 @@ namespace TrimAplikacija_V2._0
             }
         }
 
-        public static void PopulateEmployeeData(int i, DataGridView dgvName, DataGridView gridView1, DataGridView gridView2)
+        public void DeleteEmployee(DataGridView gridView)
         {
-            string query =
-                $"SELECT " +
-                $"id_zaposlen, " +
-                $"ime, " +
-                $"prezime, " +
-                $"licna_karta, " +
-                $"poziv_na_broj, " +
-                $"convert(varchar, datum_kupovine, 106) AS datum_kupovine, " +
-                $"broj_rata," +
-                $"iznos_kupovine," +
-                $"ROUND(iznos_rate, 2) AS iznos_rate," +
-                $"ukupno_duga," +
-                $"uplaceno," +
-                $"preostali_dug, " +
-                $"firma " +
-                $"FROM " +
-                $"dbo.zaposleni " +
-                $"WHERE firma = {i}";
-
-            //string query = $"SELECT * FROM dbo.zaposleni WHERE firma = {i};";
-
-            // -----  Populates data about employee in a table -----  //
-            SqlConnection sqlConnection = Connection.AddConnection();
-            using (sqlConnection)
+            sqlConnection = Connection.AddConnection();
+            if (gridView.CurrentRow.Cells["id_zaposlen"].Value != DBNull.Value)
             {
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
-                DataTable dataTable = new DataTable();
-                sqlDataAdapter.Fill(dataTable);
-
-                if (dgvName.Name == "employeesDataGridView")
+                using (sqlConnection)
                 {
-                    gridView1.AutoGenerateColumns = false;
-                    gridView1.DataSource = dataTable;
-                }
-                else if (dgvName.Name == "employeesDataGridView2")
-                {
-                    gridView2.AutoGenerateColumns = false;
-                    gridView2.DataSource = dataTable;
+                    try
+                    {
+                        sqlCommand = new SqlCommand("EmployeeDeleteByID", sqlConnection);
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.Parameters.AddWithValue("@id_zaposlen", Convert.ToInt32(gridView.CurrentRow.Cells["id_zaposlen"].Value));
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-        }
+        } 
     }
 }

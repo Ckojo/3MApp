@@ -30,9 +30,7 @@ namespace TrimAplikacija_V2._0
             PopulateCompanyDataDG2();
             var ui = new UI();
             ui.LoadButtons(flowLayoutPanel1, flowLayoutPanel2, Company_Click);
-            //LoadButtons();
             PopulateEmployees3();
-            //LoadLabelsTab3();
         }
 
         string GetConnectionString()
@@ -261,27 +259,8 @@ namespace TrimAplikacija_V2._0
         // Delets users
         private void employeesDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (employeesDataGridView.CurrentRow.Cells["id_zaposlen"].Value != DBNull.Value)
-            {
-                if (MessageBox.Show("Da li ste sigurni da želite da obrišete firmu?", "Company delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    using(sqlConnection = new SqlConnection(GetConnectionString()))
-                    {
-                        try
-                        {
-                            sqlConnection.Open();
-                            sqlCommand = new SqlCommand("EmployeeDeleteByID", sqlConnection);
-                            sqlCommand.CommandType = CommandType.StoredProcedure;
-                            sqlCommand.Parameters.AddWithValue("@id_zaposlen", Convert.ToInt32(employeesDataGridView.CurrentRow.Cells["id_zaposlen"].Value));
-                            sqlCommand.ExecuteNonQuery();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
+            Employee employee = new Employee();
+            employee.DeleteEmployee(employeesDataGridView);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -538,7 +517,7 @@ namespace TrimAplikacija_V2._0
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.EMBEDDED);
-                iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 10, iTextSharp.text.Font.NORMAL);
+                iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 6, iTextSharp.text.Font.NORMAL);
 
 
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
@@ -563,10 +542,10 @@ namespace TrimAplikacija_V2._0
                         try
                         {
                             PdfPTable pdfTable = new PdfPTable(dataGridView.Columns.Count);
-                            pdfTable.DefaultCell.Padding = 3;
+                            pdfTable.DefaultCell.Padding = 6;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-                            float[] widths = new float[] { 0f, 60f, 60f, 60f, 60f, 80f, 50f, 50f, 50f, 50f, 55f, 50f, 0f };
+                            float[] widths = new float[] { 0f, 75f, 75f, 85f, 100f, 100f, 50f, 65f, 65f, 65f, 65f, 65f, 0f };
                             pdfTable.SetWidths(widths);
 
                             foreach (DataGridViewColumn column in dataGridView.Columns)
@@ -585,7 +564,7 @@ namespace TrimAplikacija_V2._0
 
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
-                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                Document pdfDoc = new Document(PageSize.A4, 15f, 20f, 20f, 10f);
                                 PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
 
@@ -626,6 +605,39 @@ namespace TrimAplikacija_V2._0
         private void btnConvert_Click(object sender, EventArgs e)
         {
             ExportToPDF(employeesDataGridView, "test");
+        }
+
+        private void firmeDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            Company company = new Company();
+            company.EditCompany(firmeDataGridView);
+        }
+
+        private void txtPurchaseAmount_TextChanged(object sender, EventArgs e)
+        {
+            if(txtAnnuityNumber.Text != string.Empty && float.TryParse(txtPurchaseAmount.Text, out float purchaseAmount))
+                txtAnnuityAmount.Text = ((float.Parse(txtPurchaseAmount.Text) / (float.Parse(txtAnnuityNumber.Text))).ToString());
+
+            txtTotalDebtt.Text = txtPurchaseAmount.Text;
+        }
+
+        private void txtAnnuityNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPurchaseAmount.Text == string.Empty)
+            {
+                txtPurchaseAmount.Text = "Unesite iznos kupovine!";
+            }
+        }
+
+        private void txtPaid_TextChanged(object sender, EventArgs e)
+        {
+            if(!(float.TryParse(txtPurchaseAmount.Text, out _)))
+            {
+                txtPurchaseAmount.Text = "Unesite iznos kupovine";
+            }
+
+            if(txtPaid.Text != string.Empty && (float.TryParse(txtPurchaseAmount.Text, out _)))
+                txtLeftDebt.Text = ((float.Parse(txtPurchaseAmount.Text) - float.Parse(txtPaid.Text))).ToString();
         }
     }
 }
