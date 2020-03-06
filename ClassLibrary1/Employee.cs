@@ -97,5 +97,18 @@ namespace TrimAplikacija_V2._0
                 }
             }
         } 
+
+        public double CountTotalPaid(TabPage tabPage)
+        {
+            double sum = 0;
+            foreach (Control c in tabPage.Controls)
+            {
+                if(c.GetType() == typeof(TextBox))
+                {
+                    sum += double.Parse(c.Text);
+                }
+            }
+            return sum;
+        }
     }
 }

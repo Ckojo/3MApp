@@ -7,8 +7,12 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using static System.IO.Path;
+using static System.IO.Directory;
+using static System.Environment;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using DGVPrinterHelper;
 
 namespace TrimAplikacija_V2._0
 {
@@ -174,6 +178,16 @@ namespace TrimAplikacija_V2._0
                 sqlCommand = new SqlCommand(sqlCmd, sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             } 
+        }
+
+        void UpdateTotalDebt2(string debt)
+        {
+            using(sqlConnection = Connection.AddConnection())
+            {
+                string sqlCmd = $"UPDATE dbo.firme SET ukupni_dug = {float.Parse(debt)} WHERE id_firme = {Convert.ToInt32(txtCompanyID.Text)};";
+                sqlCommand = new SqlCommand(sqlCmd, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+            }
         }
 
         private void Company_Click(object sender, EventArgs e)
@@ -378,7 +392,44 @@ namespace TrimAplikacija_V2._0
 
         private void btnAddAnnuityDate_Click(object sender, EventArgs e)
         {
-            using(sqlConnection = new SqlConnection(GetConnectionString()))
+            Employee employee = new Employee();
+            double totalPaid = employee.CountTotalPaid(tabPage3);
+            int currentEmployee = int.Parse(employeesDataGridView2.CurrentRow.Cells["id_zaposlen_2"].Value.ToString());
+            double purchaseAmount = double.Parse(employeesDataGridView2.CurrentRow.Cells["iznos_kupovine_2"].Value.ToString());
+
+
+            foreach (DataGridViewRow row in employeesDataGridView.Rows)
+            {
+                if (row.Cells["id_zaposlen"].Value.ToString() == employeesDataGridView2.CurrentRow.Cells["id_zaposlen_2"].Value.ToString())
+                {
+                    MessageBox.Show("WORKS");
+                    using (sqlConnection = new SqlConnection(GetConnectionString()))
+                    {
+                        sqlConnection.Open();
+                        string querry = $"UPDATE dbo.zaposleni SET uplaceno = {totalPaid} WHERE id_zaposlen = {currentEmployee}";
+                        sqlCommand = new SqlCommand(querry, sqlConnection);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
+                    using (sqlConnection = new SqlConnection(GetConnectionString()))
+                    {
+                        sqlConnection.Open();
+                        string querry = $"UPDATE dbo.zaposleni SET preostali_dug = {purchaseAmount - totalPaid} WHERE id_zaposlen = {currentEmployee}";
+                        sqlCommand = new SqlCommand(querry, sqlConnection);
+                        sqlCommand.ExecuteNonQuery();
+                    }
+
+                    PopulateEmployeeData(int.Parse(txtCompanyID.Text), employeesDataGridView2);
+                    PopulateEmployeeData(int.Parse(txtCompanyID.Text), employeesDataGridView);
+
+
+                    string totalDebt = CompanyDebt().ToString();
+                    txtTotalDebt.Text = totalDebt;
+                    UpdateTotalDebt2(totalDebt);
+                }
+            }
+
+            using (sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 string querry = $"UPDATE dbo.datum_uplate SET ";
                 List<TextBox> textBoxes = new List<TextBox>();
@@ -564,7 +615,7 @@ namespace TrimAplikacija_V2._0
 
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
-                                Document pdfDoc = new Document(PageSize.A4, 15f, 20f, 20f, 10f);
+                                Document pdfDoc = new Document(PageSize.A4, 30f, 30f, 30f, 30f);
                                 PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
 
@@ -578,7 +629,7 @@ namespace TrimAplikacija_V2._0
 
                                 string sellerInformations = $"\n__________\nTRIM DOO\nMaršala Tita 56, 21460, Vrbas\n(021)/794-355\nPIB: 100639492\nŽiro račun: 275-0000220029609-95\ntrimsports@yahoo.com";
                                 var sellerDocument = new Paragraph(sellerInformations, font);
-                                
+
                                 pdfDoc.Add(sellerDocument);
                                 pdfDoc.Add(pLeft);
                                 pdfDoc.Add(pRight);
@@ -638,6 +689,13 @@ namespace TrimAplikacija_V2._0
 
             if(txtPaid.Text != string.Empty && (float.TryParse(txtPurchaseAmount.Text, out _)))
                 txtLeftDebt.Text = ((float.Parse(txtPurchaseAmount.Text) - float.Parse(txtPaid.Text))).ToString();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            UI ui = new UI();
+            
+            ui.PrintDocument(employeesDataGridView);
         }
     }
 }

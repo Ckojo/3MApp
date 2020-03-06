@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Data.SqlClient;
+using DGVPrinterHelper;
 
 namespace TrimAplikacija_V2._0
 {
@@ -75,6 +76,22 @@ namespace TrimAplikacija_V2._0
                     }
                 }
             }
+        }
+
+        public void PrintDocument(DataGridView gridView)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Customer Report";
+            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Far;
+            printer.Footer = "Ckojo";
+            printer.FooterSpacing = 15;
+            printer.ColumnWidth = DGVPrinter.ColumnWidthSetting.DataWidth;
+            printer.PrintDataGridView(gridView);
         }
     }
 }
