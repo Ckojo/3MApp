@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnGetAllCom = new System.Windows.Forms.Button();
+            this.btnSearchCom = new System.Windows.Forms.Button();
+            this.txtSearchCo = new System.Windows.Forms.TextBox();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.lblRata16 = new System.Windows.Forms.Label();
             this.txtRata16 = new System.Windows.Forms.TextBox();
             this.txtRata17 = new System.Windows.Forms.TextBox();
@@ -128,6 +132,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnShowAll = new System.Windows.Forms.Button();
+            this.btnSearchCompany = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblTime2 = new System.Windows.Forms.Label();
             this.lblDate2 = new System.Windows.Forms.Label();
@@ -138,6 +147,19 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblAccountingPeriod = new System.Windows.Forms.Label();
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
+            this.id_zaposlen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_licna_karta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_poziv_na_broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_datum_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_broj_rata = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_iznos_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_iznos_rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_ukupno_duga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_uplaceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_preostali_dug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -153,6 +175,7 @@
             this.lblCompanyID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.firmeDataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,51 +203,32 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.txtSearchComp = new System.Windows.Forms.TextBox();
             this.lblLeftDebt = new System.Windows.Forms.Label();
             this.lblCompany = new System.Windows.Forms.Label();
             this.txtLeftDebt = new System.Windows.Forms.TextBox();
             this.txtCompany = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.lblTotalDebtt = new System.Windows.Forms.Label();
             this.txtPaid = new System.Windows.Forms.TextBox();
-            this.txtTotalDebtt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblPaid = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.lblAnnuityNumber = new System.Windows.Forms.Label();
+            this.txtTotalDebtt = new System.Windows.Forms.TextBox();
             this.lblPurchaseAmount = new System.Windows.Forms.Label();
-            this.lblAnnuityAmount = new System.Windows.Forms.Label();
-            this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
-            this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
-            this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.lblReferenceNumber = new System.Windows.Forms.Label();
+            this.lblPaid = new System.Windows.Forms.Label();
+            this.lblAnnuityAmount = new System.Windows.Forms.Label();
             this.lblPurchaseDate = new System.Windows.Forms.Label();
-            this.txtReferenceNumber = new System.Windows.Forms.TextBox();
-            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
+            this.txtReferenceNumber = new System.Windows.Forms.TextBox();
+            this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
             this.lblIdentityCard = new System.Windows.Forms.Label();
+            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtIdentityCard = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.txt_firma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_preostali_dug = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_uplaceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_ukupno_duga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_iznos_rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_iznos_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_broj_rata = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_datum_kupovine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_poziv_na_broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_licna_karta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_zaposlen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -243,11 +247,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,6 +259,10 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage3.Controls.Add(this.btnGetAllCom);
+            this.tabPage3.Controls.Add(this.btnSearchCom);
+            this.tabPage3.Controls.Add(this.txtSearchCo);
+            this.tabPage3.Controls.Add(this.btnSearchEmployee);
             this.tabPage3.Controls.Add(this.lblRata16);
             this.tabPage3.Controls.Add(this.txtRata16);
             this.tabPage3.Controls.Add(this.txtRata17);
@@ -332,11 +335,62 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Datumi uplate";
             // 
+            // btnGetAllCom
+            // 
+            this.btnGetAllCom.BackColor = System.Drawing.Color.White;
+            this.btnGetAllCom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGetAllCom.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetAllCom.Location = new System.Drawing.Point(636, 446);
+            this.btnGetAllCom.Name = "btnGetAllCom";
+            this.btnGetAllCom.Size = new System.Drawing.Size(152, 22);
+            this.btnGetAllCom.TabIndex = 126;
+            this.btnGetAllCom.Text = "Prikaži sve firme";
+            this.btnGetAllCom.UseVisualStyleBackColor = false;
+            this.btnGetAllCom.Click += new System.EventHandler(this.btnGetAllCom_Click);
+            // 
+            // btnSearchCom
+            // 
+            this.btnSearchCom.BackColor = System.Drawing.Color.White;
+            this.btnSearchCom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchCom.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCom.Location = new System.Drawing.Point(636, 421);
+            this.btnSearchCom.Name = "btnSearchCom";
+            this.btnSearchCom.Size = new System.Drawing.Size(152, 22);
+            this.btnSearchCom.TabIndex = 125;
+            this.btnSearchCom.Text = "Pretraži sve firme";
+            this.btnSearchCom.UseVisualStyleBackColor = false;
+            this.btnSearchCom.Click += new System.EventHandler(this.btnSearchCom_Click);
+            // 
+            // txtSearchCo
+            // 
+            this.txtSearchCo.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtSearchCo.Location = new System.Drawing.Point(265, 446);
+            this.txtSearchCo.Name = "txtSearchCo";
+            this.txtSearchCo.Size = new System.Drawing.Size(343, 22);
+            this.txtSearchCo.TabIndex = 123;
+            this.txtSearchCo.Tag = "";
+            this.txtSearchCo.Text = "Pretraga firme...";
+            this.txtSearchCo.Enter += new System.EventHandler(this.txtSearchCo_Enter);
+            this.txtSearchCo.Leave += new System.EventHandler(this.txtSearchCo_Leave);
+            // 
+            // btnSearchEmployee
+            // 
+            this.btnSearchEmployee.BackColor = System.Drawing.Color.White;
+            this.btnSearchEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchEmployee.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchEmployee.Location = new System.Drawing.Point(1087, 436);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(203, 33);
+            this.btnSearchEmployee.TabIndex = 122;
+            this.btnSearchEmployee.Text = "Traži zaposlenog";
+            this.btnSearchEmployee.UseVisualStyleBackColor = false;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearchEmployee_Click);
+            // 
             // lblRata16
             // 
             this.lblRata16.AutoSize = true;
             this.lblRata16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata16.Location = new System.Drawing.Point(799, 266);
+            this.lblRata16.Location = new System.Drawing.Point(848, 266);
             this.lblRata16.Name = "lblRata16";
             this.lblRata16.Size = new System.Drawing.Size(75, 21);
             this.lblRata16.TabIndex = 117;
@@ -345,7 +399,7 @@
             // txtRata16
             // 
             this.txtRata16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata16.Location = new System.Drawing.Point(880, 262);
+            this.txtRata16.Location = new System.Drawing.Point(929, 262);
             this.txtRata16.Name = "txtRata16";
             this.txtRata16.Size = new System.Drawing.Size(133, 25);
             this.txtRata16.TabIndex = 107;
@@ -353,7 +407,7 @@
             // txtRata17
             // 
             this.txtRata17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata17.Location = new System.Drawing.Point(880, 296);
+            this.txtRata17.Location = new System.Drawing.Point(929, 296);
             this.txtRata17.Name = "txtRata17";
             this.txtRata17.Size = new System.Drawing.Size(133, 25);
             this.txtRata17.TabIndex = 109;
@@ -361,7 +415,7 @@
             // txtRata18
             // 
             this.txtRata18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata18.Location = new System.Drawing.Point(880, 329);
+            this.txtRata18.Location = new System.Drawing.Point(929, 329);
             this.txtRata18.Name = "txtRata18";
             this.txtRata18.Size = new System.Drawing.Size(133, 25);
             this.txtRata18.TabIndex = 111;
@@ -369,7 +423,7 @@
             // txtRata19
             // 
             this.txtRata19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata19.Location = new System.Drawing.Point(880, 360);
+            this.txtRata19.Location = new System.Drawing.Point(929, 360);
             this.txtRata19.Name = "txtRata19";
             this.txtRata19.Size = new System.Drawing.Size(133, 25);
             this.txtRata19.TabIndex = 113;
@@ -377,7 +431,7 @@
             // txtRata20
             // 
             this.txtRata20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata20.Location = new System.Drawing.Point(880, 394);
+            this.txtRata20.Location = new System.Drawing.Point(929, 394);
             this.txtRata20.Name = "txtRata20";
             this.txtRata20.Size = new System.Drawing.Size(133, 25);
             this.txtRata20.TabIndex = 115;
@@ -385,7 +439,7 @@
             // txtRata11
             // 
             this.txtRata11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata11.Location = new System.Drawing.Point(880, 73);
+            this.txtRata11.Location = new System.Drawing.Point(929, 73);
             this.txtRata11.Name = "txtRata11";
             this.txtRata11.Size = new System.Drawing.Size(133, 25);
             this.txtRata11.TabIndex = 92;
@@ -393,7 +447,7 @@
             // txtRata12
             // 
             this.txtRata12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata12.Location = new System.Drawing.Point(880, 107);
+            this.txtRata12.Location = new System.Drawing.Point(929, 107);
             this.txtRata12.Name = "txtRata12";
             this.txtRata12.Size = new System.Drawing.Size(133, 25);
             this.txtRata12.TabIndex = 94;
@@ -401,7 +455,7 @@
             // txtRata13
             // 
             this.txtRata13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata13.Location = new System.Drawing.Point(880, 140);
+            this.txtRata13.Location = new System.Drawing.Point(929, 140);
             this.txtRata13.Name = "txtRata13";
             this.txtRata13.Size = new System.Drawing.Size(133, 25);
             this.txtRata13.TabIndex = 96;
@@ -409,7 +463,7 @@
             // txtRata14
             // 
             this.txtRata14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata14.Location = new System.Drawing.Point(880, 171);
+            this.txtRata14.Location = new System.Drawing.Point(929, 171);
             this.txtRata14.Name = "txtRata14";
             this.txtRata14.Size = new System.Drawing.Size(133, 25);
             this.txtRata14.TabIndex = 98;
@@ -417,7 +471,7 @@
             // txtRata15
             // 
             this.txtRata15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata15.Location = new System.Drawing.Point(880, 205);
+            this.txtRata15.Location = new System.Drawing.Point(929, 205);
             this.txtRata15.Name = "txtRata15";
             this.txtRata15.Size = new System.Drawing.Size(133, 25);
             this.txtRata15.TabIndex = 100;
@@ -425,7 +479,7 @@
             // txtRata6
             // 
             this.txtRata6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata6.Location = new System.Drawing.Point(311, 262);
+            this.txtRata6.Location = new System.Drawing.Point(333, 262);
             this.txtRata6.Name = "txtRata6";
             this.txtRata6.Size = new System.Drawing.Size(133, 25);
             this.txtRata6.TabIndex = 77;
@@ -433,7 +487,7 @@
             // txtRata7
             // 
             this.txtRata7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata7.Location = new System.Drawing.Point(311, 296);
+            this.txtRata7.Location = new System.Drawing.Point(333, 296);
             this.txtRata7.Name = "txtRata7";
             this.txtRata7.Size = new System.Drawing.Size(133, 25);
             this.txtRata7.TabIndex = 79;
@@ -441,7 +495,7 @@
             // txtRata8
             // 
             this.txtRata8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata8.Location = new System.Drawing.Point(311, 329);
+            this.txtRata8.Location = new System.Drawing.Point(333, 329);
             this.txtRata8.Name = "txtRata8";
             this.txtRata8.Size = new System.Drawing.Size(133, 25);
             this.txtRata8.TabIndex = 81;
@@ -449,7 +503,7 @@
             // txtRata9
             // 
             this.txtRata9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata9.Location = new System.Drawing.Point(311, 360);
+            this.txtRata9.Location = new System.Drawing.Point(333, 360);
             this.txtRata9.Name = "txtRata9";
             this.txtRata9.Size = new System.Drawing.Size(133, 25);
             this.txtRata9.TabIndex = 83;
@@ -457,7 +511,7 @@
             // txtRata10
             // 
             this.txtRata10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata10.Location = new System.Drawing.Point(311, 394);
+            this.txtRata10.Location = new System.Drawing.Point(333, 394);
             this.txtRata10.Name = "txtRata10";
             this.txtRata10.Size = new System.Drawing.Size(133, 25);
             this.txtRata10.TabIndex = 86;
@@ -465,7 +519,7 @@
             // txtRata1
             // 
             this.txtRata1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata1.Location = new System.Drawing.Point(311, 74);
+            this.txtRata1.Location = new System.Drawing.Point(333, 74);
             this.txtRata1.Name = "txtRata1";
             this.txtRata1.Size = new System.Drawing.Size(133, 25);
             this.txtRata1.TabIndex = 62;
@@ -473,7 +527,7 @@
             // txtRata2
             // 
             this.txtRata2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata2.Location = new System.Drawing.Point(311, 108);
+            this.txtRata2.Location = new System.Drawing.Point(333, 108);
             this.txtRata2.Name = "txtRata2";
             this.txtRata2.Size = new System.Drawing.Size(133, 25);
             this.txtRata2.TabIndex = 64;
@@ -481,7 +535,7 @@
             // txtRata3
             // 
             this.txtRata3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata3.Location = new System.Drawing.Point(311, 141);
+            this.txtRata3.Location = new System.Drawing.Point(333, 141);
             this.txtRata3.Name = "txtRata3";
             this.txtRata3.Size = new System.Drawing.Size(133, 25);
             this.txtRata3.TabIndex = 67;
@@ -489,7 +543,7 @@
             // txtRata4
             // 
             this.txtRata4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata4.Location = new System.Drawing.Point(311, 172);
+            this.txtRata4.Location = new System.Drawing.Point(333, 172);
             this.txtRata4.Name = "txtRata4";
             this.txtRata4.Size = new System.Drawing.Size(133, 25);
             this.txtRata4.TabIndex = 70;
@@ -497,7 +551,7 @@
             // txtRata5
             // 
             this.txtRata5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRata5.Location = new System.Drawing.Point(311, 206);
+            this.txtRata5.Location = new System.Drawing.Point(333, 206);
             this.txtRata5.Name = "txtRata5";
             this.txtRata5.Size = new System.Drawing.Size(133, 25);
             this.txtRata5.TabIndex = 72;
@@ -506,7 +560,7 @@
             // 
             this.lblRata17.AutoSize = true;
             this.lblRata17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata17.Location = new System.Drawing.Point(795, 300);
+            this.lblRata17.Location = new System.Drawing.Point(844, 300);
             this.lblRata17.Name = "lblRata17";
             this.lblRata17.Size = new System.Drawing.Size(79, 21);
             this.lblRata17.TabIndex = 118;
@@ -516,7 +570,7 @@
             // 
             this.lblRata18.AutoSize = true;
             this.lblRata18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata18.Location = new System.Drawing.Point(791, 329);
+            this.lblRata18.Location = new System.Drawing.Point(840, 329);
             this.lblRata18.Name = "lblRata18";
             this.lblRata18.Size = new System.Drawing.Size(83, 21);
             this.lblRata18.TabIndex = 119;
@@ -526,7 +580,7 @@
             // 
             this.lblRata19.AutoSize = true;
             this.lblRata19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata19.Location = new System.Drawing.Point(800, 362);
+            this.lblRata19.Location = new System.Drawing.Point(849, 362);
             this.lblRata19.Name = "lblRata19";
             this.lblRata19.Size = new System.Drawing.Size(74, 21);
             this.lblRata19.TabIndex = 120;
@@ -536,7 +590,7 @@
             // 
             this.dtpRata20.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata20.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata20.Location = new System.Drawing.Point(1041, 393);
+            this.dtpRata20.Location = new System.Drawing.Point(1090, 393);
             this.dtpRata20.Name = "dtpRata20";
             this.dtpRata20.Size = new System.Drawing.Size(200, 22);
             this.dtpRata20.TabIndex = 116;
@@ -545,7 +599,7 @@
             // 
             this.dtpRata19.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata19.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata19.Location = new System.Drawing.Point(1041, 359);
+            this.dtpRata19.Location = new System.Drawing.Point(1090, 359);
             this.dtpRata19.Name = "dtpRata19";
             this.dtpRata19.Size = new System.Drawing.Size(200, 22);
             this.dtpRata19.TabIndex = 114;
@@ -554,7 +608,7 @@
             // 
             this.lblRata20.AutoSize = true;
             this.lblRata20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata20.Location = new System.Drawing.Point(804, 398);
+            this.lblRata20.Location = new System.Drawing.Point(853, 398);
             this.lblRata20.Name = "lblRata20";
             this.lblRata20.Size = new System.Drawing.Size(70, 21);
             this.lblRata20.TabIndex = 121;
@@ -564,7 +618,7 @@
             // 
             this.dtpRata18.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata18.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata18.Location = new System.Drawing.Point(1041, 328);
+            this.dtpRata18.Location = new System.Drawing.Point(1090, 328);
             this.dtpRata18.Name = "dtpRata18";
             this.dtpRata18.Size = new System.Drawing.Size(200, 22);
             this.dtpRata18.TabIndex = 112;
@@ -573,7 +627,7 @@
             // 
             this.dtpRata17.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata17.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata17.Location = new System.Drawing.Point(1041, 295);
+            this.dtpRata17.Location = new System.Drawing.Point(1090, 295);
             this.dtpRata17.Name = "dtpRata17";
             this.dtpRata17.Size = new System.Drawing.Size(200, 22);
             this.dtpRata17.TabIndex = 110;
@@ -582,7 +636,7 @@
             // 
             this.dtpRata16.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata16.Location = new System.Drawing.Point(1041, 261);
+            this.dtpRata16.Location = new System.Drawing.Point(1090, 261);
             this.dtpRata16.Name = "dtpRata16";
             this.dtpRata16.Size = new System.Drawing.Size(200, 22);
             this.dtpRata16.TabIndex = 108;
@@ -591,7 +645,7 @@
             // 
             this.lblRata11.AutoSize = true;
             this.lblRata11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata11.Location = new System.Drawing.Point(809, 77);
+            this.lblRata11.Location = new System.Drawing.Point(858, 77);
             this.lblRata11.Name = "lblRata11";
             this.lblRata11.Size = new System.Drawing.Size(65, 21);
             this.lblRata11.TabIndex = 102;
@@ -601,7 +655,7 @@
             // 
             this.lblRata12.AutoSize = true;
             this.lblRata12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata12.Location = new System.Drawing.Point(805, 107);
+            this.lblRata12.Location = new System.Drawing.Point(854, 107);
             this.lblRata12.Name = "lblRata12";
             this.lblRata12.Size = new System.Drawing.Size(69, 21);
             this.lblRata12.TabIndex = 103;
@@ -611,7 +665,7 @@
             // 
             this.lblRata13.AutoSize = true;
             this.lblRata13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata13.Location = new System.Drawing.Point(801, 140);
+            this.lblRata13.Location = new System.Drawing.Point(850, 140);
             this.lblRata13.Name = "lblRata13";
             this.lblRata13.Size = new System.Drawing.Size(73, 21);
             this.lblRata13.TabIndex = 104;
@@ -621,7 +675,7 @@
             // 
             this.lblRata14.AutoSize = true;
             this.lblRata14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata14.Location = new System.Drawing.Point(799, 172);
+            this.lblRata14.Location = new System.Drawing.Point(848, 172);
             this.lblRata14.Name = "lblRata14";
             this.lblRata14.Size = new System.Drawing.Size(75, 21);
             this.lblRata14.TabIndex = 105;
@@ -631,7 +685,7 @@
             // 
             this.lblRata15.AutoSize = true;
             this.lblRata15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata15.Location = new System.Drawing.Point(803, 205);
+            this.lblRata15.Location = new System.Drawing.Point(852, 205);
             this.lblRata15.Name = "lblRata15";
             this.lblRata15.Size = new System.Drawing.Size(71, 21);
             this.lblRata15.TabIndex = 106;
@@ -641,7 +695,7 @@
             // 
             this.dtpRata11.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata11.Location = new System.Drawing.Point(1041, 73);
+            this.dtpRata11.Location = new System.Drawing.Point(1090, 73);
             this.dtpRata11.Name = "dtpRata11";
             this.dtpRata11.Size = new System.Drawing.Size(200, 22);
             this.dtpRata11.TabIndex = 93;
@@ -650,7 +704,7 @@
             // 
             this.dtpRata15.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata15.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata15.Location = new System.Drawing.Point(1041, 205);
+            this.dtpRata15.Location = new System.Drawing.Point(1090, 205);
             this.dtpRata15.Name = "dtpRata15";
             this.dtpRata15.Size = new System.Drawing.Size(200, 22);
             this.dtpRata15.TabIndex = 101;
@@ -659,7 +713,7 @@
             // 
             this.dtpRata12.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata12.Location = new System.Drawing.Point(1041, 107);
+            this.dtpRata12.Location = new System.Drawing.Point(1090, 107);
             this.dtpRata12.Name = "dtpRata12";
             this.dtpRata12.Size = new System.Drawing.Size(200, 22);
             this.dtpRata12.TabIndex = 95;
@@ -668,7 +722,7 @@
             // 
             this.dtpRata14.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata14.Location = new System.Drawing.Point(1041, 171);
+            this.dtpRata14.Location = new System.Drawing.Point(1090, 171);
             this.dtpRata14.Name = "dtpRata14";
             this.dtpRata14.Size = new System.Drawing.Size(200, 22);
             this.dtpRata14.TabIndex = 99;
@@ -677,7 +731,7 @@
             // 
             this.dtpRata13.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata13.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata13.Location = new System.Drawing.Point(1041, 140);
+            this.dtpRata13.Location = new System.Drawing.Point(1090, 140);
             this.dtpRata13.Name = "dtpRata13";
             this.dtpRata13.Size = new System.Drawing.Size(200, 22);
             this.dtpRata13.TabIndex = 97;
@@ -686,7 +740,7 @@
             // 
             this.lblRata6.AutoSize = true;
             this.lblRata6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata6.Location = new System.Drawing.Point(239, 262);
+            this.lblRata6.Location = new System.Drawing.Point(261, 262);
             this.lblRata6.Name = "lblRata6";
             this.lblRata6.Size = new System.Drawing.Size(66, 21);
             this.lblRata6.TabIndex = 85;
@@ -696,7 +750,7 @@
             // 
             this.lblRata7.AutoSize = true;
             this.lblRata7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata7.Location = new System.Drawing.Point(235, 296);
+            this.lblRata7.Location = new System.Drawing.Point(257, 296);
             this.lblRata7.Name = "lblRata7";
             this.lblRata7.Size = new System.Drawing.Size(70, 21);
             this.lblRata7.TabIndex = 88;
@@ -706,7 +760,7 @@
             // 
             this.lblRata8.AutoSize = true;
             this.lblRata8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata8.Location = new System.Drawing.Point(231, 329);
+            this.lblRata8.Location = new System.Drawing.Point(256, 328);
             this.lblRata8.Name = "lblRata8";
             this.lblRata8.Size = new System.Drawing.Size(74, 21);
             this.lblRata8.TabIndex = 89;
@@ -716,7 +770,7 @@
             // 
             this.lblRata9.AutoSize = true;
             this.lblRata9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata9.Location = new System.Drawing.Point(240, 362);
+            this.lblRata9.Location = new System.Drawing.Point(262, 362);
             this.lblRata9.Name = "lblRata9";
             this.lblRata9.Size = new System.Drawing.Size(65, 21);
             this.lblRata9.TabIndex = 90;
@@ -726,7 +780,7 @@
             // 
             this.lblRata10.AutoSize = true;
             this.lblRata10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata10.Location = new System.Drawing.Point(244, 394);
+            this.lblRata10.Location = new System.Drawing.Point(266, 394);
             this.lblRata10.Name = "lblRata10";
             this.lblRata10.Size = new System.Drawing.Size(61, 21);
             this.lblRata10.TabIndex = 91;
@@ -736,7 +790,7 @@
             // 
             this.dtpRata6.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata6.Location = new System.Drawing.Point(472, 261);
+            this.dtpRata6.Location = new System.Drawing.Point(494, 261);
             this.dtpRata6.Name = "dtpRata6";
             this.dtpRata6.Size = new System.Drawing.Size(200, 22);
             this.dtpRata6.TabIndex = 78;
@@ -745,7 +799,7 @@
             // 
             this.dtpRata7.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata7.Location = new System.Drawing.Point(472, 295);
+            this.dtpRata7.Location = new System.Drawing.Point(494, 295);
             this.dtpRata7.Name = "dtpRata7";
             this.dtpRata7.Size = new System.Drawing.Size(200, 22);
             this.dtpRata7.TabIndex = 80;
@@ -754,7 +808,7 @@
             // 
             this.dtpRata8.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata8.Location = new System.Drawing.Point(472, 328);
+            this.dtpRata8.Location = new System.Drawing.Point(494, 328);
             this.dtpRata8.Name = "dtpRata8";
             this.dtpRata8.Size = new System.Drawing.Size(200, 22);
             this.dtpRata8.TabIndex = 82;
@@ -763,7 +817,7 @@
             // 
             this.dtpRata9.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata9.Location = new System.Drawing.Point(472, 359);
+            this.dtpRata9.Location = new System.Drawing.Point(494, 359);
             this.dtpRata9.Name = "dtpRata9";
             this.dtpRata9.Size = new System.Drawing.Size(200, 22);
             this.dtpRata9.TabIndex = 84;
@@ -772,7 +826,7 @@
             // 
             this.dtpRata10.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata10.Location = new System.Drawing.Point(472, 393);
+            this.dtpRata10.Location = new System.Drawing.Point(494, 393);
             this.dtpRata10.Name = "dtpRata10";
             this.dtpRata10.Size = new System.Drawing.Size(200, 22);
             this.dtpRata10.TabIndex = 87;
@@ -781,7 +835,7 @@
             // 
             this.lblRata1.AutoSize = true;
             this.lblRata1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata1.Location = new System.Drawing.Point(249, 74);
+            this.lblRata1.Location = new System.Drawing.Point(271, 74);
             this.lblRata1.Name = "lblRata1";
             this.lblRata1.Size = new System.Drawing.Size(56, 21);
             this.lblRata1.TabIndex = 65;
@@ -791,7 +845,7 @@
             // 
             this.lblRata2.AutoSize = true;
             this.lblRata2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata2.Location = new System.Drawing.Point(249, 108);
+            this.lblRata2.Location = new System.Drawing.Point(271, 108);
             this.lblRata2.Name = "lblRata2";
             this.lblRata2.Size = new System.Drawing.Size(60, 21);
             this.lblRata2.TabIndex = 69;
@@ -801,7 +855,7 @@
             // 
             this.lblRata3.AutoSize = true;
             this.lblRata3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata3.Location = new System.Drawing.Point(245, 141);
+            this.lblRata3.Location = new System.Drawing.Point(267, 141);
             this.lblRata3.Name = "lblRata3";
             this.lblRata3.Size = new System.Drawing.Size(64, 21);
             this.lblRata3.TabIndex = 73;
@@ -830,7 +884,7 @@
             // 
             this.lblRata4.AutoSize = true;
             this.lblRata4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata4.Location = new System.Drawing.Point(242, 172);
+            this.lblRata4.Location = new System.Drawing.Point(264, 172);
             this.lblRata4.Name = "lblRata4";
             this.lblRata4.Size = new System.Drawing.Size(66, 21);
             this.lblRata4.TabIndex = 75;
@@ -841,9 +895,9 @@
             this.btnAddAnnuityDate.BackColor = System.Drawing.Color.White;
             this.btnAddAnnuityDate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddAnnuityDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddAnnuityDate.Location = new System.Drawing.Point(209, 425);
+            this.btnAddAnnuityDate.Location = new System.Drawing.Point(878, 436);
             this.btnAddAnnuityDate.Name = "btnAddAnnuityDate";
-            this.btnAddAnnuityDate.Size = new System.Drawing.Size(213, 42);
+            this.btnAddAnnuityDate.Size = new System.Drawing.Size(203, 33);
             this.btnAddAnnuityDate.TabIndex = 0;
             this.btnAddAnnuityDate.Text = "Dodaj datum uplate:";
             this.btnAddAnnuityDate.UseVisualStyleBackColor = false;
@@ -865,10 +919,10 @@
             this.iznos_rate_2,
             this.txt_uplaceno_2,
             this.preostali_dug_2});
-            this.employeesDataGridView2.Location = new System.Drawing.Point(209, 475);
+            this.employeesDataGridView2.Location = new System.Drawing.Point(263, 475);
             this.employeesDataGridView2.Name = "employeesDataGridView2";
             this.employeesDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeesDataGridView2.Size = new System.Drawing.Size(1081, 170);
+            this.employeesDataGridView2.Size = new System.Drawing.Size(1027, 170);
             this.employeesDataGridView2.TabIndex = 29;
             this.employeesDataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView2_CellClick);
             // 
@@ -963,7 +1017,7 @@
             // 
             this.lblRata5.AutoSize = true;
             this.lblRata5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRata5.Location = new System.Drawing.Point(249, 206);
+            this.lblRata5.Location = new System.Drawing.Point(271, 206);
             this.lblRata5.Name = "lblRata5";
             this.lblRata5.Size = new System.Drawing.Size(62, 21);
             this.lblRata5.TabIndex = 76;
@@ -971,21 +1025,23 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 645);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(231, 645);
             this.flowLayoutPanel2.TabIndex = 2;
+            this.flowLayoutPanel2.WrapContents = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(197, 104);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 104);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -994,7 +1050,7 @@
             // 
             this.dtpRata5.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata5.Location = new System.Drawing.Point(472, 206);
+            this.dtpRata5.Location = new System.Drawing.Point(494, 206);
             this.dtpRata5.Name = "dtpRata5";
             this.dtpRata5.Size = new System.Drawing.Size(200, 22);
             this.dtpRata5.TabIndex = 74;
@@ -1003,7 +1059,7 @@
             // 
             this.dtpRata1.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata1.Location = new System.Drawing.Point(472, 74);
+            this.dtpRata1.Location = new System.Drawing.Point(494, 74);
             this.dtpRata1.Name = "dtpRata1";
             this.dtpRata1.Size = new System.Drawing.Size(200, 22);
             this.dtpRata1.TabIndex = 63;
@@ -1012,7 +1068,7 @@
             // 
             this.dtpRata4.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata4.Location = new System.Drawing.Point(472, 172);
+            this.dtpRata4.Location = new System.Drawing.Point(494, 172);
             this.dtpRata4.Name = "dtpRata4";
             this.dtpRata4.Size = new System.Drawing.Size(200, 22);
             this.dtpRata4.TabIndex = 71;
@@ -1021,7 +1077,7 @@
             // 
             this.dtpRata2.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata2.Location = new System.Drawing.Point(472, 108);
+            this.dtpRata2.Location = new System.Drawing.Point(494, 108);
             this.dtpRata2.Name = "dtpRata2";
             this.dtpRata2.Size = new System.Drawing.Size(200, 22);
             this.dtpRata2.TabIndex = 66;
@@ -1030,7 +1086,7 @@
             // 
             this.dtpRata3.CustomFormat = "dd -MMMM- yyyy";
             this.dtpRata3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRata3.Location = new System.Drawing.Point(472, 141);
+            this.dtpRata3.Location = new System.Drawing.Point(494, 141);
             this.dtpRata3.Name = "dtpRata3";
             this.dtpRata3.Size = new System.Drawing.Size(200, 22);
             this.dtpRata3.TabIndex = 68;
@@ -1057,9 +1113,9 @@
             this.mesto,
             this.pib,
             this.ukupni_dug});
-            this.firmeDataGridView.Location = new System.Drawing.Point(6, 407);
+            this.firmeDataGridView.Location = new System.Drawing.Point(6, 401);
             this.firmeDataGridView.Name = "firmeDataGridView";
-            this.firmeDataGridView.Size = new System.Drawing.Size(655, 288);
+            this.firmeDataGridView.Size = new System.Drawing.Size(655, 230);
             this.firmeDataGridView.TabIndex = 2;
             this.firmeDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.firmeDataGridView_CellValueChanged);
             this.firmeDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.firmeDataGridView_UserDeletingRow);
@@ -1116,7 +1172,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(6, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1298, 351);
+            this.panel3.Size = new System.Drawing.Size(1287, 351);
             this.panel3.TabIndex = 2;
             // 
             // btnAdd
@@ -1135,28 +1191,28 @@
             this.txtTotalDebt2.Location = new System.Drawing.Point(141, 178);
             this.txtTotalDebt2.Name = "txtTotalDebt2";
             this.txtTotalDebt2.ReadOnly = true;
-            this.txtTotalDebt2.Size = new System.Drawing.Size(1138, 22);
+            this.txtTotalDebt2.Size = new System.Drawing.Size(1093, 22);
             this.txtTotalDebt2.TabIndex = 56;
             // 
             // txtPIB2
             // 
             this.txtPIB2.Location = new System.Drawing.Point(141, 145);
             this.txtPIB2.Name = "txtPIB2";
-            this.txtPIB2.Size = new System.Drawing.Size(1138, 22);
+            this.txtPIB2.Size = new System.Drawing.Size(1093, 22);
             this.txtPIB2.TabIndex = 55;
             // 
             // txtHeadQuarter2
             // 
             this.txtHeadQuarter2.Location = new System.Drawing.Point(141, 114);
             this.txtHeadQuarter2.Name = "txtHeadQuarter2";
-            this.txtHeadQuarter2.Size = new System.Drawing.Size(1138, 22);
+            this.txtHeadQuarter2.Size = new System.Drawing.Size(1093, 22);
             this.txtHeadQuarter2.TabIndex = 54;
             // 
             // txtCompanyName2
             // 
             this.txtCompanyName2.Location = new System.Drawing.Point(141, 83);
             this.txtCompanyName2.Name = "txtCompanyName2";
-            this.txtCompanyName2.Size = new System.Drawing.Size(1138, 22);
+            this.txtCompanyName2.Size = new System.Drawing.Size(1093, 22);
             this.txtCompanyName2.TabIndex = 53;
             // 
             // label3
@@ -1213,6 +1269,10 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage1.Controls.Add(this.btnShowAll);
+            this.tabPage1.Controls.Add(this.btnSearchCompany);
+            this.tabPage1.Controls.Add(this.lblSearch);
+            this.tabPage1.Controls.Add(this.txtSearch);
             this.tabPage1.Controls.Add(this.btnPrint);
             this.tabPage1.Controls.Add(this.panel10);
             this.tabPage1.Controls.Add(this.btnConvert);
@@ -1231,12 +1291,68 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Zaposleni - Detalji";
             // 
+            // btnShowAll
+            // 
+            this.btnShowAll.BackColor = System.Drawing.Color.White;
+            this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAll.Location = new System.Drawing.Point(409, 378);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(166, 35);
+            this.btnShowAll.TabIndex = 42;
+            this.btnShowAll.Text = "Prikaži sve firme";
+            this.btnShowAll.UseVisualStyleBackColor = false;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click_1);
+            // 
+            // btnSearchCompany
+            // 
+            this.btnSearchCompany.BackColor = System.Drawing.Color.White;
+            this.btnSearchCompany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchCompany.Location = new System.Drawing.Point(232, 378);
+            this.btnSearchCompany.Name = "btnSearchCompany";
+            this.btnSearchCompany.Size = new System.Drawing.Size(166, 35);
+            this.btnSearchCompany.TabIndex = 41;
+            this.btnSearchCompany.Text = "Pretraži firmu";
+            this.btnSearchCompany.UseVisualStyleBackColor = false;
+            this.btnSearchCompany.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(308, 315);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(171, 32);
+            this.lblSearch.TabIndex = 40;
+            this.lblSearch.Text = "Pretraga firme:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(232, 350);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(343, 22);
+            this.txtSearch.TabIndex = 39;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Location = new System.Drawing.Point(801, 365);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(241, 52);
+            this.btnPrint.TabIndex = 38;
+            this.btnPrint.Text = "Štampanje";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.lblTime2);
             this.panel10.Controls.Add(this.lblDate2);
-            this.panel10.Location = new System.Drawing.Point(553, 6);
+            this.panel10.Location = new System.Drawing.Point(563, 6);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(333, 61);
             this.panel10.TabIndex = 37;
@@ -1245,7 +1361,7 @@
             // 
             this.lblTime2.AutoSize = true;
             this.lblTime2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime2.Location = new System.Drawing.Point(231, 21);
+            this.lblTime2.Location = new System.Drawing.Point(233, 21);
             this.lblTime2.Name = "lblTime2";
             this.lblTime2.Size = new System.Drawing.Size(0, 21);
             this.lblTime2.TabIndex = 1;
@@ -1254,7 +1370,7 @@
             // 
             this.lblDate2.AutoSize = true;
             this.lblDate2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate2.Location = new System.Drawing.Point(11, 21);
+            this.lblDate2.Location = new System.Drawing.Point(13, 21);
             this.lblDate2.Name = "lblDate2";
             this.lblDate2.Size = new System.Drawing.Size(0, 21);
             this.lblDate2.TabIndex = 0;
@@ -1264,7 +1380,7 @@
             this.btnConvert.BackColor = System.Drawing.Color.White;
             this.btnConvert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConvert.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConvert.Location = new System.Drawing.Point(456, 365);
+            this.btnConvert.Location = new System.Drawing.Point(1048, 365);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(241, 52);
             this.btnConvert.TabIndex = 36;
@@ -1345,30 +1461,127 @@
             this.txt_uplaceno,
             this.txt_preostali_dug,
             this.txt_firma});
-            this.employeesDataGridView.Location = new System.Drawing.Point(209, 423);
+            this.employeesDataGridView.Location = new System.Drawing.Point(230, 423);
             this.employeesDataGridView.Name = "employeesDataGridView";
             this.employeesDataGridView.Size = new System.Drawing.Size(1060, 197);
             this.employeesDataGridView.TabIndex = 0;
             this.employeesDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesDataGridView_CellValueChanged);
             this.employeesDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.employeesDataGridView_UserDeletingRow);
             // 
+            // id_zaposlen
+            // 
+            this.id_zaposlen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_zaposlen.DataPropertyName = "id_zaposlen";
+            this.id_zaposlen.HeaderText = "ID";
+            this.id_zaposlen.Name = "id_zaposlen";
+            this.id_zaposlen.Visible = false;
+            // 
+            // txt_ime
+            // 
+            this.txt_ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_ime.DataPropertyName = "ime";
+            this.txt_ime.HeaderText = "Ime";
+            this.txt_ime.Name = "txt_ime";
+            // 
+            // txt_prezime
+            // 
+            this.txt_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_prezime.DataPropertyName = "prezime";
+            this.txt_prezime.HeaderText = "Prezime";
+            this.txt_prezime.Name = "txt_prezime";
+            // 
+            // txt_licna_karta
+            // 
+            this.txt_licna_karta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_licna_karta.DataPropertyName = "licna_karta";
+            this.txt_licna_karta.HeaderText = "Licna karta";
+            this.txt_licna_karta.Name = "txt_licna_karta";
+            // 
+            // txt_poziv_na_broj
+            // 
+            this.txt_poziv_na_broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_poziv_na_broj.DataPropertyName = "poziv_na_broj";
+            this.txt_poziv_na_broj.HeaderText = "Poziv na broj";
+            this.txt_poziv_na_broj.Name = "txt_poziv_na_broj";
+            // 
+            // txt_datum_kupovine
+            // 
+            this.txt_datum_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_datum_kupovine.DataPropertyName = "datum_kupovine";
+            this.txt_datum_kupovine.HeaderText = "Datum kupovine";
+            this.txt_datum_kupovine.Name = "txt_datum_kupovine";
+            // 
+            // txt_broj_rata
+            // 
+            this.txt_broj_rata.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_broj_rata.DataPropertyName = "broj_rata";
+            this.txt_broj_rata.HeaderText = "Broj rata";
+            this.txt_broj_rata.Name = "txt_broj_rata";
+            // 
+            // txt_iznos_kupovine
+            // 
+            this.txt_iznos_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_iznos_kupovine.DataPropertyName = "iznos_kupovine";
+            this.txt_iznos_kupovine.HeaderText = "Iznos kupovine";
+            this.txt_iznos_kupovine.Name = "txt_iznos_kupovine";
+            // 
+            // txt_iznos_rate
+            // 
+            this.txt_iznos_rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_iznos_rate.DataPropertyName = "iznos_rate";
+            this.txt_iznos_rate.HeaderText = "Iznos rate";
+            this.txt_iznos_rate.Name = "txt_iznos_rate";
+            this.txt_iznos_rate.ReadOnly = true;
+            // 
+            // txt_ukupno_duga
+            // 
+            this.txt_ukupno_duga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_ukupno_duga.DataPropertyName = "ukupno_duga";
+            this.txt_ukupno_duga.HeaderText = "Ukupno duga";
+            this.txt_ukupno_duga.Name = "txt_ukupno_duga";
+            this.txt_ukupno_duga.ReadOnly = true;
+            // 
+            // txt_uplaceno
+            // 
+            this.txt_uplaceno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_uplaceno.DataPropertyName = "uplaceno";
+            this.txt_uplaceno.HeaderText = "Uplaceno";
+            this.txt_uplaceno.Name = "txt_uplaceno";
+            // 
+            // txt_preostali_dug
+            // 
+            this.txt_preostali_dug.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_preostali_dug.DataPropertyName = "preostali_dug";
+            this.txt_preostali_dug.HeaderText = "Preostali dug";
+            this.txt_preostali_dug.Name = "txt_preostali_dug";
+            this.txt_preostali_dug.ReadOnly = true;
+            // 
+            // txt_firma
+            // 
+            this.txt_firma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txt_firma.DataPropertyName = "firma";
+            this.txt_firma.HeaderText = "Firma";
+            this.txt_firma.Name = "txt_firma";
+            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 645);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(221, 645);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(205, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1387,7 +1600,7 @@
             this.panel2.Controls.Add(this.lblCompanyName);
             this.panel2.Controls.Add(this.lblCompanyID);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(209, 6);
+            this.panel2.Location = new System.Drawing.Point(230, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(327, 234);
             this.panel2.TabIndex = 1;
@@ -1490,6 +1703,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.firmeDataGridView2);
             this.tabPage4.Controls.Add(this.employeesDataGridView3);
             this.tabPage4.Controls.Add(this.panel4);
@@ -1503,6 +1717,19 @@
             this.tabPage4.Size = new System.Drawing.Size(1296, 651);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Zaposleni - Unos";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Light", 15.25F);
+            this.button1.Location = new System.Drawing.Point(954, 496);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(333, 39);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Prikaži sve firme";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // firmeDataGridView2
             // 
@@ -1738,81 +1965,87 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.txtSearchComp);
+            this.panel1.Controls.Add(this.lblLeftDebt);
+            this.panel1.Controls.Add(this.lblCompany);
+            this.panel1.Controls.Add(this.txtLeftDebt);
+            this.panel1.Controls.Add(this.txtCompany);
+            this.panel1.Controls.Add(this.lblTotalDebtt);
+            this.panel1.Controls.Add(this.txtPaid);
+            this.panel1.Controls.Add(this.lblAnnuityNumber);
+            this.panel1.Controls.Add(this.txtTotalDebtt);
+            this.panel1.Controls.Add(this.lblPurchaseAmount);
+            this.panel1.Controls.Add(this.lblReferenceNumber);
+            this.panel1.Controls.Add(this.lblPaid);
+            this.panel1.Controls.Add(this.lblAnnuityAmount);
+            this.panel1.Controls.Add(this.lblPurchaseDate);
+            this.panel1.Controls.Add(this.txtAnnuityAmount);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Controls.Add(this.txtPurchaseAmount);
+            this.panel1.Controls.Add(this.txtReferenceNumber);
+            this.panel1.Controls.Add(this.txtAnnuityNumber);
+            this.panel1.Controls.Add(this.lblIdentityCard);
+            this.panel1.Controls.Add(this.dtpPurchaseDate);
+            this.panel1.Controls.Add(this.lblLastName);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.txtIdentityCard);
+            this.panel1.Controls.Add(this.txtLastName);
             this.panel1.Location = new System.Drawing.Point(209, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 434);
             this.panel1.TabIndex = 10;
             // 
-            // panel9
+            // txtSearchComp
             // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lblLeftDebt);
-            this.panel9.Controls.Add(this.lblCompany);
-            this.panel9.Controls.Add(this.txtLeftDebt);
-            this.panel9.Controls.Add(this.txtCompany);
-            this.panel9.Location = new System.Drawing.Point(35, 353);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(655, 65);
-            this.panel9.TabIndex = 5;
+            this.txtSearchComp.Location = new System.Drawing.Point(507, 285);
+            this.txtSearchComp.Name = "txtSearchComp";
+            this.txtSearchComp.Size = new System.Drawing.Size(137, 22);
+            this.txtSearchComp.TabIndex = 12;
+            this.txtSearchComp.Text = "Unesite ime firme";
+            this.txtSearchComp.TextChanged += new System.EventHandler(this.txtSearchComp_TextChanged);
             // 
             // lblLeftDebt
             // 
             this.lblLeftDebt.AutoSize = true;
             this.lblLeftDebt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeftDebt.Location = new System.Drawing.Point(13, 26);
+            this.lblLeftDebt.Location = new System.Drawing.Point(397, 246);
             this.lblLeftDebt.Name = "lblLeftDebt";
             this.lblLeftDebt.Size = new System.Drawing.Size(104, 21);
-            this.lblLeftDebt.TabIndex = 1;
+            this.lblLeftDebt.TabIndex = 37;
             this.lblLeftDebt.Text = "Preostali dug:";
             // 
             // lblCompany
             // 
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(346, 29);
+            this.lblCompany.Location = new System.Drawing.Point(448, 287);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(53, 21);
-            this.lblCompany.TabIndex = 10;
+            this.lblCompany.TabIndex = 38;
             this.lblCompany.Text = "Firma:";
             // 
             // txtLeftDebt
             // 
-            this.txtLeftDebt.Location = new System.Drawing.Point(123, 29);
+            this.txtLeftDebt.Location = new System.Drawing.Point(507, 249);
             this.txtLeftDebt.Name = "txtLeftDebt";
             this.txtLeftDebt.ReadOnly = true;
-            this.txtLeftDebt.Size = new System.Drawing.Size(116, 22);
+            this.txtLeftDebt.Size = new System.Drawing.Size(194, 22);
             this.txtLeftDebt.TabIndex = 11;
             // 
             // txtCompany
             // 
-            this.txtCompany.Location = new System.Drawing.Point(405, 28);
+            this.txtCompany.Location = new System.Drawing.Point(650, 285);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(51, 22);
-            this.txtCompany.TabIndex = 12;
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.lblTotalDebtt);
-            this.panel8.Controls.Add(this.txtPaid);
-            this.panel8.Controls.Add(this.txtTotalDebtt);
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.lblPaid);
-            this.panel8.Location = new System.Drawing.Point(35, 273);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(655, 65);
-            this.panel8.TabIndex = 4;
+            this.txtCompany.TabIndex = 13;
+            this.txtCompany.Text = "ID ";
+            this.txtCompany.TextChanged += new System.EventHandler(this.txtCompany_TextChanged);
             // 
             // lblTotalDebtt
             // 
             this.lblTotalDebtt.AutoSize = true;
             this.lblTotalDebtt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDebtt.Location = new System.Drawing.Point(30, 13);
+            this.lblTotalDebtt.Location = new System.Drawing.Point(394, 159);
             this.lblTotalDebtt.Name = "lblTotalDebtt";
             this.lblTotalDebtt.Size = new System.Drawing.Size(107, 21);
             this.lblTotalDebtt.TabIndex = 2;
@@ -1820,219 +2053,169 @@
             // 
             // txtPaid
             // 
-            this.txtPaid.Location = new System.Drawing.Point(430, 20);
+            this.txtPaid.Location = new System.Drawing.Point(507, 206);
             this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Size = new System.Drawing.Size(112, 22);
+            this.txtPaid.Size = new System.Drawing.Size(194, 22);
             this.txtPaid.TabIndex = 10;
             this.txtPaid.TextChanged += new System.EventHandler(this.txtPaid_TextChanged);
-            // 
-            // txtTotalDebtt
-            // 
-            this.txtTotalDebtt.Location = new System.Drawing.Point(143, 16);
-            this.txtTotalDebtt.Name = "txtTotalDebtt";
-            this.txtTotalDebtt.ReadOnly = true;
-            this.txtTotalDebtt.Size = new System.Drawing.Size(116, 22);
-            this.txtTotalDebtt.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(265, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 21);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "RSD";
-            // 
-            // lblPaid
-            // 
-            this.lblPaid.AutoSize = true;
-            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaid.Location = new System.Drawing.Point(346, 16);
-            this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(78, 21);
-            this.lblPaid.TabIndex = 36;
-            this.lblPaid.Text = "Uplaćeno:";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.lblAnnuityNumber);
-            this.panel7.Controls.Add(this.lblPurchaseAmount);
-            this.panel7.Controls.Add(this.lblAnnuityAmount);
-            this.panel7.Controls.Add(this.txtAnnuityAmount);
-            this.panel7.Controls.Add(this.txtPurchaseAmount);
-            this.panel7.Controls.Add(this.txtAnnuityNumber);
-            this.panel7.Location = new System.Drawing.Point(33, 195);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(657, 65);
-            this.panel7.TabIndex = 3;
             // 
             // lblAnnuityNumber
             // 
             this.lblAnnuityNumber.AutoSize = true;
             this.lblAnnuityNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityNumber.Location = new System.Drawing.Point(20, 16);
+            this.lblAnnuityNumber.Location = new System.Drawing.Point(63, 286);
             this.lblAnnuityNumber.Name = "lblAnnuityNumber";
             this.lblAnnuityNumber.Size = new System.Drawing.Size(72, 21);
             this.lblAnnuityNumber.TabIndex = 5;
             this.lblAnnuityNumber.Text = "Broj rata:";
             // 
+            // txtTotalDebtt
+            // 
+            this.txtTotalDebtt.Location = new System.Drawing.Point(507, 162);
+            this.txtTotalDebtt.Name = "txtTotalDebtt";
+            this.txtTotalDebtt.ReadOnly = true;
+            this.txtTotalDebtt.Size = new System.Drawing.Size(194, 22);
+            this.txtTotalDebtt.TabIndex = 9;
+            // 
             // lblPurchaseAmount
             // 
             this.lblPurchaseAmount.AutoSize = true;
             this.lblPurchaseAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseAmount.Location = new System.Drawing.Point(147, 17);
+            this.lblPurchaseAmount.Location = new System.Drawing.Point(384, 77);
             this.lblPurchaseAmount.Name = "lblPurchaseAmount";
             this.lblPurchaseAmount.Size = new System.Drawing.Size(117, 21);
             this.lblPurchaseAmount.TabIndex = 4;
             this.lblPurchaseAmount.Text = "Iznos kupovine:";
             // 
-            // lblAnnuityAmount
-            // 
-            this.lblAnnuityAmount.AutoSize = true;
-            this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityAmount.Location = new System.Drawing.Point(424, 17);
-            this.lblAnnuityAmount.Name = "lblAnnuityAmount";
-            this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
-            this.lblAnnuityAmount.TabIndex = 3;
-            this.lblAnnuityAmount.Text = "Iznos rate:";
-            // 
-            // txtAnnuityAmount
-            // 
-            this.txtAnnuityAmount.Location = new System.Drawing.Point(506, 19);
-            this.txtAnnuityAmount.Name = "txtAnnuityAmount";
-            this.txtAnnuityAmount.ReadOnly = true;
-            this.txtAnnuityAmount.Size = new System.Drawing.Size(134, 22);
-            this.txtAnnuityAmount.TabIndex = 8;
-            // 
-            // txtPurchaseAmount
-            // 
-            this.txtPurchaseAmount.Location = new System.Drawing.Point(270, 15);
-            this.txtPurchaseAmount.Name = "txtPurchaseAmount";
-            this.txtPurchaseAmount.Size = new System.Drawing.Size(148, 22);
-            this.txtPurchaseAmount.TabIndex = 7;
-            this.txtPurchaseAmount.TextChanged += new System.EventHandler(this.txtPurchaseAmount_TextChanged);
-            // 
-            // txtAnnuityNumber
-            // 
-            this.txtAnnuityNumber.Location = new System.Drawing.Point(98, 16);
-            this.txtAnnuityNumber.Name = "txtAnnuityNumber";
-            this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
-            this.txtAnnuityNumber.TabIndex = 6;
-            this.txtAnnuityNumber.TextChanged += new System.EventHandler(this.txtAnnuityNumber_TextChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.lblReferenceNumber);
-            this.panel6.Controls.Add(this.lblPurchaseDate);
-            this.panel6.Controls.Add(this.txtReferenceNumber);
-            this.panel6.Controls.Add(this.dtpPurchaseDate);
-            this.panel6.Location = new System.Drawing.Point(33, 111);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(657, 65);
-            this.panel6.TabIndex = 2;
-            // 
             // lblReferenceNumber
             // 
             this.lblReferenceNumber.AutoSize = true;
             this.lblReferenceNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenceNumber.Location = new System.Drawing.Point(19, 17);
+            this.lblReferenceNumber.Location = new System.Drawing.Point(33, 205);
             this.lblReferenceNumber.Name = "lblReferenceNumber";
             this.lblReferenceNumber.Size = new System.Drawing.Size(102, 21);
             this.lblReferenceNumber.TabIndex = 7;
             this.lblReferenceNumber.Text = "Poziv na broj:";
             // 
+            // lblPaid
+            // 
+            this.lblPaid.AutoSize = true;
+            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaid.Location = new System.Drawing.Point(423, 202);
+            this.lblPaid.Name = "lblPaid";
+            this.lblPaid.Size = new System.Drawing.Size(78, 21);
+            this.lblPaid.TabIndex = 36;
+            this.lblPaid.Text = "Uplaćeno:";
+            // 
+            // lblAnnuityAmount
+            // 
+            this.lblAnnuityAmount.AutoSize = true;
+            this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnuityAmount.Location = new System.Drawing.Point(421, 115);
+            this.lblAnnuityAmount.Name = "lblAnnuityAmount";
+            this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
+            this.lblAnnuityAmount.TabIndex = 3;
+            this.lblAnnuityAmount.Text = "Iznos rate:";
+            // 
             // lblPurchaseDate
             // 
             this.lblPurchaseDate.AutoSize = true;
             this.lblPurchaseDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseDate.Location = new System.Drawing.Point(363, 18);
+            this.lblPurchaseDate.Location = new System.Drawing.Point(7, 245);
             this.lblPurchaseDate.Name = "lblPurchaseDate";
             this.lblPurchaseDate.Size = new System.Drawing.Size(128, 21);
             this.lblPurchaseDate.TabIndex = 6;
             this.lblPurchaseDate.Text = "Datum kupovine:";
             // 
-            // txtReferenceNumber
+            // txtAnnuityAmount
             // 
-            this.txtReferenceNumber.Location = new System.Drawing.Point(127, 17);
-            this.txtReferenceNumber.Name = "txtReferenceNumber";
-            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
-            this.txtReferenceNumber.TabIndex = 4;
-            // 
-            // dtpPurchaseDate
-            // 
-            this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
-            this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(497, 18);
-            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
-            this.dtpPurchaseDate.Size = new System.Drawing.Size(151, 22);
-            this.dtpPurchaseDate.TabIndex = 5;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.lblName);
-            this.panel5.Controls.Add(this.lblIdentityCard);
-            this.panel5.Controls.Add(this.lblLastName);
-            this.panel5.Controls.Add(this.txtName);
-            this.panel5.Controls.Add(this.txtIdentityCard);
-            this.panel5.Controls.Add(this.txtLastName);
-            this.panel5.Location = new System.Drawing.Point(33, 30);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(657, 65);
-            this.panel5.TabIndex = 1;
+            this.txtAnnuityAmount.Location = new System.Drawing.Point(507, 116);
+            this.txtAnnuityAmount.Name = "txtAnnuityAmount";
+            this.txtAnnuityAmount.ReadOnly = true;
+            this.txtAnnuityAmount.Size = new System.Drawing.Size(194, 22);
+            this.txtAnnuityAmount.TabIndex = 8;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(29, 18);
+            this.lblName.Location = new System.Drawing.Point(66, 76);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(39, 21);
-            this.lblName.TabIndex = 0;
+            this.lblName.TabIndex = 13;
             this.lblName.Text = "Ime:";
+            // 
+            // txtPurchaseAmount
+            // 
+            this.txtPurchaseAmount.Location = new System.Drawing.Point(507, 75);
+            this.txtPurchaseAmount.Name = "txtPurchaseAmount";
+            this.txtPurchaseAmount.Size = new System.Drawing.Size(194, 22);
+            this.txtPurchaseAmount.TabIndex = 7;
+            this.txtPurchaseAmount.TextChanged += new System.EventHandler(this.txtPurchaseAmount_TextChanged);
+            // 
+            // txtReferenceNumber
+            // 
+            this.txtReferenceNumber.Location = new System.Drawing.Point(141, 205);
+            this.txtReferenceNumber.Name = "txtReferenceNumber";
+            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
+            this.txtReferenceNumber.TabIndex = 4;
+            // 
+            // txtAnnuityNumber
+            // 
+            this.txtAnnuityNumber.Location = new System.Drawing.Point(141, 286);
+            this.txtAnnuityNumber.Name = "txtAnnuityNumber";
+            this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
+            this.txtAnnuityNumber.TabIndex = 6;
+            this.txtAnnuityNumber.TextChanged += new System.EventHandler(this.txtAnnuityNumber_TextChanged);
             // 
             // lblIdentityCard
             // 
             this.lblIdentityCard.AutoSize = true;
             this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentityCard.Location = new System.Drawing.Point(408, 21);
+            this.lblIdentityCard.Location = new System.Drawing.Point(47, 162);
             this.lblIdentityCard.Name = "lblIdentityCard";
             this.lblIdentityCard.Size = new System.Drawing.Size(88, 21);
-            this.lblIdentityCard.TabIndex = 8;
+            this.lblIdentityCard.TabIndex = 17;
             this.lblIdentityCard.Text = "Lična karta:";
+            // 
+            // dtpPurchaseDate
+            // 
+            this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
+            this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(141, 245);
+            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
+            this.dtpPurchaseDate.Size = new System.Drawing.Size(218, 22);
+            this.dtpPurchaseDate.TabIndex = 5;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(204, 19);
+            this.lblLastName.Location = new System.Drawing.Point(66, 116);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(69, 21);
-            this.lblLastName.TabIndex = 9;
+            this.lblLastName.TabIndex = 18;
             this.lblLastName.Text = "Prezime:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(89, 18);
+            this.txtName.Location = new System.Drawing.Point(141, 76);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 22);
+            this.txtName.Size = new System.Drawing.Size(218, 22);
             this.txtName.TabIndex = 1;
             // 
             // txtIdentityCard
             // 
-            this.txtIdentityCard.Location = new System.Drawing.Point(502, 22);
+            this.txtIdentityCard.Location = new System.Drawing.Point(141, 163);
             this.txtIdentityCard.Name = "txtIdentityCard";
-            this.txtIdentityCard.Size = new System.Drawing.Size(100, 22);
+            this.txtIdentityCard.Size = new System.Drawing.Size(218, 22);
             this.txtIdentityCard.TabIndex = 3;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(279, 21);
+            this.txtLastName.Location = new System.Drawing.Point(141, 118);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(100, 22);
+            this.txtLastName.Size = new System.Drawing.Size(218, 22);
             this.txtLastName.TabIndex = 2;
             // 
             // tabControl1
@@ -2046,114 +2229,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1304, 677);
             this.tabControl1.TabIndex = 0;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.White;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(209, 365);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(241, 52);
-            this.btnPrint.TabIndex = 38;
-            this.btnPrint.Text = "Štampanje";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // txt_firma
-            // 
-            this.txt_firma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_firma.DataPropertyName = "firma";
-            this.txt_firma.HeaderText = "Firma";
-            this.txt_firma.Name = "txt_firma";
-            // 
-            // txt_preostali_dug
-            // 
-            this.txt_preostali_dug.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_preostali_dug.DataPropertyName = "preostali_dug";
-            this.txt_preostali_dug.HeaderText = "Preostali dug";
-            this.txt_preostali_dug.Name = "txt_preostali_dug";
-            this.txt_preostali_dug.ReadOnly = true;
-            // 
-            // txt_uplaceno
-            // 
-            this.txt_uplaceno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_uplaceno.DataPropertyName = "uplaceno";
-            this.txt_uplaceno.HeaderText = "Uplaceno";
-            this.txt_uplaceno.Name = "txt_uplaceno";
-            // 
-            // txt_ukupno_duga
-            // 
-            this.txt_ukupno_duga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_ukupno_duga.DataPropertyName = "ukupno_duga";
-            this.txt_ukupno_duga.HeaderText = "Ukupno duga";
-            this.txt_ukupno_duga.Name = "txt_ukupno_duga";
-            this.txt_ukupno_duga.ReadOnly = true;
-            // 
-            // txt_iznos_rate
-            // 
-            this.txt_iznos_rate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_iznos_rate.DataPropertyName = "iznos_rate";
-            this.txt_iznos_rate.HeaderText = "Iznos rate";
-            this.txt_iznos_rate.Name = "txt_iznos_rate";
-            this.txt_iznos_rate.ReadOnly = true;
-            // 
-            // txt_iznos_kupovine
-            // 
-            this.txt_iznos_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_iznos_kupovine.DataPropertyName = "iznos_kupovine";
-            this.txt_iznos_kupovine.HeaderText = "Iznos kupovine";
-            this.txt_iznos_kupovine.Name = "txt_iznos_kupovine";
-            // 
-            // txt_broj_rata
-            // 
-            this.txt_broj_rata.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_broj_rata.DataPropertyName = "broj_rata";
-            this.txt_broj_rata.HeaderText = "Broj rata";
-            this.txt_broj_rata.Name = "txt_broj_rata";
-            // 
-            // txt_datum_kupovine
-            // 
-            this.txt_datum_kupovine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_datum_kupovine.DataPropertyName = "datum_kupovine";
-            this.txt_datum_kupovine.HeaderText = "Datum kupovine";
-            this.txt_datum_kupovine.Name = "txt_datum_kupovine";
-            // 
-            // txt_poziv_na_broj
-            // 
-            this.txt_poziv_na_broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_poziv_na_broj.DataPropertyName = "poziv_na_broj";
-            this.txt_poziv_na_broj.HeaderText = "Poziv na broj";
-            this.txt_poziv_na_broj.Name = "txt_poziv_na_broj";
-            // 
-            // txt_licna_karta
-            // 
-            this.txt_licna_karta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_licna_karta.DataPropertyName = "licna_karta";
-            this.txt_licna_karta.HeaderText = "Licna karta";
-            this.txt_licna_karta.Name = "txt_licna_karta";
-            // 
-            // txt_prezime
-            // 
-            this.txt_prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_prezime.DataPropertyName = "prezime";
-            this.txt_prezime.HeaderText = "Prezime";
-            this.txt_prezime.Name = "txt_prezime";
-            // 
-            // txt_ime
-            // 
-            this.txt_ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txt_ime.DataPropertyName = "ime";
-            this.txt_ime.HeaderText = "Ime";
-            this.txt_ime.Name = "txt_ime";
-            // 
-            // id_zaposlen
-            // 
-            this.id_zaposlen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_zaposlen.DataPropertyName = "id_zaposlen";
-            this.id_zaposlen.HeaderText = "ID";
-            this.id_zaposlen.Name = "id_zaposlen";
-            this.id_zaposlen.Visible = false;
             // 
             // Form1
             // 
@@ -2193,16 +2268,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2298,7 +2364,6 @@
         private System.Windows.Forms.Label lblInformations;
         private System.Windows.Forms.Label lblRata4;
         private System.Windows.Forms.Button btnAddAnnuityDate;
-        private System.Windows.Forms.DataGridView employeesDataGridView2;
         private System.Windows.Forms.Label lblRata5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -2354,36 +2419,16 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label lblLeftDebt;
-        private System.Windows.Forms.Label lblCompany;
-        private System.Windows.Forms.TextBox txtLeftDebt;
-        private System.Windows.Forms.TextBox txtCompany;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblTotalDebtt;
         private System.Windows.Forms.TextBox txtPaid;
         private System.Windows.Forms.TextBox txtTotalDebtt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPaid;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblAnnuityNumber;
         private System.Windows.Forms.Label lblPurchaseAmount;
         private System.Windows.Forms.Label lblAnnuityAmount;
         private System.Windows.Forms.TextBox txtAnnuityAmount;
         private System.Windows.Forms.TextBox txtPurchaseAmount;
         private System.Windows.Forms.TextBox txtAnnuityNumber;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lblReferenceNumber;
-        private System.Windows.Forms.Label lblPurchaseDate;
-        private System.Windows.Forms.TextBox txtReferenceNumber;
-        private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblIdentityCard;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtIdentityCard;
-        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblTime2;
@@ -2434,6 +2479,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_uplaceno;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_preostali_dug;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_firma;
+        private System.Windows.Forms.Label lblLeftDebt;
+        private System.Windows.Forms.Label lblCompany;
+        private System.Windows.Forms.TextBox txtLeftDebt;
+        private System.Windows.Forms.TextBox txtCompany;
+        private System.Windows.Forms.Label lblReferenceNumber;
+        private System.Windows.Forms.Label lblPurchaseDate;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtReferenceNumber;
+        private System.Windows.Forms.Label lblIdentityCard;
+        private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtIdentityCard;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Button btnSearchEmployee;
+        public System.Windows.Forms.DataGridView employeesDataGridView2;
+        private System.Windows.Forms.TextBox txtSearchComp;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnShowAll;
+        private System.Windows.Forms.Button btnSearchCompany;
+        private System.Windows.Forms.Button btnGetAllCom;
+        private System.Windows.Forms.Button btnSearchCom;
+        private System.Windows.Forms.TextBox txtSearchCo;
     }
 }
 

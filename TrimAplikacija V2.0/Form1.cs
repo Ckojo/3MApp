@@ -13,6 +13,8 @@ using static System.Environment;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using DGVPrinterHelper;
+using System.Diagnostics;
+using RawPrint;
 
 namespace TrimAplikacija_V2._0
 {
@@ -23,7 +25,8 @@ namespace TrimAplikacija_V2._0
         SqlDataAdapter sqlDataAdapter;
         SqlDataReader sqlDataReader;
         DataTable dataTable;
-        
+        UI ui = new UI();
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +35,6 @@ namespace TrimAplikacija_V2._0
         private void Form1_Load(object sender, EventArgs e)
         {
             PopulateCompanyDataDG2();
-            var ui = new UI();
             ui.LoadButtons(flowLayoutPanel1, flowLayoutPanel2, Company_Click);
             PopulateEmployees3();
         }
@@ -270,9 +272,31 @@ namespace TrimAplikacija_V2._0
             }
         }
 
+        // This method deletes users from "DatumUplate" table in Db, once we delete a certain user.
+        public void DeleteUsersFromPurchaseDate()
+        {
+            sqlConnection = Connection.AddConnection();
+            int currentRow = Convert.ToInt32(employeesDataGridView.CurrentRow.Cells["id_zaposlen"].Value);
+            using (sqlConnection)
+            {
+                try
+                {
+                    sqlCommand = new SqlCommand("DeleteFromDatumUplate", sqlConnection);
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@id_z", currentRow);
+                    sqlCommand.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         // Delets users
         private void employeesDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
+            DeleteUsersFromPurchaseDate();
             Employee employee = new Employee();
             employee.DeleteEmployee(employeesDataGridView);
         }
@@ -348,41 +372,53 @@ namespace TrimAplikacija_V2._0
                 List<DateTimePicker> dateTimePickers = new List<DateTimePicker>();
                 int currentIdIndex = int.Parse(row.Cells["id_zaposlen_2"].Value.ToString());
                 string querry = $"SELECT * FROM dbo.datum_uplate WHERE id_z = {currentIdIndex}";
-                using(sqlConnection = new SqlConnection(GetConnectionString()))
+                sqlConnection = Connection.AddConnection();
+                using(sqlConnection)
                 {
-                    sqlConnection.Open();
                     sqlCommand = new SqlCommand(querry, sqlConnection);
                     sqlDataReader = sqlCommand.ExecuteReader();
-
-                    while (sqlDataReader.Read())
+                    while(sqlDataReader.Read())
                     {
-                        foreach (Control c in tabPage3.Controls)
-                        {
-                            if (c.GetType() == typeof(TextBox) && c.Name.Contains("txtRata"))
-                                textBoxes.Add((TextBox)c);
-                        }
-
-                        foreach (Control c in tabPage3.Controls)
-                        {
-                            if (c.GetType() == typeof(DateTimePicker) && c.Name.Contains("dtpRata"))
-                            {
-                                dateTimePickers.Add((DateTimePicker)c);
-                            }
-                        }
-
-                        textBoxes.Reverse();
-                        dateTimePickers.Reverse();
-
-                        if (textBoxes.Count == dateTimePickers.Count)
-                        {
-                            int j = 1;
-                            int k = 2;
-                            for (int i = 0; i < textBoxes.Count; i++, j+= 2, k+= 2)
-                            {
-                                textBoxes[i].Text = sqlDataReader.GetSqlDouble(j).ToString();
-                                dateTimePickers[i].Value = sqlDataReader.GetDateTime(k);
-                            }
-                        }
+                        txtRata1.Text = sqlDataReader.GetSqlDouble(1).ToString();
+                        dtpRata1.Value = sqlDataReader.GetDateTime(2);
+                        txtRata2.Text = sqlDataReader.GetSqlDouble(3).ToString();
+                        dtpRata2.Value = sqlDataReader.GetDateTime(4);
+                        txtRata3.Text = sqlDataReader.GetSqlDouble(5).ToString();
+                        dtpRata3.Value = sqlDataReader.GetDateTime(6);
+                        txtRata4.Text = sqlDataReader.GetSqlDouble(7).ToString();
+                        dtpRata4.Value = sqlDataReader.GetDateTime(8);
+                        txtRata5.Text = sqlDataReader.GetSqlDouble(9).ToString();
+                        dtpRata5.Value = sqlDataReader.GetDateTime(10);
+                        txtRata6.Text = sqlDataReader.GetSqlDouble(11).ToString();
+                        dtpRata6.Value = sqlDataReader.GetDateTime(12);
+                        txtRata7.Text = sqlDataReader.GetSqlDouble(13).ToString();
+                        dtpRata7.Value = sqlDataReader.GetDateTime(14);
+                        txtRata8.Text = sqlDataReader.GetSqlDouble(15).ToString();
+                        dtpRata8.Value = sqlDataReader.GetDateTime(16);
+                        txtRata9.Text = sqlDataReader.GetSqlDouble(17).ToString();
+                        dtpRata9.Value = sqlDataReader.GetDateTime(18);
+                        txtRata10.Text = sqlDataReader.GetSqlDouble(19).ToString();
+                        dtpRata10.Value = sqlDataReader.GetDateTime(20);
+                        txtRata11.Text = sqlDataReader.GetSqlDouble(21).ToString();
+                        dtpRata11.Value = sqlDataReader.GetDateTime(22);
+                        txtRata12.Text = sqlDataReader.GetSqlDouble(23).ToString();
+                        dtpRata12.Value = sqlDataReader.GetDateTime(24);
+                        txtRata13.Text = sqlDataReader.GetSqlDouble(25).ToString();
+                        dtpRata13.Value = sqlDataReader.GetDateTime(26);
+                        txtRata14.Text = sqlDataReader.GetSqlDouble(27).ToString();
+                        dtpRata14.Value = sqlDataReader.GetDateTime(28);
+                        txtRata15.Text = sqlDataReader.GetSqlDouble(29).ToString();
+                        dtpRata15.Value = sqlDataReader.GetDateTime(30);
+                        txtRata16.Text = sqlDataReader.GetSqlDouble(31).ToString();
+                        dtpRata16.Value = sqlDataReader.GetDateTime(32);
+                        txtRata17.Text = sqlDataReader.GetSqlDouble(33).ToString();
+                        dtpRata17.Value = sqlDataReader.GetDateTime(34);
+                        txtRata18.Text = sqlDataReader.GetSqlDouble(35).ToString();
+                        dtpRata18.Value = sqlDataReader.GetDateTime(36);
+                        txtRata19.Text = sqlDataReader.GetSqlDouble(37).ToString();
+                        dtpRata19.Value = sqlDataReader.GetDateTime(38);
+                        txtRata20.Text = sqlDataReader.GetSqlDouble(39).ToString();
+                        dtpRata20.Value = sqlDataReader.GetDateTime(40);
                     }
                 }
 
@@ -406,16 +442,16 @@ namespace TrimAplikacija_V2._0
                     using (sqlConnection = new SqlConnection(GetConnectionString()))
                     {
                         sqlConnection.Open();
-                        string querry = $"UPDATE dbo.zaposleni SET uplaceno = {totalPaid} WHERE id_zaposlen = {currentEmployee}";
-                        sqlCommand = new SqlCommand(querry, sqlConnection);
+                        string query = $"UPDATE dbo.zaposleni SET uplaceno = {totalPaid} WHERE id_zaposlen = {currentEmployee}";
+                        sqlCommand = new SqlCommand(query, sqlConnection);
                         sqlCommand.ExecuteNonQuery();
                     }
 
                     using (sqlConnection = new SqlConnection(GetConnectionString()))
                     {
                         sqlConnection.Open();
-                        string querry = $"UPDATE dbo.zaposleni SET preostali_dug = {purchaseAmount - totalPaid} WHERE id_zaposlen = {currentEmployee}";
-                        sqlCommand = new SqlCommand(querry, sqlConnection);
+                        string query = $"UPDATE dbo.zaposleni SET preostali_dug = {purchaseAmount - totalPaid} WHERE id_zaposlen = {currentEmployee}";
+                        sqlCommand = new SqlCommand(query, sqlConnection);
                         sqlCommand.ExecuteNonQuery();
                     }
 
@@ -429,57 +465,61 @@ namespace TrimAplikacija_V2._0
                 }
             }
 
-            using (sqlConnection = new SqlConnection(GetConnectionString()))
+
+            string querry = $"UPDATE dbo.datum_uplate " +
+                $"SET " +
+                $"rata_1 = {txtRata1.Text}, " +
+                $"rata_1_datum = '{dtpRata1.Value}', " +
+                $"rata_2 = {txtRata2.Text}, " +
+                $"rata_2_datum = '{dtpRata2.Value}', " +
+                $"rata_3 = {txtRata3.Text}, " +
+                $"rata_3_datum = '{dtpRata3.Value}', " +
+                $"rata_4 = {txtRata4.Text}, " +
+                $"rata_4_datum = '{dtpRata4.Value}', " +
+                $"rata_5 = {txtRata5.Text}, " +
+                $"rata_5_datum = '{dtpRata5.Value}', " +
+                $"rata_6 = {txtRata6.Text}, " +
+                $"rata_6_datum = '{dtpRata6.Value}', " +
+                $"rata_7 = {txtRata7.Text}, " +
+                $"rata_7_datum = '{dtpRata7.Value}', " +
+                $"rata_8 = {txtRata8.Text}, " +
+                $"rata_8_datum = '{dtpRata8.Value}', " +
+                $"rata_9 = {txtRata9.Text}, " +
+                $"rata_9_datum = '{dtpRata9.Value}', " +
+                $"rata_10 = {txtRata10.Text}, " +
+                $"rata_10_datum = '{dtpRata10.Value}', " +
+                $"rata_11 = {txtRata11.Text}, " +
+                $"rata_11_datum = '{dtpRata11.Value}', " +
+                $"rata_12 = {txtRata12.Text}, " +
+                $"rata_12_datum = '{dtpRata12.Value}', " +
+                $"rata_13 = {txtRata13.Text}, " +
+                $"rata_13_datum = '{dtpRata13.Value}', " +
+                $"rata_14 = {txtRata14.Text}, " +
+                $"rata_14_datum = '{dtpRata14.Value}', " +
+                $"rata_15 = {txtRata15.Text}, " +
+                $"rata_15_datum = '{dtpRata15.Value}', " +
+                $"rata_16 = {txtRata16.Text}, " +
+                $"rata_16_datum = '{dtpRata16.Value}', " +
+                $"rata_17 = {txtRata17.Text}, " +
+                $"rata_17_datum = '{dtpRata17.Value}', " +
+                $"rata_18 = {txtRata18.Text}, " +
+                $"rata_18_datum = '{dtpRata18.Value}', " +
+                $"rata_19 = {txtRata19.Text}, " +
+                $"rata_19_datum = '{dtpRata19.Value}', " +
+                $"rata_20 = {txtRata20.Text}, " +
+                $"rata_20_datum = '{dtpRata20.Value}' " +
+                $"WHERE id_z = {currentEmployee}";
+
+            sqlConnection = Connection.AddConnection();
+            using (sqlConnection)
             {
-                string querry = $"UPDATE dbo.datum_uplate SET ";
-                List<TextBox> textBoxes = new List<TextBox>();
-                List<DateTimePicker> dateTimePickers = new List<DateTimePicker>();
-                foreach (Control c in tabPage3.Controls)
-                {
-                    if (c.GetType() == typeof(TextBox) && c.Name.Contains("txtRata"))
-                        textBoxes.Add((TextBox)c);
-                }
-
-                foreach (Control c in tabPage3.Controls)
-                {
-                    if (c.GetType() == typeof(DateTimePicker) && c.Name.Contains("dtpRata"))
-                    {
-                        dateTimePickers.Add((DateTimePicker)c);
-                    }
-                }
-
-                textBoxes.Reverse();
-                dateTimePickers.Reverse();
-
-                if(textBoxes.Count == dateTimePickers.Count)
-                {
-                    for(int i = 1; i <= textBoxes.Count; i++)
-                    {
-                        if(i == 20)
-                        {
-                            querry += $"rata_{i} = {float.Parse(textBoxes[i - 1].Text)}, " +
-                                $"rata_{i}_datum = '{dateTimePickers[i - 1].Value}' " +
-                                $"WHERE id_z = {int.Parse(employeesDataGridView2.CurrentRow.Cells["id_zaposlen_2"].Value.ToString())}";
-                        }
-                        else
-                        {
-                            querry += $"rata_{i} = {float.Parse(textBoxes[i - 1].Text)}, " +
-                            $"rata_{i}_datum = '{dateTimePickers[i - 1].Value}', ";
-                        }
-                    }
-                }
-
-
-                sqlConnection.Open();
                 sqlCommand = new SqlCommand(querry, sqlConnection);
                 if (sqlCommand.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Podaci uspešno uneseni", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Podaci uspešno uneseni!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string querry = $"SELECT " +
@@ -557,9 +597,12 @@ namespace TrimAplikacija_V2._0
             {
                 if (c.GetType() == typeof(TextBox))
                 {
-                    ((TextBox)c).Text = string.Empty;
+                    ((TextBox)c).Text = "";
                 }
             }
+
+            /*txtSearchComp.Text = "Unesite ime firme";
+            txtCompany.Text = "ID";*/
         }
 
         void ExportToPDF(DataGridView dataGridView, string fileName)
@@ -568,7 +611,7 @@ namespace TrimAplikacija_V2._0
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 BaseFont baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1250, BaseFont.EMBEDDED);
-                iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 6, iTextSharp.text.Font.NORMAL);
+                iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 8, iTextSharp.text.Font.NORMAL);
 
 
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
@@ -596,7 +639,7 @@ namespace TrimAplikacija_V2._0
                             pdfTable.DefaultCell.Padding = 6;
                             pdfTable.WidthPercentage = 100;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-                            float[] widths = new float[] { 0f, 75f, 75f, 85f, 100f, 100f, 50f, 65f, 65f, 65f, 65f, 65f, 0f };
+                            float[] widths = new float[] { 0f, 75f, 75f, 85f, 100f, 100f, 50f, 65f, 65f, 0f, 0f, 0f, 0f };
                             pdfTable.SetWidths(widths);
 
                             foreach (DataGridViewColumn column in dataGridView.Columns)
@@ -624,7 +667,7 @@ namespace TrimAplikacija_V2._0
                                 pdfDoc.Add(image);
 
                                 Paragraph pLeft = new Paragraph($"\n__________\nFirma: {txtCompanyName.Text}\nMesto: {txtHeadQuarter.Text}\n" +
-                                    $"PIB: {txtPIB.Text}\nPreostali dug: {txtTotalDebt.Text}\n\n", font);
+                                    $"PIB: {txtPIB.Text}\n\n", font);
                                 Paragraph pRight = new Paragraph($"Obračunski period:\n{dtpDateOne.Value.ToString("dd. MM. yyyy.")} - {dtpDateTwo.Value.ToString("dd. MM. yyyy.")}\n\n", font);
 
                                 string sellerInformations = $"\n__________\nTRIM DOO\nMaršala Tita 56, 21460, Vrbas\n(021)/794-355\nPIB: 100639492\nŽiro račun: 275-0000220029609-95\ntrimsports@yahoo.com";
@@ -693,9 +736,119 @@ namespace TrimAplikacija_V2._0
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            UI ui = new UI();
-            
-            ui.PrintDocument(employeesDataGridView);
+            /*UI ui = new UI();
+            ui.PrintDocument(employeesDataGridView);*/
+            string path = Combine(GetFolderPath(SpecialFolder.Desktop), "Output.pdf");
+            Process p = new Process();
+            p.StartInfo = new ProcessStartInfo()
+            {
+                CreateNoWindow = true,
+                Verb = "print",
+                FileName = path
+            };
+            p.Start();
+        }
+
+        private void btnSearchEmployee_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(employeesDataGridView2);
+            form2.StartPosition = FormStartPosition.CenterScreen;
+            form2.Show();
+        }
+
+        private void btnSearchCompany_Click(object sender, EventArgs e)
+        {
+            // ----- Populating data about a company -----  //
+            /*using (sqlConnection = new SqlConnection(GetConnectionString()))
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM dbo.firme WHERE naziv LIKE '%{txtSearchCompany.Text}%'", sqlConnection);
+                dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                // Populates data in second datagridview (Tab page - 'Zaposleni - Unos')
+                firmeDataGridView2.AutoGenerateColumns = false;
+                firmeDataGridView2.DataSource = dataTable;
+
+                txtSearchCompany.Text = "";
+            }*/
+        }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            PopulateCompanyDataDG2();
+        }
+
+        void SearchCompText()
+        {
+            // ----- Populating data about a company -----  //
+            using (sqlConnection = new SqlConnection(GetConnectionString()))
+            {
+                sqlConnection.Open();
+                sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM dbo.firme WHERE naziv LIKE '%{txtSearchComp.Text}%'", sqlConnection);
+                dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                // Populates data in second datagridview (Tab page - 'Zaposleni - Unos')
+                firmeDataGridView2.AutoGenerateColumns = false;
+                firmeDataGridView2.DataSource = dataTable;
+            }
+        }
+
+        private void txtSearchComp_TextChanged(object sender, EventArgs e)
+        {
+            SearchCompText();
+        }
+
+        private void txtCompany_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCompany.Text == string.Empty)
+            {
+                txtCompany.Text = "ID";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PopulateCompanyDataDG2();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UI.SearchButton(flowLayoutPanel1, txtSearch);
+        }
+
+        private void btnShowAll_Click_1(object sender, EventArgs e)
+        {
+            UI.ShowAllButtons(flowLayoutPanel1);
+        }
+
+        private void btnSearchCom_Click(object sender, EventArgs e)
+        {
+            UI.SearchButton(flowLayoutPanel2, txtSearchCo);
+        }
+
+        private void btnGetAllCom_Click(object sender, EventArgs e)
+        {
+            UI.ShowAllButtons(flowLayoutPanel2);
+        }
+
+        private void txtSearchCo_Enter(object sender, EventArgs e)
+        {
+            if(txtSearchCo.Text == "Pretraga firme...")
+            {
+                txtSearchCo.Text = string.Empty;
+                txtSearchCo.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtSearchCo_Leave(object sender, EventArgs e)
+        {
+            if (txtSearchCo.Text == string.Empty)
+            {
+                txtSearchCo.Text = "Pretraga firme...";
+                txtSearchCo.ForeColor = Color.DarkGray;
+            }
         }
     }
 }

@@ -110,5 +110,47 @@ namespace TrimAplikacija_V2._0
             }
             return sum;
         }
+
+        public void SearchEmployee(DataGridView gridView, TextBox name, TextBox lastName)
+        {
+            string querry = $"SELECT " +
+                $"id_zaposlen, " +
+                $"ime, " +
+                $"prezime, " +
+                $"licna_karta, " +
+                $"poziv_na_broj, " +
+                $"convert(varchar, datum_kupovine, 106) AS datum_kupovine, " +
+                $"broj_rata," +
+                $"iznos_kupovine," +
+                $"ROUND(iznos_rate, 2) AS iznos_rate," +
+                $"ukupno_duga," +
+                $"uplaceno," +
+                $"preostali_dug, " +
+                $"firma " +
+                $"FROM " +
+                $"dbo.zaposleni " + 
+                $"WHERE dbo.zaposleni.ime LIKE '%{name.Text}%' OR prezime LIKE '{lastName.Text}'; ";
+                
+
+            sqlConnection = Connection.AddConnection();
+            using(sqlConnection)
+            {
+                try
+                {
+                    dataTable = new DataTable();
+                    
+                    sqlDataAdapter = new SqlDataAdapter(querry, sqlConnection);
+                    sqlDataAdapter.Fill(dataTable);
+                    gridView.AutoGenerateColumns = false;
+                    gridView.DataSource = dataTable;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+            }
+        }
     }
 }

@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Data.SqlClient;
 using DGVPrinterHelper;
+using System.Drawing.Printing;
+using System.Drawing.Printing;
 
 namespace TrimAplikacija_V2._0
 {
@@ -77,21 +79,64 @@ namespace TrimAplikacija_V2._0
                 }
             }
         }
-
-        public void PrintDocument(DataGridView gridView)
+        
+        
+        public static List<Button> GetAllButons(FlowLayoutPanel flowLayoutPanel)
         {
-            DGVPrinter printer = new DGVPrinter();
-            printer.Title = "Customer Report";
-            printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
-            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
-            printer.PageNumbers = true;
-            printer.PageNumberInHeader = false;
-            printer.PorportionalColumns = true;
-            printer.HeaderCellAlignment = StringAlignment.Far;
-            printer.Footer = "Ckojo";
-            printer.FooterSpacing = 15;
-            printer.ColumnWidth = DGVPrinter.ColumnWidthSetting.DataWidth;
-            printer.PrintDataGridView(gridView);
+            List<Button> buttons = new List<Button>();
+            foreach (Control c in flowLayoutPanel.Controls)
+            {
+                if (c.GetType() == typeof(Button))
+                {
+                    buttons.Add((Button)c);
+                }
+            }
+            return buttons;
+        }
+
+        public static void SearchButton(FlowLayoutPanel flowLayoutPanel, TextBox textBox)
+        {
+            List<Button> buttons = UI.GetAllButons(flowLayoutPanel);
+            foreach (Button button in buttons)
+            {
+                if (button.Text.ToLower() == textBox.Text.ToLower())
+                {
+                    button.Visible = true;
+                }
+                else if (button.Text != textBox.Text)
+                {
+                    button.Visible = false;
+                }
+                else if (textBox.Text == string.Empty)
+                {
+                    foreach (Button button1 in buttons)
+                    {
+                        button1.Visible = true;
+                    }
+                }
+            }
+            if(textBox.Name == "txtSearchCo")
+            {
+                textBox.Text = "Pretraga firme...";
+                textBox.ForeColor = Color.DarkGray;
+            }
+            else
+            {
+                textBox.Text = string.Empty;
+            }
+        }
+
+        public static void ShowAllButtons(FlowLayoutPanel flowLayoutPanel)
+        {
+            List<Button> buttons = UI.GetAllButons(flowLayoutPanel);
+
+            foreach (Button button in buttons)
+            {
+                if (button.Visible != true)
+                {
+                    button.Visible = true;
+                }
+            }
         }
     }
 }
