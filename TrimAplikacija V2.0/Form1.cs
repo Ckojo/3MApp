@@ -756,24 +756,6 @@ namespace TrimAplikacija_V2._0
             form2.Show();
         }
 
-        private void btnSearchCompany_Click(object sender, EventArgs e)
-        {
-            // ----- Populating data about a company -----  //
-            /*using (sqlConnection = new SqlConnection(GetConnectionString()))
-            {
-                sqlConnection.Open();
-                sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM dbo.firme WHERE naziv LIKE '%{txtSearchCompany.Text}%'", sqlConnection);
-                dataTable = new DataTable();
-                sqlDataAdapter.Fill(dataTable);
-
-                // Populates data in second datagridview (Tab page - 'Zaposleni - Unos')
-                firmeDataGridView2.AutoGenerateColumns = false;
-                firmeDataGridView2.DataSource = dataTable;
-
-                txtSearchCompany.Text = "";
-            }*/
-        }
-
         private void btnShowAll_Click(object sender, EventArgs e)
         {
             PopulateCompanyDataDG2();

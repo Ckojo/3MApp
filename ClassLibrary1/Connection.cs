@@ -25,5 +25,22 @@ namespace TrimAplikacija_V2._0
                 return false; 
 
         }
+
+        public static List<string> SearchQuery(string query)
+        {
+            SqlConnection sqlConnection = Connection.AddConnection();
+            List<string> results = new List<string>();
+            using (sqlConnection)
+            {
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    results.Add(sqlDataReader.GetString(0));
+                }
+            }
+
+            return results;
+        }
     }
 }

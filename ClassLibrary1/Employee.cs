@@ -129,7 +129,7 @@ namespace TrimAplikacija_V2._0
                 $"firma " +
                 $"FROM " +
                 $"dbo.zaposleni " + 
-                $"WHERE dbo.zaposleni.ime LIKE '%{name.Text}%' OR prezime LIKE '{lastName.Text}'; ";
+                $"WHERE dbo.zaposleni.ime LIKE '%{name.Text}%' AND prezime LIKE '{lastName.Text}'; ";
                 
 
             sqlConnection = Connection.AddConnection();

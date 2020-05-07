@@ -96,34 +96,32 @@ namespace TrimAplikacija_V2._0
 
         public static void SearchButton(FlowLayoutPanel flowLayoutPanel, TextBox textBox)
         {
+            List<string> companies = Connection.SearchQuery($"SELECT naziv FROM dbo.firme WHERE naziv LIKE '%{textBox.Text}%';");
             List<Button> buttons = UI.GetAllButons(flowLayoutPanel);
+
             foreach (Button button in buttons)
             {
-                if (button.Text.ToLower() == textBox.Text.ToLower())
+                foreach (var company in companies)
                 {
-                    button.Visible = true;
-                }
-                else if (button.Text != textBox.Text)
-                {
-                    button.Visible = false;
-                }
-                else if (textBox.Text == string.Empty)
-                {
-                    foreach (Button button1 in buttons)
+                    if(button.Text.ToLower() == company.ToLower())
                     {
-                        button1.Visible = true;
+                        button.Visible = true;
+                    }
+                    else if (button.Text != company)
+                    {
+                        button.Visible = false;
+                    }
+                    else if (textBox.Text == string.Empty)
+                    {
+                        foreach (Button button1 in buttons)
+                        {
+                            button1.Visible = true;
+                        }
                     }
                 }
             }
-            if(textBox.Name == "txtSearchCo")
-            {
-                textBox.Text = "Pretraga firme...";
-                textBox.ForeColor = Color.DarkGray;
-            }
-            else
-            {
-                textBox.Text = string.Empty;
-            }
+
+            textBox.Text = string.Empty;
         }
 
         public static void ShowAllButtons(FlowLayoutPanel flowLayoutPanel)
