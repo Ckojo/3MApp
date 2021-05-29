@@ -12,5 +12,8 @@ namespace TrimAplikacija_V2._0.DataAccess
         public DataContext() : base("name=con") { }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<PaymentDate> PaymentDates { get; set; }
+        public DbSet<PaymentDateDetail> PaymentDateDetails { get; set; }
     }
 }

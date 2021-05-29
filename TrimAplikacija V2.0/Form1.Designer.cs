@@ -1,4 +1,6 @@
-﻿namespace TrimAplikacija_V2._0
+﻿using System;
+
+namespace TrimAplikacija_V2._0
 {
     partial class Form1
     {
@@ -108,31 +110,40 @@
             this.preostali_dug_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRata5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dtpRata5 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata1 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata4 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata2 = new System.Windows.Forms.DateTimePicker();
             this.dtpRata3 = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.firmeDataGridView = new System.Windows.Forms.DataGridView();
-            this.id_firme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pib = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupni_dug = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companiesBindingSource = new System.Windows.Forms.DataGridView();
+            this.CompanyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalDebt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblCompanyEmail = new System.Windows.Forms.Label();
+            this.txtAddCompanyCity = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtTotalDebt2 = new System.Windows.Forms.TextBox();
-            this.txtPIB2 = new System.Windows.Forms.TextBox();
-            this.txtHeadQuarter2 = new System.Windows.Forms.TextBox();
-            this.txtCompanyName2 = new System.Windows.Forms.TextBox();
+            this.txtAddTotalDebtCompany = new System.Windows.Forms.TextBox();
+            this.txtAddTIN = new System.Windows.Forms.TextBox();
+            this.txtAddCompanyEmail = new System.Windows.Forms.TextBox();
+            this.txtAddCompanyName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.employeesBindingSource = new System.Windows.Forms.DataGridView();
+            this.EmployeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UniqueNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnShowAll = new System.Windows.Forms.Button();
             this.btnSearchCompany = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
@@ -148,11 +159,10 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblAccountingPeriod = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTotalDebt = new System.Windows.Forms.TextBox();
-            this.txtPIB = new System.Windows.Forms.TextBox();
-            this.txtHeadQuarter = new System.Windows.Forms.TextBox();
+            this.txtTIN = new System.Windows.Forms.TextBox();
+            this.txtCompanyCity = new System.Windows.Forms.TextBox();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
             this.txtCompanyID = new System.Windows.Forms.TextBox();
             this.lblTotalDebt = new System.Windows.Forms.Label();
@@ -163,7 +173,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.firmeDataGridView2 = new System.Windows.Forms.DataGridView();
+            this.companiesHelperBindingSource = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -176,52 +186,37 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearchComp = new System.Windows.Forms.TextBox();
-            this.lblLeftDebt = new System.Windows.Forms.Label();
+            this.txtCompanyNameInsert = new System.Windows.Forms.TextBox();
             this.lblCompany = new System.Windows.Forms.Label();
-            this.txtLeftDebt = new System.Windows.Forms.TextBox();
             this.txtCompany = new System.Windows.Forms.TextBox();
-            this.lblTotalDebtt = new System.Windows.Forms.Label();
-            this.txtPaid = new System.Windows.Forms.TextBox();
-            this.lblAnnuityNumber = new System.Windows.Forms.Label();
-            this.txtTotalDebtt = new System.Windows.Forms.TextBox();
-            this.lblPurchaseAmount = new System.Windows.Forms.Label();
             this.lblReferenceNumber = new System.Windows.Forms.Label();
-            this.lblPaid = new System.Windows.Forms.Label();
-            this.lblAnnuityAmount = new System.Windows.Forms.Label();
-            this.lblPurchaseDate = new System.Windows.Forms.Label();
-            this.txtAnnuityAmount = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtPurchaseAmount = new System.Windows.Forms.TextBox();
-            this.txtReferenceNumber = new System.Windows.Forms.TextBox();
-            this.txtAnnuityNumber = new System.Windows.Forms.TextBox();
+            this.txtUniqueNumber = new System.Windows.Forms.TextBox();
             this.lblIdentityCard = new System.Windows.Forms.Label();
-            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtIdentityCard = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtIdNumber = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.employeesDataGridView = new System.Windows.Forms.DataGridView();
+            this.companyBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesBinding = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.panel10.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesHelperBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBinding)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -1001,7 +996,6 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -1009,16 +1003,6 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(231, 645);
             this.flowLayoutPanel2.TabIndex = 2;
             this.flowLayoutPanel2.WrapContents = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(225, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // dtpRata5
             // 
@@ -1069,7 +1053,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tabPage2.Controls.Add(this.firmeDataGridView);
+            this.tabPage2.Controls.Add(this.companiesBindingSource);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -1078,65 +1062,86 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unos firme";
             // 
-            // firmeDataGridView
+            // companiesBindingSource
             // 
-            this.firmeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.firmeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_firme,
-            this.naziv,
-            this.mesto,
-            this.pib,
-            this.ukupni_dug});
-            this.firmeDataGridView.Location = new System.Drawing.Point(6, 401);
-            this.firmeDataGridView.Name = "firmeDataGridView";
-            this.firmeDataGridView.Size = new System.Drawing.Size(655, 230);
-            this.firmeDataGridView.TabIndex = 2;
+            this.companiesBindingSource.AutoGenerateColumns = false;
+            this.companiesBindingSource.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.companiesBindingSource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.companiesBindingSource.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CompanyId,
+            this.CompanyName,
+            this.City,
+            this.Email,
+            this.TIN,
+            this.TotalDebt});
+            this.companiesBindingSource.DataSource = this.companyBinding;
+            this.companiesBindingSource.Location = new System.Drawing.Point(6, 401);
+            this.companiesBindingSource.Name = "companiesBindingSource";
+            this.companiesBindingSource.ReadOnly = true;
+            this.companiesBindingSource.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.companiesBindingSource.Size = new System.Drawing.Size(655, 230);
+            this.companiesBindingSource.TabIndex = 2;
+            this.companiesBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.companiesBindingSource_CellClick);
             // 
-            // id_firme
+            // CompanyId
             // 
-            this.id_firme.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_firme.DataPropertyName = "id_firme";
-            this.id_firme.HeaderText = "Firma ID";
-            this.id_firme.Name = "id_firme";
-            this.id_firme.Visible = false;
+            this.CompanyId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CompanyId.DataPropertyName = "CompanyId";
+            this.CompanyId.HeaderText = "Firma ID";
+            this.CompanyId.Name = "CompanyId";
+            this.CompanyId.ReadOnly = true;
+            this.CompanyId.Visible = false;
             // 
-            // naziv
+            // CompanyName
             // 
-            this.naziv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.naziv.DataPropertyName = "naziv";
-            this.naziv.HeaderText = "Naziv";
-            this.naziv.Name = "naziv";
+            this.CompanyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CompanyName.DataPropertyName = "Name";
+            this.CompanyName.HeaderText = "Naziv";
+            this.CompanyName.Name = "CompanyName";
+            this.CompanyName.ReadOnly = true;
             // 
-            // mesto
+            // City
             // 
-            this.mesto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mesto.DataPropertyName = "mesto";
-            this.mesto.HeaderText = "Mesto";
-            this.mesto.Name = "mesto";
+            this.City.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.City.DataPropertyName = "City";
+            this.City.HeaderText = "Mesto";
+            this.City.Name = "City";
+            this.City.ReadOnly = true;
             // 
-            // pib
+            // Email
             // 
-            this.pib.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pib.DataPropertyName = "pib";
-            this.pib.HeaderText = "PIB";
-            this.pib.Name = "pib";
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
-            // ukupni_dug
+            // TIN
             // 
-            this.ukupni_dug.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ukupni_dug.DataPropertyName = "ukupni_dug";
-            this.ukupni_dug.HeaderText = "Ukupni dug";
-            this.ukupni_dug.Name = "ukupni_dug";
-            this.ukupni_dug.Visible = false;
+            this.TIN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TIN.DataPropertyName = "TIN";
+            this.TIN.HeaderText = "PIB";
+            this.TIN.Name = "TIN";
+            this.TIN.ReadOnly = true;
+            // 
+            // TotalDebt
+            // 
+            this.TotalDebt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalDebt.DataPropertyName = "TotalDebt";
+            this.TotalDebt.HeaderText = "Ukupni dug";
+            this.TotalDebt.Name = "TotalDebt";
+            this.TotalDebt.ReadOnly = true;
+            this.TotalDebt.Visible = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
+            this.panel3.Controls.Add(this.lblCompanyEmail);
+            this.panel3.Controls.Add(this.txtAddCompanyCity);
             this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Controls.Add(this.txtTotalDebt2);
-            this.panel3.Controls.Add(this.txtPIB2);
-            this.panel3.Controls.Add(this.txtHeadQuarter2);
-            this.panel3.Controls.Add(this.txtCompanyName2);
+            this.panel3.Controls.Add(this.txtAddTotalDebtCompany);
+            this.panel3.Controls.Add(this.txtAddTIN);
+            this.panel3.Controls.Add(this.txtAddCompanyEmail);
+            this.panel3.Controls.Add(this.txtAddCompanyName);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label5);
@@ -1147,6 +1152,23 @@
             this.panel3.Size = new System.Drawing.Size(1287, 351);
             this.panel3.TabIndex = 2;
             // 
+            // lblCompanyEmail
+            // 
+            this.lblCompanyEmail.AutoSize = true;
+            this.lblCompanyEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyEmail.Location = new System.Drawing.Point(29, 139);
+            this.lblCompanyEmail.Name = "lblCompanyEmail";
+            this.lblCompanyEmail.Size = new System.Drawing.Size(48, 21);
+            this.lblCompanyEmail.TabIndex = 58;
+            this.lblCompanyEmail.Text = "Email";
+            // 
+            // txtAddCompanyCity
+            // 
+            this.txtAddCompanyCity.Location = new System.Drawing.Point(141, 111);
+            this.txtAddCompanyCity.Name = "txtAddCompanyCity";
+            this.txtAddCompanyCity.Size = new System.Drawing.Size(1093, 22);
+            this.txtAddCompanyCity.TabIndex = 54;
+            // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1156,41 +1178,41 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "UNESI";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // txtTotalDebt2
+            // txtAddTotalDebtCompany
             // 
-            this.txtTotalDebt2.Location = new System.Drawing.Point(141, 178);
-            this.txtTotalDebt2.Name = "txtTotalDebt2";
-            this.txtTotalDebt2.ReadOnly = true;
-            this.txtTotalDebt2.Size = new System.Drawing.Size(1093, 22);
-            this.txtTotalDebt2.TabIndex = 56;
+            this.txtAddTotalDebtCompany.Location = new System.Drawing.Point(141, 195);
+            this.txtAddTotalDebtCompany.Name = "txtAddTotalDebtCompany";
+            this.txtAddTotalDebtCompany.Size = new System.Drawing.Size(1093, 22);
+            this.txtAddTotalDebtCompany.TabIndex = 57;
             // 
-            // txtPIB2
+            // txtAddTIN
             // 
-            this.txtPIB2.Location = new System.Drawing.Point(141, 145);
-            this.txtPIB2.Name = "txtPIB2";
-            this.txtPIB2.Size = new System.Drawing.Size(1093, 22);
-            this.txtPIB2.TabIndex = 55;
+            this.txtAddTIN.Location = new System.Drawing.Point(141, 167);
+            this.txtAddTIN.Name = "txtAddTIN";
+            this.txtAddTIN.Size = new System.Drawing.Size(1093, 22);
+            this.txtAddTIN.TabIndex = 56;
             // 
-            // txtHeadQuarter2
+            // txtAddCompanyEmail
             // 
-            this.txtHeadQuarter2.Location = new System.Drawing.Point(141, 114);
-            this.txtHeadQuarter2.Name = "txtHeadQuarter2";
-            this.txtHeadQuarter2.Size = new System.Drawing.Size(1093, 22);
-            this.txtHeadQuarter2.TabIndex = 54;
+            this.txtAddCompanyEmail.Location = new System.Drawing.Point(141, 139);
+            this.txtAddCompanyEmail.Name = "txtAddCompanyEmail";
+            this.txtAddCompanyEmail.Size = new System.Drawing.Size(1093, 22);
+            this.txtAddCompanyEmail.TabIndex = 55;
             // 
-            // txtCompanyName2
+            // txtAddCompanyName
             // 
-            this.txtCompanyName2.Location = new System.Drawing.Point(141, 83);
-            this.txtCompanyName2.Name = "txtCompanyName2";
-            this.txtCompanyName2.Size = new System.Drawing.Size(1093, 22);
-            this.txtCompanyName2.TabIndex = 53;
+            this.txtAddCompanyName.Location = new System.Drawing.Point(141, 83);
+            this.txtAddCompanyName.Name = "txtAddCompanyName";
+            this.txtAddCompanyName.Size = new System.Drawing.Size(1093, 22);
+            this.txtAddCompanyName.TabIndex = 53;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 175);
+            this.label3.Location = new System.Drawing.Point(28, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 21);
             this.label3.TabIndex = 51;
@@ -1200,7 +1222,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 146);
+            this.label4.Location = new System.Drawing.Point(29, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 21);
             this.label4.TabIndex = 50;
@@ -1210,7 +1232,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 117);
+            this.label5.Location = new System.Drawing.Point(29, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 49;
@@ -1220,7 +1242,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 89);
+            this.label6.Location = new System.Drawing.Point(29, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 21);
             this.label6.TabIndex = 48;
@@ -1240,7 +1262,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tabPage1.Controls.Add(this.employeesDataGridView);
+            this.tabPage1.Controls.Add(this.employeesBindingSource);
             this.tabPage1.Controls.Add(this.btnShowAll);
             this.tabPage1.Controls.Add(this.btnSearchCompany);
             this.tabPage1.Controls.Add(this.lblSearch);
@@ -1261,6 +1283,76 @@
             this.tabPage1.Size = new System.Drawing.Size(1296, 651);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Zaposleni - Detalji";
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.AllowUserToAddRows = false;
+            this.employeesBindingSource.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.employeesBindingSource.AutoGenerateColumns = false;
+            this.employeesBindingSource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesBindingSource.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmployeeId,
+            this.FirstName,
+            this.LastName,
+            this.IdNumber,
+            this.UniqueNumber,
+            this.Company});
+            this.employeesBindingSource.DataSource = this.employeesBinding;
+            this.employeesBindingSource.Location = new System.Drawing.Point(232, 448);
+            this.employeesBindingSource.Name = "employeesBindingSource";
+            this.employeesBindingSource.ReadOnly = true;
+            this.employeesBindingSource.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.employeesBindingSource.Size = new System.Drawing.Size(1060, 197);
+            this.employeesBindingSource.TabIndex = 43;
+            this.employeesBindingSource.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesBindingSource_CellClick);
+            // 
+            // EmployeeId
+            // 
+            this.EmployeeId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EmployeeId.DataPropertyName = "EmployeeId";
+            this.EmployeeId.HeaderText = "ID";
+            this.EmployeeId.Name = "EmployeeId";
+            this.EmployeeId.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "Ime";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Prezime";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // IdNumber
+            // 
+            this.IdNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IdNumber.DataPropertyName = "IdNumber";
+            this.IdNumber.HeaderText = "Licna karta";
+            this.IdNumber.Name = "IdNumber";
+            this.IdNumber.ReadOnly = true;
+            // 
+            // UniqueNumber
+            // 
+            this.UniqueNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UniqueNumber.DataPropertyName = "UniqueNumber";
+            this.UniqueNumber.HeaderText = "Poziv na broj";
+            this.UniqueNumber.Name = "UniqueNumber";
+            this.UniqueNumber.ReadOnly = true;
+            // 
+            // Company
+            // 
+            this.Company.DataPropertyName = "CompanyId";
+            this.Company.HeaderText = "Firma";
+            this.Company.Name = "Company";
+            this.Company.ReadOnly = true;
+            this.Company.Visible = false;
             // 
             // btnShowAll
             // 
@@ -1411,7 +1503,6 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
@@ -1420,22 +1511,12 @@
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
             this.panel2.Controls.Add(this.txtTotalDebt);
-            this.panel2.Controls.Add(this.txtPIB);
-            this.panel2.Controls.Add(this.txtHeadQuarter);
+            this.panel2.Controls.Add(this.txtTIN);
+            this.panel2.Controls.Add(this.txtCompanyCity);
             this.panel2.Controls.Add(this.txtCompanyName);
             this.panel2.Controls.Add(this.txtCompanyID);
             this.panel2.Controls.Add(this.lblTotalDebt);
@@ -1456,19 +1537,19 @@
             this.txtTotalDebt.Size = new System.Drawing.Size(149, 22);
             this.txtTotalDebt.TabIndex = 56;
             // 
-            // txtPIB
+            // txtTIN
             // 
-            this.txtPIB.Location = new System.Drawing.Point(140, 155);
-            this.txtPIB.Name = "txtPIB";
-            this.txtPIB.Size = new System.Drawing.Size(149, 22);
-            this.txtPIB.TabIndex = 55;
+            this.txtTIN.Location = new System.Drawing.Point(140, 155);
+            this.txtTIN.Name = "txtTIN";
+            this.txtTIN.Size = new System.Drawing.Size(149, 22);
+            this.txtTIN.TabIndex = 55;
             // 
-            // txtHeadQuarter
+            // txtCompanyCity
             // 
-            this.txtHeadQuarter.Location = new System.Drawing.Point(140, 124);
-            this.txtHeadQuarter.Name = "txtHeadQuarter";
-            this.txtHeadQuarter.Size = new System.Drawing.Size(149, 22);
-            this.txtHeadQuarter.TabIndex = 54;
+            this.txtCompanyCity.Location = new System.Drawing.Point(140, 124);
+            this.txtCompanyCity.Name = "txtCompanyCity";
+            this.txtCompanyCity.Size = new System.Drawing.Size(149, 22);
+            this.txtCompanyCity.TabIndex = 54;
             // 
             // txtCompanyName
             // 
@@ -1548,7 +1629,7 @@
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Controls.Add(this.firmeDataGridView2);
+            this.tabPage4.Controls.Add(this.companiesHelperBindingSource);
             this.tabPage4.Controls.Add(this.panel4);
             this.tabPage4.Controls.Add(this.btnAddEmp);
             this.tabPage4.Controls.Add(this.flowLayoutPanel3);
@@ -1573,45 +1654,47 @@
             this.button1.Text = "Prikaži sve firme";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // firmeDataGridView2
+            // companiesHelperBindingSource
             // 
-            this.firmeDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.firmeDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.companiesHelperBindingSource.AutoGenerateColumns = false;
+            this.companiesHelperBindingSource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.companiesHelperBindingSource.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21});
-            this.firmeDataGridView2.Location = new System.Drawing.Point(954, 99);
-            this.firmeDataGridView2.Name = "firmeDataGridView2";
-            this.firmeDataGridView2.Size = new System.Drawing.Size(333, 386);
-            this.firmeDataGridView2.TabIndex = 14;
+            this.companiesHelperBindingSource.DataSource = this.companyBinding;
+            this.companiesHelperBindingSource.Location = new System.Drawing.Point(954, 99);
+            this.companiesHelperBindingSource.Name = "companiesHelperBindingSource";
+            this.companiesHelperBindingSource.Size = new System.Drawing.Size(333, 386);
+            this.companiesHelperBindingSource.TabIndex = 14;
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "id_firme";
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "CompanyId";
             this.dataGridViewTextBoxColumn17.HeaderText = "Firma ID";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "naziv";
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Name";
             this.dataGridViewTextBoxColumn18.HeaderText = "Naziv";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "mesto";
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "City";
             this.dataGridViewTextBoxColumn19.HeaderText = "Mesto";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "pib";
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "TIN";
             this.dataGridViewTextBoxColumn20.HeaderText = "PIB";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.Visible = false;
@@ -1619,7 +1702,7 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "ukupni_dug";
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "TotalDebt";
             this.dataGridViewTextBoxColumn21.HeaderText = "Ukupni dug";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             this.dataGridViewTextBoxColumn21.Visible = false;
@@ -1663,6 +1746,7 @@
             this.btnAddEmp.TabIndex = 12;
             this.btnAddEmp.Text = "Dodaj";
             this.btnAddEmp.UseVisualStyleBackColor = false;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -1687,252 +1771,114 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtSearchComp);
-            this.panel1.Controls.Add(this.lblLeftDebt);
+            this.panel1.Controls.Add(this.txtCompanyNameInsert);
             this.panel1.Controls.Add(this.lblCompany);
-            this.panel1.Controls.Add(this.txtLeftDebt);
             this.panel1.Controls.Add(this.txtCompany);
-            this.panel1.Controls.Add(this.lblTotalDebtt);
-            this.panel1.Controls.Add(this.txtPaid);
-            this.panel1.Controls.Add(this.lblAnnuityNumber);
-            this.panel1.Controls.Add(this.txtTotalDebtt);
-            this.panel1.Controls.Add(this.lblPurchaseAmount);
             this.panel1.Controls.Add(this.lblReferenceNumber);
-            this.panel1.Controls.Add(this.lblPaid);
-            this.panel1.Controls.Add(this.lblAnnuityAmount);
-            this.panel1.Controls.Add(this.lblPurchaseDate);
-            this.panel1.Controls.Add(this.txtAnnuityAmount);
             this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.txtPurchaseAmount);
-            this.panel1.Controls.Add(this.txtReferenceNumber);
-            this.panel1.Controls.Add(this.txtAnnuityNumber);
+            this.panel1.Controls.Add(this.txtUniqueNumber);
             this.panel1.Controls.Add(this.lblIdentityCard);
-            this.panel1.Controls.Add(this.dtpPurchaseDate);
             this.panel1.Controls.Add(this.lblLastName);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.txtIdentityCard);
+            this.panel1.Controls.Add(this.txtFirstName);
+            this.panel1.Controls.Add(this.txtIdNumber);
             this.panel1.Controls.Add(this.txtLastName);
             this.panel1.Location = new System.Drawing.Point(209, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 434);
             this.panel1.TabIndex = 10;
             // 
-            // txtSearchComp
+            // txtCompanyNameInsert
             // 
-            this.txtSearchComp.Location = new System.Drawing.Point(507, 285);
-            this.txtSearchComp.Name = "txtSearchComp";
-            this.txtSearchComp.Size = new System.Drawing.Size(137, 22);
-            this.txtSearchComp.TabIndex = 12;
-            this.txtSearchComp.Text = "Unesite ime firme";
-            // 
-            // lblLeftDebt
-            // 
-            this.lblLeftDebt.AutoSize = true;
-            this.lblLeftDebt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeftDebt.Location = new System.Drawing.Point(397, 246);
-            this.lblLeftDebt.Name = "lblLeftDebt";
-            this.lblLeftDebt.Size = new System.Drawing.Size(104, 21);
-            this.lblLeftDebt.TabIndex = 37;
-            this.lblLeftDebt.Text = "Preostali dug:";
+            this.txtCompanyNameInsert.Location = new System.Drawing.Point(197, 295);
+            this.txtCompanyNameInsert.Name = "txtCompanyNameInsert";
+            this.txtCompanyNameInsert.Size = new System.Drawing.Size(230, 22);
+            this.txtCompanyNameInsert.TabIndex = 12;
+            this.txtCompanyNameInsert.Text = "Unesite ime firme";
             // 
             // lblCompany
             // 
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(448, 287);
+            this.lblCompany.Location = new System.Drawing.Point(138, 297);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(53, 21);
             this.lblCompany.TabIndex = 38;
             this.lblCompany.Text = "Firma:";
             // 
-            // txtLeftDebt
-            // 
-            this.txtLeftDebt.Location = new System.Drawing.Point(507, 249);
-            this.txtLeftDebt.Name = "txtLeftDebt";
-            this.txtLeftDebt.ReadOnly = true;
-            this.txtLeftDebt.Size = new System.Drawing.Size(194, 22);
-            this.txtLeftDebt.TabIndex = 11;
-            // 
             // txtCompany
             // 
-            this.txtCompany.Location = new System.Drawing.Point(650, 285);
+            this.txtCompany.Location = new System.Drawing.Point(433, 295);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(51, 22);
+            this.txtCompany.Size = new System.Drawing.Size(133, 22);
             this.txtCompany.TabIndex = 13;
             this.txtCompany.Text = "ID ";
-            // 
-            // lblTotalDebtt
-            // 
-            this.lblTotalDebtt.AutoSize = true;
-            this.lblTotalDebtt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDebtt.Location = new System.Drawing.Point(394, 159);
-            this.lblTotalDebtt.Name = "lblTotalDebtt";
-            this.lblTotalDebtt.Size = new System.Drawing.Size(107, 21);
-            this.lblTotalDebtt.TabIndex = 2;
-            this.lblTotalDebtt.Text = "Ukupno duga:";
-            // 
-            // txtPaid
-            // 
-            this.txtPaid.Location = new System.Drawing.Point(507, 206);
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.Size = new System.Drawing.Size(194, 22);
-            this.txtPaid.TabIndex = 10;
-            // 
-            // lblAnnuityNumber
-            // 
-            this.lblAnnuityNumber.AutoSize = true;
-            this.lblAnnuityNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityNumber.Location = new System.Drawing.Point(63, 286);
-            this.lblAnnuityNumber.Name = "lblAnnuityNumber";
-            this.lblAnnuityNumber.Size = new System.Drawing.Size(72, 21);
-            this.lblAnnuityNumber.TabIndex = 5;
-            this.lblAnnuityNumber.Text = "Broj rata:";
-            // 
-            // txtTotalDebtt
-            // 
-            this.txtTotalDebtt.Location = new System.Drawing.Point(507, 162);
-            this.txtTotalDebtt.Name = "txtTotalDebtt";
-            this.txtTotalDebtt.ReadOnly = true;
-            this.txtTotalDebtt.Size = new System.Drawing.Size(194, 22);
-            this.txtTotalDebtt.TabIndex = 9;
-            // 
-            // lblPurchaseAmount
-            // 
-            this.lblPurchaseAmount.AutoSize = true;
-            this.lblPurchaseAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseAmount.Location = new System.Drawing.Point(384, 77);
-            this.lblPurchaseAmount.Name = "lblPurchaseAmount";
-            this.lblPurchaseAmount.Size = new System.Drawing.Size(117, 21);
-            this.lblPurchaseAmount.TabIndex = 4;
-            this.lblPurchaseAmount.Text = "Iznos kupovine:";
             // 
             // lblReferenceNumber
             // 
             this.lblReferenceNumber.AutoSize = true;
             this.lblReferenceNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenceNumber.Location = new System.Drawing.Point(33, 205);
+            this.lblReferenceNumber.Location = new System.Drawing.Point(89, 254);
             this.lblReferenceNumber.Name = "lblReferenceNumber";
             this.lblReferenceNumber.Size = new System.Drawing.Size(102, 21);
             this.lblReferenceNumber.TabIndex = 7;
             this.lblReferenceNumber.Text = "Poziv na broj:";
             // 
-            // lblPaid
-            // 
-            this.lblPaid.AutoSize = true;
-            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaid.Location = new System.Drawing.Point(423, 202);
-            this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(78, 21);
-            this.lblPaid.TabIndex = 36;
-            this.lblPaid.Text = "Uplaćeno:";
-            // 
-            // lblAnnuityAmount
-            // 
-            this.lblAnnuityAmount.AutoSize = true;
-            this.lblAnnuityAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnuityAmount.Location = new System.Drawing.Point(421, 115);
-            this.lblAnnuityAmount.Name = "lblAnnuityAmount";
-            this.lblAnnuityAmount.Size = new System.Drawing.Size(80, 21);
-            this.lblAnnuityAmount.TabIndex = 3;
-            this.lblAnnuityAmount.Text = "Iznos rate:";
-            // 
-            // lblPurchaseDate
-            // 
-            this.lblPurchaseDate.AutoSize = true;
-            this.lblPurchaseDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurchaseDate.Location = new System.Drawing.Point(7, 245);
-            this.lblPurchaseDate.Name = "lblPurchaseDate";
-            this.lblPurchaseDate.Size = new System.Drawing.Size(128, 21);
-            this.lblPurchaseDate.TabIndex = 6;
-            this.lblPurchaseDate.Text = "Datum kupovine:";
-            // 
-            // txtAnnuityAmount
-            // 
-            this.txtAnnuityAmount.Location = new System.Drawing.Point(507, 116);
-            this.txtAnnuityAmount.Name = "txtAnnuityAmount";
-            this.txtAnnuityAmount.ReadOnly = true;
-            this.txtAnnuityAmount.Size = new System.Drawing.Size(194, 22);
-            this.txtAnnuityAmount.TabIndex = 8;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(66, 76);
+            this.lblName.Location = new System.Drawing.Point(122, 125);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(39, 21);
             this.lblName.TabIndex = 13;
             this.lblName.Text = "Ime:";
             // 
-            // txtPurchaseAmount
+            // txtUniqueNumber
             // 
-            this.txtPurchaseAmount.Location = new System.Drawing.Point(507, 75);
-            this.txtPurchaseAmount.Name = "txtPurchaseAmount";
-            this.txtPurchaseAmount.Size = new System.Drawing.Size(194, 22);
-            this.txtPurchaseAmount.TabIndex = 7;
-            // 
-            // txtReferenceNumber
-            // 
-            this.txtReferenceNumber.Location = new System.Drawing.Point(141, 205);
-            this.txtReferenceNumber.Name = "txtReferenceNumber";
-            this.txtReferenceNumber.Size = new System.Drawing.Size(218, 22);
-            this.txtReferenceNumber.TabIndex = 4;
-            // 
-            // txtAnnuityNumber
-            // 
-            this.txtAnnuityNumber.Location = new System.Drawing.Point(141, 286);
-            this.txtAnnuityNumber.Name = "txtAnnuityNumber";
-            this.txtAnnuityNumber.Size = new System.Drawing.Size(35, 22);
-            this.txtAnnuityNumber.TabIndex = 6;
+            this.txtUniqueNumber.Location = new System.Drawing.Point(197, 254);
+            this.txtUniqueNumber.Name = "txtUniqueNumber";
+            this.txtUniqueNumber.Size = new System.Drawing.Size(369, 22);
+            this.txtUniqueNumber.TabIndex = 4;
             // 
             // lblIdentityCard
             // 
             this.lblIdentityCard.AutoSize = true;
             this.lblIdentityCard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentityCard.Location = new System.Drawing.Point(47, 162);
+            this.lblIdentityCard.Location = new System.Drawing.Point(103, 211);
             this.lblIdentityCard.Name = "lblIdentityCard";
             this.lblIdentityCard.Size = new System.Drawing.Size(88, 21);
             this.lblIdentityCard.TabIndex = 17;
             this.lblIdentityCard.Text = "Lična karta:";
             // 
-            // dtpPurchaseDate
-            // 
-            this.dtpPurchaseDate.CustomFormat = "dd -MMMM- yyyy";
-            this.dtpPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(141, 245);
-            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
-            this.dtpPurchaseDate.Size = new System.Drawing.Size(218, 22);
-            this.dtpPurchaseDate.TabIndex = 5;
-            // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(66, 116);
+            this.lblLastName.Location = new System.Drawing.Point(122, 165);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(69, 21);
             this.lblLastName.TabIndex = 18;
             this.lblLastName.Text = "Prezime:";
             // 
-            // txtName
+            // txtFirstName
             // 
-            this.txtName.Location = new System.Drawing.Point(141, 76);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(218, 22);
-            this.txtName.TabIndex = 1;
+            this.txtFirstName.Location = new System.Drawing.Point(197, 125);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(369, 22);
+            this.txtFirstName.TabIndex = 1;
             // 
-            // txtIdentityCard
+            // txtIdNumber
             // 
-            this.txtIdentityCard.Location = new System.Drawing.Point(141, 163);
-            this.txtIdentityCard.Name = "txtIdentityCard";
-            this.txtIdentityCard.Size = new System.Drawing.Size(218, 22);
-            this.txtIdentityCard.TabIndex = 3;
+            this.txtIdNumber.Location = new System.Drawing.Point(197, 212);
+            this.txtIdNumber.Name = "txtIdNumber";
+            this.txtIdNumber.Size = new System.Drawing.Size(369, 22);
+            this.txtIdNumber.TabIndex = 3;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(141, 118);
+            this.txtLastName.Location = new System.Drawing.Point(197, 167);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(218, 22);
+            this.txtLastName.Size = new System.Drawing.Size(369, 22);
             this.txtLastName.TabIndex = 2;
             // 
             // tabControl1
@@ -1947,14 +1893,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1304, 677);
             this.tabControl1.TabIndex = 0;
             // 
-            // employeesDataGridView
-            // 
-            this.employeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGridView.Location = new System.Drawing.Point(239, 457);
-            this.employeesDataGridView.Name = "employeesDataGridView";
-            this.employeesDataGridView.Size = new System.Drawing.Size(1050, 188);
-            this.employeesDataGridView.TabIndex = 43;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1967,69 +1905,38 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3M";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView2)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmeDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companiesHelperBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBinding)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBinding)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtIme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtPrezime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtLicnaKarta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtPozivNaBroj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtDatumKupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtBrojRata;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtIznosKupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtIznosRate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtUkupnoDuga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtUplaceno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtPreostaliDug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtFirma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtMesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtPoreski;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtUkupniDug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn licna_karta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn poziv_na_broj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datum_kupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn broj_rata;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iznos_kupovine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iznos_rate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ukupno_duga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uplaceno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preostali_dug;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firma;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblRata16;
@@ -2091,25 +1998,19 @@
         private System.Windows.Forms.Button btnAddAnnuityDate;
         private System.Windows.Forms.Label lblRata5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker dtpRata5;
         private System.Windows.Forms.DateTimePicker dtpRata1;
         private System.Windows.Forms.DateTimePicker dtpRata4;
         private System.Windows.Forms.DateTimePicker dtpRata2;
         private System.Windows.Forms.DateTimePicker dtpRata3;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView firmeDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_firme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mesto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pib;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ukupni_dug;
+        private System.Windows.Forms.DataGridView companiesBindingSource;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtTotalDebt2;
-        public System.Windows.Forms.TextBox txtPIB2;
-        public System.Windows.Forms.TextBox txtHeadQuarter2;
-        public System.Windows.Forms.TextBox txtCompanyName2;
+        private System.Windows.Forms.TextBox txtAddTotalDebtCompany;
+        public System.Windows.Forms.TextBox txtAddTIN;
+        public System.Windows.Forms.TextBox txtAddCompanyEmail;
+        public System.Windows.Forms.TextBox txtAddCompanyName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -2117,12 +2018,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.DataGridView firmeDataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridView companiesHelperBindingSource;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDateTime;
@@ -2130,16 +2026,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTotalDebtt;
-        private System.Windows.Forms.TextBox txtPaid;
-        private System.Windows.Forms.TextBox txtTotalDebtt;
-        private System.Windows.Forms.Label lblPaid;
-        private System.Windows.Forms.Label lblAnnuityNumber;
-        private System.Windows.Forms.Label lblPurchaseAmount;
-        private System.Windows.Forms.Label lblAnnuityAmount;
-        private System.Windows.Forms.TextBox txtAnnuityAmount;
-        private System.Windows.Forms.TextBox txtPurchaseAmount;
-        private System.Windows.Forms.TextBox txtAnnuityNumber;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lblTime2;
@@ -2151,11 +2037,10 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblAccountingPeriod;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtTotalDebt;
-        private System.Windows.Forms.TextBox txtPIB;
-        private System.Windows.Forms.TextBox txtHeadQuarter;
+        private System.Windows.Forms.TextBox txtTIN;
+        private System.Windows.Forms.TextBox txtCompanyCity;
         private System.Windows.Forms.TextBox txtCompanyName;
         private System.Windows.Forms.TextBox txtCompanyID;
         private System.Windows.Forms.Label lblTotalDebt;
@@ -2176,23 +2061,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_uplaceno_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn preostali_dug_2;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Label lblLeftDebt;
         private System.Windows.Forms.Label lblCompany;
-        private System.Windows.Forms.TextBox txtLeftDebt;
         private System.Windows.Forms.TextBox txtCompany;
         private System.Windows.Forms.Label lblReferenceNumber;
-        private System.Windows.Forms.Label lblPurchaseDate;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtReferenceNumber;
+        private System.Windows.Forms.TextBox txtUniqueNumber;
         private System.Windows.Forms.Label lblIdentityCard;
-        private System.Windows.Forms.DateTimePicker dtpPurchaseDate;
         private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtIdentityCard;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtIdNumber;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Button btnSearchEmployee;
         public System.Windows.Forms.DataGridView employeesDataGridView2;
-        private System.Windows.Forms.TextBox txtSearchComp;
+        private System.Windows.Forms.TextBox txtCompanyNameInsert;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
@@ -2202,7 +2083,28 @@
         private System.Windows.Forms.TextBox txtSearchCo;
         private System.Windows.Forms.Button btnGetAllCom;
         private System.Windows.Forms.Button btnSearchCom;
-        private System.Windows.Forms.DataGridView employeesDataGridView;
+        private System.Windows.Forms.DataGridView employeesBindingSource;
+        private System.Windows.Forms.BindingSource employeesBinding;
+        private System.Windows.Forms.BindingSource companyBinding;
+        private System.Windows.Forms.Label lblCompanyEmail;
+        public System.Windows.Forms.TextBox txtAddCompanyCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompanyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn City;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDebt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmployeeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UniqueNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
     }
 }
 
