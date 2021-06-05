@@ -92,6 +92,9 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RawPrint, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RawPrint.0.5.0\lib\net40\RawPrint.dll</HintPath>
     </Reference>
@@ -115,9 +118,10 @@
     <Compile Include="DataAccess\Company.cs" />
     <Compile Include="DataAccess\DataContext.cs" />
     <Compile Include="DataAccess\Employee.cs" />
+    <Compile Include="DataAccess\InstallenmentAmount.cs" />
+    <Compile Include="DataAccess\InstallenmentDate.cs" />
     <Compile Include="DataAccess\Payment.cs" />
     <Compile Include="DataAccess\PaymentDate.cs" />
-    <Compile Include="DataAccess\PaymentDateDetail.cs" />
     <Compile Include="EmployeePaymentsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +201,26 @@
     <Compile Include="Migrations\202105282020412_add_payment_date_details.designer.cs">
       <DependentUpon>202105282020412_add_payment_date_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106051208428_removing_payment_date_details_table.cs" />
+    <Compile Include="Migrations\202106051208428_removing_payment_date_details_table.designer.cs">
+      <DependentUpon>202106051208428_removing_payment_date_details_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106051239567_add_installenments_tables.cs" />
+    <Compile Include="Migrations\202106051239567_add_installenments_tables.designer.cs">
+      <DependentUpon>202106051239567_add_installenments_tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106051427569_removing_columns_from_paymentdate_table.cs" />
+    <Compile Include="Migrations\202106051427569_removing_columns_from_paymentdate_table.designer.cs">
+      <DependentUpon>202106051427569_removing_columns_from_paymentdate_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106051432098_adding_columns_to_paymentdate_table.cs" />
+    <Compile Include="Migrations\202106051432098_adding_columns_to_paymentdate_table.designer.cs">
+      <DependentUpon>202106051432098_adding_columns_to_paymentdate_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106051449393_change_column_names_for_paymentdate_table.cs" />
+    <Compile Include="Migrations\202106051449393_change_column_names_for_paymentdate_table.designer.cs">
+      <DependentUpon>202106051449393_change_column_names_for_paymentdate_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,6 +277,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105282020412_add_payment_date_details.resx">
       <DependentUpon>202105282020412_add_payment_date_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051208428_removing_payment_date_details_table.resx">
+      <DependentUpon>202106051208428_removing_payment_date_details_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051239567_add_installenments_tables.resx">
+      <DependentUpon>202106051239567_add_installenments_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051427569_removing_columns_from_paymentdate_table.resx">
+      <DependentUpon>202106051427569_removing_columns_from_paymentdate_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051432098_adding_columns_to_paymentdate_table.resx">
+      <DependentUpon>202106051432098_adding_columns_to_paymentdate_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106051449393_change_column_names_for_paymentdate_table.resx">
+      <DependentUpon>202106051449393_change_column_names_for_paymentdate_table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

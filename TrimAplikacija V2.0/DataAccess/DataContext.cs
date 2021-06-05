@@ -14,6 +14,7 @@ namespace TrimAplikacija_V2._0.DataAccess
         public DbSet<Company> Companies { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PaymentDate> PaymentDates { get; set; }
-        public DbSet<PaymentDateDetail> PaymentDateDetails { get; set; }
+        public DbSet<InstallenmentAmount> InstallenmentAmounts { get; set; }
+        public DbSet<InstallenmentDate> InstallenmentDates { get; set; }
     }
 }
