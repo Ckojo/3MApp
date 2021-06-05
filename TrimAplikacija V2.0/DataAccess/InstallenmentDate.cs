@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace TrimAplikacija_V2._0.DataAccess
 {
-    public class PaymentDate
+    public class InstallenmentDate
     {
         public int Id { get; set; }
-        public Payment Payment { get; set; }
-        public InstallenmentDate InstallenmentDate { get; set; }
-        public InstallenmentAmount InstallenmentAmount { get; set; }
+        public DateTime DatePaid { get; set; }
     }
 }

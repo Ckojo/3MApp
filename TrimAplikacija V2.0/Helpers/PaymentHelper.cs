@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -108,20 +109,35 @@ namespace TrimAplikacija_V2._0.Helpers
             };
         }
 
-        public static bool InsertInstallenmentDetails(int paymentId)
+        public static bool InsertInstallenmentDetails(int paymentId, List<(DateTime InstallenmentDate, double InstallenmentAmount)> paymentDetails)
         {
             try
             {
                 using (DataContext db = new DataContext())
                 {
                     var paymentDate = db.Set<PaymentDate>();
-
+                    
                     if (paymentDate != null)
                     {
                         var payments = paymentDate.Where(p => p.Payment.Id == paymentId).ToList();
+
                         if(payments.Count == 0)
                         {
-                            // TODO: IZVUCI SVE TEXTOBOXE ZA SVAKU RATU I SVAKI DATUM UPLATE I UNETI U PAYMENT DETAILS TABELU NEKAKO
+                            foreach (var item in paymentDetails)
+                            {
+                                paymentDate.Add(new PaymentDate()
+                                {
+                                    Payment = db.Payments.Find(paymentId),
+                                    InstallenmentAmount = db.InstallenmentAmounts.Add(new InstallenmentAmount()
+                                    {
+                                        Paid = item.InstallenmentAmount
+                                    }),
+                                    InstallenmentDate = db.InstallenmentDates.Add(new InstallenmentDate()
+                                    {
+                                        DatePaid = item.InstallenmentDate
+                                    })
+                                });
+                            }
                         }
                     }
 
